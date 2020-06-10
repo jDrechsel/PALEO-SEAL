@@ -105,9 +105,46 @@
                     
                     </div>
                 </div>
-                <div ng-repeat="sample in result" class="">
-                    {{sample.options.xUID}} - {{sample.options.title}}
-                </div>
+                <table  class="sampleTable " width="100%" height="100vh" id="tabelle" style="overflow-y: scroll;">
+                    <thead>
+                        <tr class="">
+                            <th>xUID</th>
+                            <th ng-click="sortType = 'A_01'; sortReverse = !sortReverse">
+                                SampleID
+                                <span ng-if="sortReverse == true && sortType == 'A_01'" class="fa fa-caret-down"> 
+                                  <md-icon md-svg-src="img/expand_more.svg"></md-icon>
+                                </span>
+                                <span ng-if="sortReverse == false  && sortType == 'A_01'" class="fa fa-caret-down"> 
+                                  <md-icon md-svg-src="img/expand_less.svg"></md-icon>
+                                </span>
+                            </th>
+                            <th ng-click="sortType = 'C0_02'; sortReverse = !sortReverse">
+                                Reference
+                                <span ng-if="sortReverse == true && sortType == 'C0_02'" class="fa fa-caret-down"> 
+                                    <md-icon md-svg-src="img/expand_more.svg"></md-icon>
+                                </span>
+                                <span ng-if="sortReverse == false && sortType == 'C0_02'" class="fa fa-caret-down"> 
+                                  <md-icon md-svg-src="img/expand_less.svg"></md-icon>
+                                </span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr 
+                    ng-repeat="sample in result" 
+                    ng-class="">
+                        <td>
+                            {{sample.options.xUID}}
+                        </td>
+                        <td>
+                            {{sample.options.title}}
+                        </td>
+                        <td>
+                            {{sample.options.reference}}
+                        </td>
+                    </tr>
+
+                </table>
+              
 
             </md-content>
         </md-sidenav>

@@ -143,7 +143,7 @@ ng-mouse-wheel-up="ZoomSvgIn()"
                     ng-attr-cx ="{{(punkt.age * svgScaleX) + svgShiftX}}" 
                     ng-attr-cy ="{{(punkt.elevation * svgScaleY) - svgShiftY}}"
                     r="3"
-                    style="fill: blue;"></circle>
+                    ng-show="punkt.export"></circle>
                    
                 </g>
             </g>
@@ -168,6 +168,11 @@ ng-mouse-wheel-up="ZoomSvgIn()"
                     ng-attr-x2="{{(punkt.age * svgScaleX) + svgShiftX}}" 
                     ng-attr-y2="{{((punkt.elevation ) * svgScaleY) - svgShiftY}}" 
                      />   
+                     <circle class="markerSelect" 
+                     ng-attr-cx ="{{(punkt.age * svgScaleX) + svgShiftX}}" 
+                     ng-attr-cy ="{{(punkt.elevation * svgScaleY) - svgShiftY}}"
+                     r="3"
+                     ng-show="punkt.export"></circle>
                 </g>
             
            </g>
@@ -198,6 +203,11 @@ ng-mouse-wheel-up="ZoomSvgIn()"
                 ng-attr-x="{{punkt.age * svgScaleX}}" 
                 ng-attr-y="{{ (-punkt.elevation) * svgScaleY}}"
                 >{{punkt.title}}</text> 
+                <circle class="markerSelect" 
+                ng-attr-cx ="{{(punkt.age * svgScaleX) + svgShiftX}}" 
+                ng-attr-cy ="{{(punkt.elevation * svgScaleY) - svgShiftY}}"
+                r="3"
+                ng-show="punkt.export"></circle>
             </g>
            </g>
         </g>

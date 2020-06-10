@@ -323,12 +323,12 @@
         </svg>
         <div  >
 
-            <!-- <div ng-click="svgScaleX= 0.05 ; svgScaleY=2; svgShiftX = 0; svgShiftY = 0;" style="font-size: 8;">
+            <div ng-click="svgScaleX= 0.05 ; svgScaleY=2; svgShiftX = 0; svgShiftY = 0;" style="font-size: 8;">
                 
                 ScaleX: {{svgScaleX | number: 3}} - ScaleY: {{svgScaleY | number: 3}} 
                 ZoomX: {{svgScaleX/staticScaleX | number: 3}} - ZoomY: {{svgScaleY/staticScaleY | number: 3}}
                 ShiftX: {{svgShiftX}} - ShiftY: {{svgShiftY}}
-            </div> -->
+            </div>
             <!-- <div ng-click="viewBoxString='0 -260 600 300'">
                 viewBox: {{viewBoxString}}
             </div> -->
@@ -458,23 +458,32 @@
     <div style="overflow-y: scroll; height: 69vh;">
         <div ng-repeat="group in groups| filter: auswahl.suche.reference" >
             <md-card>
-                <md-card-title>
-                    <h4>
+                <div class="groupContainer myPadding">
+
+                    
+                    <div class="myHeading" >
                         
                         {{group.label2}}
-                    </h4>
-                </md-card-title>
-                <md-content>
-                    <div class="col-md-7">
-                        {{group.proben.length}}  Samples
                     </div>
+                    <div class="mySampleBadge" >{{group.proben.length}}</div>
+                </div>
+                <!-- <div class=" myPadding"> -->
+                <!-- </md-card-title> -->
+                <md-content>
+                    
                     <div class="col-md-2">
-                        <md-button class="md-raised md-small" ng-click="select(group)">
-                            Details
+                        <md-button class="md-raised md-small" ng-click="select(group); status!=status"
+                        [ng-class]="status ? 'groupPristine' : 'groupSelected' "
+                        ng-show="status ? 'groupPristine' : 'groupSelected' ">
+                            Show
                         </md-button>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-2">
                         <md-button class="md-raised md-small" ng-click="selectWithinGroup(group)">
                             Add to List
                         </md-button>
+                        
                     </div>
                 </md-content>
                 

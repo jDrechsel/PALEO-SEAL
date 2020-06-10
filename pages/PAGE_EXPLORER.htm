@@ -2,338 +2,48 @@
     <!-- <nvd3 options="options" data="werteSCATTER" class="ng-scope" width=600px height=400px></nvd3> -->
     <div  style="height: 55vh;">
         <h4>{{sortierung2}} : {{detailName}}</h4>
-        <!-- <my-plot></my-plot> -->
-        <!-- <svg id="svgPlot" width="100%" height="100%" viewBox="30 -130 250 150"> -->
-            <!-- $scope.svgBox_X = 30;
-                $scope.svgBox_Y = -130;
-                $scope.svgBox_dX = 250;
-                $scope.svgBox_dY = 150; -->
-            <!-- ng-attr-viewBox="{{viewBoxString}}" -->
-            <!-- viewBox="0 -260 600 300" -->
-            <!-- Initial Scales: x: 0.05 , y: 2 -->
+        <span style="position: absolute; right: 20px; top: 5px;">
+            <md-checkbox class="myCheckbox" ng-checked="showPlotControl == true; " ng-click="showPlotControl = !showPlotControl " >
+                <!--  -->
+                show Controls
+            </md-checkbox>
+            <md-checkbox class="myCheckbox" ng-checked="showRejected == true; " ng-click="showRejected = !showRejected " >
+                <!--  -->
+                show Rejected
+            </md-checkbox>
+            <md-checkbox  class="myCheckbox" ng-checked="linkTable == true; " ng-click="linkTable = !linkTable " >
+                <!--  -->
+                link Table
+            </md-checkbox>
             
+        </span>
+    </div>
+    <div layout="row" layout-wrap flex ng-show="showPlotControl">
+        <md-slider-container>
+            ZoomX
+            <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgScaleX" min="0" max="0.2" step="0.001">
+            </md-slider>
+        </md-slider-container>
+        <md-slider-container>
+            ZoomY
+            <md-slider class="md-primary" ng-model="svgScaleY" min="1" max="4" step="0.01">
+            </md-slider>
+        </md-slider-container>
+    </div>
+    <div layout="row" layout-wrap flex ng-show="showPlotControl"> 
+        <md-slider-container>
+            ScrollX
+            <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgShiftX" min="-300" max="300" step="1">
+            </md-slider>
+        </md-slider-container>
+        <md-slider-container>
+            ScrollY
+            <md-slider class="md-primary" ng-model="svgShiftY" min="-100" max="100" step="1">
+            </md-slider>
+        </md-slider-container>
+    </div>
+    <div>
 
-        <svg id="svgPlot" width="100%" height="100%" 
-        ng-attr-view_box="{{viewBoxString}}"
-        ng-mousemove="plotPosition($event)" ng-mousedown="plotAction($event)" ng-mouseup="plotMouseUp($event)"  
-        ng-mouse-wheel-down="svgScaleX= svgScaleX-0.005; svgScaleY= svgScaleY - 0.2" 
-        ng-mouse-wheel-up="svgScaleX= svgScaleX+0.005; svgScaleY= svgScaleY + 0.2"
-        >
-            <style>
-               
-                <!-- svg {
-                    background-color:white;
-                    transform: scale(1,-1);
-                }
-                svg  text{
-                    transform: scale(1,-1);
-                    pointer-events: none;
-                    -webkit-user-select: none;
-                    -moz-user-select: none;
-                    -ms-user-select: none;
-                    user-select: none;
-                }
-                .svgText {
-                    pointer-events: none;
-                    -webkit-user-select: none;
-                    -moz-user-select: none;
-                    -ms-user-select: none;
-                    user-select: none;
-                }
-                #headbase{
-                    stroke: rgb(161, 161, 161);
-                }
-                #terrestrial{
-                    fill: rgba(121, 54, 10, 0);
-                }
-                #marine{
-                    fill: rgba(13, 35, 131, 0);
-                }
-                #marine:hover{
-                    filter: drop-shadow(30px 10px 4px #4444dd );
-                }
-                #indicator2{
-                    fill: rgba(116, 116, 116, 0);
-                }
-                #elevation{
-                    stroke:rgba(37, 65, 194, 0.568)
-                }
-                #age{
-                    stroke:rgba(143, 143, 143, 0.719)
-                }
-                #elevation text{
-                    stroke:rgba(143, 143, 143, 0.719);
-                }
-                .plotMarker:hover{
-                    stroke: rgba(197, 27, 27, 0.493);
-                }
-                .plotMarkerSelected{
-                    stroke: rgba(14, 10, 1);
-                }
-                .testCircle{
-                    fill: rgb(20, 20, 20, 0.2);
-                }
-                text {
-                    font-family:serif;	
-                    font-size: 10px;
-                    font-weight: bold;
-                    fill: #00000083;
-                    stroke: #306f91;
-                    stroke-width: 0;
-                  }
-                #text_S {
-                    font-family:serif;	
-                    font-size: 10px;
-                    fill: rgba(14, 10, 1, 0.658);
-                  }
-                .label{
-                    font-family:serif;	
-                    font-size: 10px;
-                    font-weight: bold;
-                    fill: #00000000;
-                  }
-                .label:hover{
-                    font-family:serif;	
-                    font-size: 10px;
-                    font-weight: bold;
-                    fill: #000000;
-                  }
-                #head:hover > .label{
-                    display:block;
-                  }
-                .sampleLabel{
-                    display:none;
-                    fill:rgb(20, 20, 20);
-                    font-size:2em;
-                    font-family:sans-serif;
-                  } -->
-                <!-- #horizontal{stroke:rgb(223, 102, 21);} -->
-            </style>
-            <g id="plotBase">
-                <g id="axes">
-
-                    <g id="age">
-                        <text id="ageLabel"
-                        ng-attr-x="{{svgBox_dX*0.5}}"
-                        ng-attr-y="{{svgBox_dY*0.8+15}}"
-                        >
-                            age [a BP]
-                        </text>
-                        <line x1="0" ng-attr-y1="{{-svgBox_dY*0.8}}" ng-attr-x2="{{xScaleMax*(staticScaleX)}}" ng-attr-y2="{{-svgBox_dY*0.8}}"  />   
-                        <g ng-repeat="tick in ticksX">
-                            <line 
-                            ng-attr-x1="{{(tick.tickPos*svgScaleX)+svgShiftX}}" 
-                            ng-attr-y1="{{-svgBox_dY*0.8-2}}" 
-                            ng-attr-x2="{{(tick.tickPos*svgScaleX)+svgShiftX}}" 
-                            ng-attr-y2="{{-svgBox_dY*0.8+5}}"  />   
-                            <text id="text_S" 
-                            ng-attr-x="{{(tick.tickPos*svgScaleX)+svgShiftX}}"
-                            ng-attr-y="{{svgBox_dY*0.8+10}}">
-                            {{tick.tickPos}}
-                            </text>
-                        </g> 
-                        <g>
-                            <text id="ageMaxLabel"
-                        ng-attr-x="{{xScaleMax*(staticScaleX)-30}}"
-                        ng-attr-y="{{svgBox_dY*0.8}}"
-                        >
-                            {{(svgBox_dX-svgShiftX)/svgScaleX | number: 0}}
-                        </text>
-                        </g>
-                     </g>
-                <g id="elevation">
-                    
-                    <g ng-attr-transform="rotate(90, -20, -{{svgBox_dY*0.5}})">
-                        
-                        <text id="elevationLabel"
-                        ng-attr-x="-20"
-                        ng-attr-y="{{svgBox_dY*0.5}}"
-                        
-                        >
-                        elevation [m]
-                    </text>
-                </g>
-                    <line stroke-dasharray="10,10" x1="0" y1="0" ng-attr-x2="{{svgBox_dX}}" y2="0"  />   
-                    <line x1="0" ng-attr-y1="{{10 * staticScaleY}}" x2="0" ng-attr-y2="{{ - 120 * staticScaleY}}"  />  
-                    <g ng-repeat="tick in ticksY">
-                        <line 
-                        ng-attr-x1="-2" 
-                        ng-attr-y1="{{tick.tickPos * svgScaleY}}" 
-                        ng-attr-x2="5" 
-                        ng-attr-y2="{{tick.tickPos * svgScaleY}}"  />   
-                        <text id="text_S" 
-                        text-anchor="end"
-                        ng-attr-x="-5"
-                        ng-attr-y="{{ - tick.tickPos * svgScaleY +3}}">
-                            {{tick.tickPos}}
-                        </text>
-                    </g>
-                    </g>
-                    <g id="xaxisEnd" visibility="hidden">
-                        <polygon id="eins" 
-                        ng-attr-points="600,-235 600,-245 620,-240"/>
-                    </g>
-                </g>
-            </g>
-
-            <g id="terrestrial" class="plotMarker" ng-repeat="punkt in werteALL | filter: {plot: true, type_string: 'Terrestrial limiting'}"
-            ng-click="punkt.export = !punkt.export ; scrollToSample(this.punkt.xUID) "
-            ng-mouseover="scrollToSample(this.punkt.xUID)"
-            ng-class="{'plotMarkerSelected': punkt.export === true}">
-                <g id="markerBack" ng-attr-title="{{punkt.label}}">
-                    <!-- <line x1="80" y1="80" x2="100" y2="80" stroke="black" />  -->
-                    <circle visibility="hidden"
-                        ng-click="punkt.export = !punkt.export"
-                        ng-attr-cx="{{punkt.age * svgScaleX}}" 
-                        ng-attr-cy="{{punkt.elevation * svgScaleY}}" 
-                        ng-attr-r="3" />
-                    <text  class="label"
-                    ng-attr-x="{{punkt.age * svgScaleX}}"
-                    ng-attr-y="{{  punkt.elevation * svgScaleY}}">
-                        {{punkt.title}}
-                    </text>
-                </g>
-
-                <g id="head" ng-click="punkt.export = !punkt.export">
-                    <title>{{punkt.title}}</title>
-                    <line id="horizontal"
-                    ng-attr-x1="{{ (punkt.age - punkt.ageError ) * svgScaleX}}" 
-                    ng-attr-y1="{{punkt.elevation * svgScaleY}}" 
-                    ng-attr-x2="{{ (punkt.age + punkt.ageError)* svgScaleX}}" 
-                    ng-attr-y2="{{punkt.elevation * svgScaleY}}" 
-                    stroke="black" />   
-                    <line id="vertical"
-                    ng-attr-x1="{{punkt.age * svgScaleX}}" 
-                    ng-attr-y1="{{ (punkt.elevation) * svgScaleY}}" 
-                    ng-attr-x2="{{punkt.age * svgScaleX}}" 
-                    ng-attr-y2="{{(punkt.elevation - 2*punkt.sElevationErrorPlus) * svgScaleY}}" 
-                    stroke="black" />  
-                    <text class="sampleLabel"
-                    ng-attr-x="{{punkt.age * svgScaleX}}" 
-                    ng-attr-y="{{ (punkt.elevation) * svgScaleY}}"
-                    >{{punkt.title}}</text> 
-                </g>
-                <g>
-                    <circle id="markerBG" class="testCircle" 
-                        ng-attr-cx="{{(punkt.age * svgScaleX)+svgShiftX}}" 
-                        ng-attr-cy="{{(punkt.elevation * svgScaleY)+svgShiftY}}" 
-                        ng-attr-r="3" />
-                </g>
-                <!-- <g id="trackOffset" visibility="hidden">
-                    <line id="horizontal"
-                    ng-attr-x1="{{ (punkt.x) * svgScaleX}}" 
-                    ng-attr-y1="{{punkt.y * svgScaleY}}" 
-                    ng-attr-x2="{{ ((punkt.plotmX1 + punkt.plotmX2)*0.5 )* svgScaleX}}" 
-                    ng-attr-y2="{{punkt.y * svgScaleY}}" 
-                    stroke="red" />
-                </g> -->
-            </g>
-            <g id="marine" class="plotMarker" ng-repeat="punkt in werteALL | filter: {plot: true, type_string: 'Marine limiting'}"
-            ng-click="punkt.export = !punkt.export ; scrollToSample(this.punkt.xUID) "
-            ng-mouseover="scrollToSample(this.punkt.xUID)"
-            ng-class="{'plotMarkerSelected': punkt.export === true}">
-                <g id="markerBack">
-                    <!-- <line x1="80" y1="140" x2="100" y2="140" stroke="black" />  -->
-                    <circle ng-click="punkt.export = !punkt.export "
-                        ng-attr-cx="{{punkt.age * svgScaleX}}" 
-                        ng-attr-cy="{{punkt.elevation * svgScaleY}}" 
-                        ng-attr-r="3" />
-                    <text id="eins" class="label"
-                        ng-attr-x="{{punkt.age * svgScaleX}}"
-                        ng-attr-y="{{ - punkt.elevation * svgScaleY}}">
-                            {{punkt.label}}
-                    </text>
-                </g>
-                <g id="headbase" visibility="hidden">
-                    <line 
-                    ng-attr-x1="{{ (punkt.age - standardErrorX ) * svgScaleX}}" 
-                    ng-attr-y1="{{punkt.elevation * svgScaleY}}" 
-                    ng-attr-x2="{{ (punkt.age + standardErrorX ) * svgScaleX}}" 
-                    ng-attr-y2="{{punkt.elevation * svgScaleY}}" 
-                    stroke="black" />   
-                    <line 
-                    ng-attr-x1="{{punkt.age * svgScaleX}}" 
-                    ng-attr-y1="{{ (punkt.elevation + standardErrorY) * svgScaleY}}" 
-                    ng-attr-x2="{{punkt.age * svgScaleX}}" 
-                    ng-attr-y2="{{punkt.elevation * svgScaleY}}" 
-                    stroke="black" />   
-                </g>
-                <g id="head">
-                    <line id="horizontal"
-                    ng-attr-x1="{{ (punkt.age - punkt.ageError ) * svgScaleX}}" 
-                    ng-attr-y1="{{punkt.elevation * svgScaleY}}" 
-                    ng-attr-x2="{{ (punkt.age + punkt.ageError)* svgScaleX}}" 
-                    ng-attr-y2="{{punkt.elevation * svgScaleY}}" 
-                    stroke="blue" />   
-                    <line id="vertical"
-                    ng-attr-x1="{{punkt.age * svgScaleX}}" 
-                    ng-attr-y1="{{ (punkt.elevation + 2*punkt.sElevationErrorPlus) * svgScaleY}}" 
-                    ng-attr-x2="{{punkt.age * svgScaleX}}" 
-                    ng-attr-y2="{{(punkt.elevation ) * svgScaleY}}" 
-                    stroke="blue" />   
-                </g>
-            </g>
-            <g id="indicator2" class="plotMarker" ng-repeat="punkt in werteALL | filter: {plot: true, type_string: 'Indicator'}"
-            ng-click="punkt.export = !punkt.export ; scrollToSample(this.punkt.xUID) "
-            ng-mouseover="scrollToSample(this.punkt.xUID)"
-            ng-class="{'plotMarkerSelected': punkt.export === true}">
-                <g id="markerBack">
-                    <!-- <line x1="80" y1="80" x2="100" y2="80" stroke="black" />  -->
-                    <circle 
-                        ng-click="punkt.export = !punkt.export"
-                        ng-attr-cx="{{punkt.age * svgScaleX}}" 
-                        ng-attr-cy="{{punkt.elevation * svgScaleY}}" 
-                        ng-attr-r="3" />
-                    <text id="eins" class="label"
-                    ng-attr-x="{{punkt.age * svgScaleX}}"
-                    ng-attr-y="{{ - punkt.elevation * svgScaleY}}">
-                        {{punkt.label}}
-                    </text>
-                </g>
-                <g id="headbase" visibility="hidden">
-                    <line 
-                    ng-attr-x1="{{ (punkt.age - standardErrorX ) * svgScaleX}}" 
-                    ng-attr-y1="{{punkt.elevation * svgScaleY}}" 
-                    ng-attr-x2="{{ (punkt.age + standardErrorX ) * svgScaleX}}" 
-                    ng-attr-y2="{{punkt.elevation * svgScaleY}}" 
-                    stroke="black" />   
-                    <line 
-                    ng-attr-x1="{{punkt.age * svgScaleX}}" 
-                    ng-attr-y1="{{ (punkt.elevation + standardErrorY) * svgScaleY}}" 
-                    ng-attr-x2="{{punkt.age * svgScaleX}}" 
-                    ng-attr-y2="{{ (punkt.elevation - standardErrorY) * svgScaleY}}" 
-                    stroke="black" />   
-                </g>
-                <g id="head">
-                    <line id="horizontal"
-                    ng-attr-x1="{{ (punkt.age - punkt.ageError ) * svgScaleX}}" 
-                    ng-attr-y1="{{punkt.elevation * svgScaleY}}" 
-                    ng-attr-x2="{{ (punkt.age + punkt.ageError)* svgScaleX}}" 
-                    ng-attr-y2="{{punkt.elevation * svgScaleY}}" 
-                    stroke="black" />   
-                    <line id="vertical"
-                    ng-attr-x1="{{punkt.age * svgScaleX}}" 
-                    ng-attr-y1="{{ (punkt.elevation + punkt.sElevationErrorMinus) * svgScaleY}}" 
-                    ng-attr-x2="{{punkt.age * svgScaleX}}" 
-                    ng-attr-y2="{{(punkt.elevation - punkt.sElevationErrorPlus) * svgScaleY}}" 
-                    stroke="black" />   
-                </g>
-            </g>
-            
-        </svg>
-        <div  >
-
-            <div ng-click="svgScaleX= 0.05 ; svgScaleY=2; svgShiftX = 0; svgShiftY = 0;" style="font-size: 8;">
-                
-                ScaleX: {{svgScaleX | number: 3}} - ScaleY: {{svgScaleY | number: 3}} 
-                ZoomX: {{svgScaleX/staticScaleX | number: 3}} - ZoomY: {{svgScaleY/staticScaleY | number: 3}}
-                ShiftX: {{svgShiftX}} - ShiftY: {{svgShiftY}}
-            </div>
-            <!-- <div ng-click="viewBoxString='0 -260 600 300'">
-                viewBox: {{viewBoxString}}
-            </div> -->
-        </div>
-        
         
     </div>
     <div class=row><h4 style="z-index: 4;">Details</h4></div>

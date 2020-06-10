@@ -1,0 +1,224 @@
+
+<div class="col-md-9" style="background-color: rgb(228, 228, 228); height: 90vh;">
+    <div layout="row" layout-wrap flex>
+        <p>Samples:<span class="badge">{{selected.proben.length}}</span> [
+            Marine<span class="badge badge-marine" >{{werteSCATTER[0].values.length}}</span> 
+            Indicator <span class="badge badge-indicator">{{werteSCATTER[1].values.length}}</span>
+            Terrestrial: <span class="badge badge-terrestrial">{{werteSCATTER[2].values.length}}</span>]
+        </p>
+        <span style="position: absolute; right: 20px; top: 5px;">
+            <md-checkbox class="myCheckbox" ng-checked="showPlotControl == true; " ng-click="showPlotControl = !showPlotControl " >
+                <!--  -->
+                show Controls
+            </md-checkbox>
+            <md-checkbox class="myCheckbox" ng-checked="showRejected == true; " ng-click="showRejected = !showRejected " >
+                <!--  -->
+                show Rejected
+            </md-checkbox>
+            <md-checkbox  class="myCheckbox" ng-checked="linkTable == true; " ng-click="linkTable = !linkTable " >
+                <!--  -->
+                link Table
+            </md-checkbox>
+            
+            <!-- <md-button class="md-raised md-small" ng-click="select(group)">
+                Show
+            </md-button>
+            <md-button  class=" md-raised md-small" ng-click="openSidenav()">
+                Details
+            </md-button> -->
+        </span>
+        <!-- <button type="button" class="btn btn-primary" ng-click="openSidenav()" style="position: absolute; right: 20px; top: 15px;">Export</button> -->
+        
+        
+    </div>
+    <div layout="row" layout-wrap flex ng-show="showPlotControl">
+        <md-slider-container>
+            ZoomX
+            <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgScaleX" min="0" max="0.2" step="0.001">
+            </md-slider>
+        </md-slider-container>
+        <md-slider-container>
+            ZoomY
+            <md-slider class="md-primary" ng-model="svgScaleY" min="1" max="4" step="0.01">
+            </md-slider>
+        </md-slider-container>
+    </div>
+    <div layout="row" layout-wrap flex ng-show="showPlotControl"> 
+        <md-slider-container>
+            ScrollX
+            <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgShiftX" min="-300" max="300" step="1">
+            </md-slider>
+        </md-slider-container>
+        <md-slider-container>
+            ScrollY
+            <md-slider class="md-primary" ng-model="svgShiftY" min="-100" max="100" step="1">
+            </md-slider>
+        </md-slider-container>
+    </div>
+    <div>
+
+        <jd-directive-svg daten="werteALL" plotfilter="export"></jd-directive-svg>   
+    </div>
+    <!-- <div id="test1" class='with-3d-shadow with-transitions'>
+        <svg></svg>
+    </div> -->
+    <!-- <md-content>
+        <md-tabs md-center-tabs>
+            <md-tab aria-label="one">
+                <md-content>
+                    <h4>Export View</h4>
+                </md-content>
+            </md-tab>
+            <md-tab aria-label="two">
+                <md-content>
+                    <h4>Inspect View</h4>
+                    <nvd3 options="options" data="werteSCATTER"></nvd3>
+
+                </md-content>
+            </md-tab>
+        </md-tabs>
+    </md-content> -->
+
+</div>
+<div class="col-md-3" style="background-color: darkgrey; height: 90vh; padding: 0px;">
+    <!-- <div ><h4>Data Explorer</h4>
+        <p ng-hide="selected">Please choose grouping to show samples</p>
+    	<p style="cursor: pointer;">
+            Group by:
+            <a ng-click="groupBy( 'D5_01' ); sortierung = 'Type'">Type</a> -
+            <a ng-click="groupBy( 'B_01' ); sortierung = 'Region'">Region</a> -
+            <a ng-click="groupBy( 'B_02' ); sortierung = 'Subregion'">Subregion</a> -
+            <a ng-click="groupBy( 'A_02' ); sortierung = 'Reference'">Publication</a> -
+            <a ng-click="groupBy( 'C_01' ); sortierung = 'Dating'">Dating Method</a> - 
+            <a ng-click="groupBy(); sortierung = 'None'">All Samples</a>
+        </p>
+        
+    	
+    </div> -->
+
+    <md-card class="special">
+        <!-- <md-card-title>
+            <md-card-title-text>
+                Select 
+            </md-card-title-text>
+        </md-card-title> -->
+        <md-card-content>
+            <div layout="row" layout-align="space-between center">
+                <span>Select category:</span>
+                <md-select ng-model="sortierung2"  placeholder="Select" class="md-no-underline" style="margin: 2px;">
+                    <!-- <md-option value="'Type'" data-kategorie="'D5_01'">Type</md-option> -->
+                    <md-option value="Type" ng-click="groupBy( 'type', 'Type' ); sortierung2 = 'Type'">Type</md-option>
+                    <md-option value="Region" ng-click="groupBy( 'region', 'Region' ); sortierung2 = 'Region'">Region</md-option>
+                    <md-option value="Subregion" ng-click="groupBy( 'subregion', 'Subregion' ); sortierung2 = 'Subregion'">Subregion</md-option>
+                    <md-option value="Reference" ng-click="groupBy( 'reference', 'Reference' ); sortierung2 = 'Reference'">Reference</md-option>
+                    <md-option value="pubYear" ng-click="groupBy( 'publicationYear', 'Reference' ); sortierung2 = 'Reference'">Publication Year</md-option>
+                    <md-option value="Dating" ng-click="groupBy( 'dating' , 'Dating'); sortierung2 = 'Dating'">Dating</md-option>
+                    <md-option value="None" ng-click="groupBy(); sortierung2 = 'None'">All Samples</md-option>
+                    </md-select>
+              </div>
+              <p ng-show="sortierung != ''">{{groups.length}} classes</p>
+              <div>
+                <form name="eineForm">
+                    <md-input-container style="padding: 0px; margin: 0px;">
+                           <label>Filter by Publication</label>
+                        <input ng-model="auswahl.suche.A_02">
+                    </md-input-container>
+                </form>
+              </div>
+        </md-card-content>
+    </md-card>
+
+
+    <div style="height: 69vh; overflow-y: scroll">
+
+        <div ng-repeat="group in groups" >
+            <md-card>
+                <md-card-title>
+                    <div class="col-md-12">
+<h4>
+
+    {{group.label2}}
+</h4>
+                    </div>
+                </md-card-title>
+                <md-content>
+                    <div class="col-md-7">
+
+                        Samples {{group.proben.length}}
+                        <!-- {{nachSchlagen(group.label,sortierung)}} -->
+                        
+                    </div>
+                    <div class="col-md-2">
+                        <md-button class="md-raised md-small" ng-click="select(group)">
+                            <!-- funzt nicht -->
+                            Details
+                        </md-button>
+                        <md-button class="md-raised md-small" ng-click="selectWithinGroup(group)">
+                            Add to List
+                        </md-button>
+                    </div>
+                       
+                    <!-- <button type="button" class="btn btn-primary" ng-click="openSidenav()" style="position: absolute; right: 20px; top: 15px;">Export</button> -->
+
+                </md-content>
+                
+            </md-card>
+        </div>
+    </div>
+</div>
+
+
+<!-- SIDENAV -->
+<div layout="row">
+	<!-- <div ng-show="linksOpen" flex> -->
+		<md-sidenav style="min-width: 60vw; position: fixed;" class="md-sidenav-left" md-component-id="links" md-disable-backdrop md-whiteframe="4">
+			<md-toolbar class="md-theme-indigo">
+                
+                <span>
+
+                    <h2 class="md-toolbar-tools">Export list:       
+                        <span>
+                            <md-button ng-click="closeSideNav('links')" class="md-accent" style="position: absolute; right: 20px; top: 15px;">
+                                Close
+                            </md-button>
+                        </span>
+                    </h2>
+                </span>
+				
+			</md-toolbar>
+			<md-content layout-margin>
+
+                <nvd3 options="options" data="werteSCATTER"></nvd3>
+                <div id="test1" class='with-3d-shadow with-transitions'>
+                    <svg></svg>
+                </div>
+        
+                <div layout="row" layout-wrap flex>
+                    <p>Samples:<span class="badge">{{selected.proben.length}}</span> [
+                        Marine<span class="badge badge-marine" >{{werteSCATTER[2].values.length}}</span> 
+                        Indicator <span class="badge badge-indicator">{{werteSCATTER[1].values.length}}</span>
+                        Terrestrial: <span class="badge badge-terrestrial">{{werteSCATTER[0].values.length}}</span>]
+                    </p>
+                </div>
+                <div layout="row" layout-wrap flex>
+                    <h4>Test scopes</h4>
+                </div>
+
+                <div layout="row" layout-wrap flex>
+                    <p>labels: {{labelsXY}}</p>
+                </div>
+
+                <div layout="row" layout-wrap flex>
+                    <p>werteXY: {{werteXY}}</p>
+                </div>
+
+                <div layout="row" layout-wrap flex>
+                    <p>werteSCATTER: {{werteSCATTER}}</p>
+                </div>
+            </md-content>
+        </md-sidenav>
+    <!-- </div> -->
+</div>
+
+
+

@@ -216,6 +216,8 @@ input {
   /* SVG PLOT STYLE */
   .myContainer{
       display: table;
+      table-layout: fixed;
+      height: 80vh;
   }
 
   .myContainerContent{

@@ -47,86 +47,87 @@
     </div>
 
     <!-- <div class=row><h4 style="z-index: 4;">Details</h4></div> -->
-    <div class="myContainerContent" style=" overflow-y: scroll;">
-
-        <table  class="sampleTable" width="100%" id="tabelle" style="max-height: inherit; overflow-y: scroll;">
-            <thead>
-                <tr>
-                    <th>
-                        <md-checkbox ng-model="allSelected" ng-checked="allSelected == true; " ng-click="selectAll()">
-
-                            Export
-                        </md-checkbox>
-                        
-                    </th>
-                    <th ng-click="sortType = 'A_01'; sortReverse = !sortReverse">
-                        SampleID
-                        <span ng-if="sortReverse == true && sortType == 'A_01'" class="fa fa-caret-down"> 
-                          <md-icon md-svg-src="img/expand_more.svg"></md-icon>
-                        </span>
-                        <span ng-if="sortReverse == false  && sortType == 'A_01'" class="fa fa-caret-down"> 
-                          <md-icon md-svg-src="img/expand_less.svg"></md-icon>
-                        </span>
-                    </th>
-                    <th ng-click="sortType = 'C0_02'; sortReverse = !sortReverse">
-                        Reference
-                        <span ng-if="sortReverse == true && sortType == 'C0_02'" class="fa fa-caret-down"> 
-                            <md-icon md-svg-src="img/expand_more.svg"></md-icon>
-                        </span>
-                        <span ng-if="sortReverse == false && sortType == 'C0_02'" class="fa fa-caret-down"> 
-                          <md-icon md-svg-src="img/expand_less.svg"></md-icon>
-                        </span>
-                    </th>
-                    <th>Age-</th>
-                    <th ng-click="sortType = 'D7_01'; sortReverse = !sortReverse">
-                        Age
-                        <span ng-if="sortReverse == true && sortType == 'D7_01'" class="fa fa-caret-down"> 
-                            <md-icon md-svg-src="img/expand_more.svg"></md-icon>
-                        </span>
-                        <span ng-if="sortReverse == false && sortType == 'D7_01'" class="fa fa-caret-down"> 
-                            <md-icon md-svg-src="img/expand_less.svg"></md-icon>
-                        </span>
-                    </th>
-                    <th>
-                        Age+
-                    </th>
-                    <th>
-                        Elev-
-                    </th>
-                    <th ng-click="sortType = 'D3_11'; sortReverse = !sortReverse">
-                            elev
-                            <span ng-if="sortReverse == true && sortType == 'D3_11'" class="fa fa-caret-down"> 
+    <div class="myContainerContent" >
+        <div style=" overflow-y: scroll;" >
+            <table  class="sampleTable" width="100%" id="tabelle" style=" overflow-y: scroll;">
+                <thead>
+                    <tr>
+                        <th>
+                            <md-checkbox ng-model="allSelected" ng-checked="allSelected == true; " ng-click="selectAll()">
+    
+                                Export
+                            </md-checkbox>
+                            
+                        </th>
+                        <th ng-click="sortType = 'A_01'; sortReverse = !sortReverse">
+                            SampleID
+                            <span ng-if="sortReverse == true && sortType == 'A_01'" class="fa fa-caret-down"> 
+                              <md-icon md-svg-src="img/expand_more.svg"></md-icon>
+                            </span>
+                            <span ng-if="sortReverse == false  && sortType == 'A_01'" class="fa fa-caret-down"> 
+                              <md-icon md-svg-src="img/expand_less.svg"></md-icon>
+                            </span>
+                        </th>
+                        <th ng-click="sortType = 'C0_02'; sortReverse = !sortReverse">
+                            Reference
+                            <span ng-if="sortReverse == true && sortType == 'C0_02'" class="fa fa-caret-down"> 
                                 <md-icon md-svg-src="img/expand_more.svg"></md-icon>
                             </span>
-                            <span ng-if="sortReverse == false && sortType == 'D3_11'" class="fa fa-caret-down"> 
+                            <span ng-if="sortReverse == false && sortType == 'C0_02'" class="fa fa-caret-down"> 
+                              <md-icon md-svg-src="img/expand_less.svg"></md-icon>
+                            </span>
+                        </th>
+                        <th>Age-</th>
+                        <th ng-click="sortType = 'D7_01'; sortReverse = !sortReverse">
+                            Age
+                            <span ng-if="sortReverse == true && sortType == 'D7_01'" class="fa fa-caret-down"> 
+                                <md-icon md-svg-src="img/expand_more.svg"></md-icon>
+                            </span>
+                            <span ng-if="sortReverse == false && sortType == 'D7_01'" class="fa fa-caret-down"> 
                                 <md-icon md-svg-src="img/expand_less.svg"></md-icon>
                             </span>
-                    </th>
-                    <th>
-                        Elev+
-                    </th>
+                        </th>
+                        <th>
+                            Age+
+                        </th>
+                        <th>
+                            Elev-
+                        </th>
+                        <th ng-click="sortType = 'D3_11'; sortReverse = !sortReverse">
+                                elev
+                                <span ng-if="sortReverse == true && sortType == 'D3_11'" class="fa fa-caret-down"> 
+                                    <md-icon md-svg-src="img/expand_more.svg"></md-icon>
+                                </span>
+                                <span ng-if="sortReverse == false && sortType == 'D3_11'" class="fa fa-caret-down"> 
+                                    <md-icon md-svg-src="img/expand_less.svg"></md-icon>
+                                </span>
+                        </th>
+                        <th>
+                            Elev+
+                        </th>
+                    </tr>
+                </thead>
+                <tr ng-attr-id="{{selected.xUID}}" 
+                ng-repeat="selected in werteALL |filter: {plot: 'true'} |orderBy:sortType:sortReverse" 
+                ng-class="">
+                    <td>
+                        <md-checkbox class="myCheckbox" aria-label=""
+                        ng-checked="selected.export == true; " ng-click="selected.export = !selected.export " style="z-index: 10;">
+                        <!--  -->
+    
+                        </md-checkbox>
+                    </td>
+                    <td > {{selected.label}} </td>
+                    <td> {{selected.reference}} </td>
+                    <td> {{selected.age-selected.ageError}}</td>
+                    <td> {{selected.age}} </td>
+                    <td> {{selected.ageErrorPlus}} </td>
+                    <td> {{selected.sElevationErrorMinus}} </td>
+                    <td> {{selected.elevation}} </td>
+                    <td> {{selected.sElevationErrorPlus}} </td>
                 </tr>
-            </thead>
-            <tr ng-attr-id="{{selected.xUID}}" 
-            ng-repeat="selected in werteALL |filter: {plot: 'true'} |orderBy:sortType:sortReverse" 
-            ng-class="">
-                <td>
-                    <md-checkbox class="myCheckbox" aria-label=""
-                    ng-checked="selected.export == true; " ng-click="selected.export = !selected.export " style="z-index: 10;">
-                    <!--  -->
-
-                    </md-checkbox>
-                </td>
-                <td > {{selected.label}} </td>
-                <td> {{selected.reference}} </td>
-                <td> {{selected.age-selected.ageError}}</td>
-                <td> {{selected.age}} </td>
-                <td> {{selected.ageErrorPlus}} </td>
-                <td> {{selected.sElevationErrorMinus}} </td>
-                <td> {{selected.elevation}} </td>
-                <td> {{selected.sElevationErrorPlus}} </td>
-            </tr>
-        </table>
+            </table>
+        </div>
     </div>
 </div>
 

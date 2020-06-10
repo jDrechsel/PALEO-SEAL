@@ -52,6 +52,6 @@ expandControllerPLOTsvgOPT = function( $scope, $parse){
     // Plot visibility toggler
     $scope.showRejected = false;
     $scope.linkTable = true;
-    $scope.showPlotControl = true;
+    $scope.showPlotControl = false;
 
 }; //endof Expander

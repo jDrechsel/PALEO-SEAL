@@ -75,6 +75,10 @@ svg  text{
 
 .plotMarkerRejected{
     stroke: rgba(133, 13, 13, 0.568);
+
+}
+.markerSelect{
+    fill: red;
 }
 .testCircle{
     fill: rgb(20, 20, 20, 0);

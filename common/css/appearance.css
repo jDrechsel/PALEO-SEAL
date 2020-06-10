@@ -218,12 +218,22 @@ input {
       display: table;
       table-layout: fixed;
       height: 80vh;
+      max-height: 90vh;
   }
 
   .myContainerContent{
       display: table-row;
       /* height: auto; */
       width: 100vw;
+      
+  }
+  .myContainerContentResponsive{
+      display: table-row;
+      height: 20vh;
+      max-height: 20vh;
+      width: 100vw;
+      overflow-y: scroll;
+
   }
 
   /* INTERFACE ELEMENTS */

@@ -134,7 +134,12 @@ ng-mouse-wheel-up="ZoomSvgIn()"
                     ng-attr-y1="{{ ((punkt.elevation + punkt.sElevationErrorMinus) * svgScaleY) - svgShiftY}}" 
                     ng-attr-x2="{{(punkt.age * svgScaleX) + svgShiftX}}" 
                     ng-attr-y2="{{((punkt.elevation - punkt.sElevationErrorPlus) * svgScaleY) - svgShiftY}}" 
-                    />   
+                    />  
+                    <circle class="markerSelect" 
+                    ng-attr-cx ="{{(punkt.age * svgScaleX) + svgShiftX}}" 
+                    ng-attr-cy ="{{(punkt.elevation * svgScaleY) - svgShiftY}}"
+                    r="3"></circle>
+                   
                 </g>
             </g>
         </g>

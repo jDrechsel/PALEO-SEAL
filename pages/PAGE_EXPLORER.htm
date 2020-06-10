@@ -17,35 +17,34 @@
             </md-checkbox>
             
         </span>
-    </div>
-    <div layout="row" layout-wrap flex ng-show="showPlotControl">
-        <md-slider-container>
-            ZoomX
-            <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgScaleX" min="0" max="0.2" step="0.001">
-            </md-slider>
-        </md-slider-container>
-        <md-slider-container>
-            ZoomY
-            <md-slider class="md-primary" ng-model="svgScaleY" min="1" max="4" step="0.01">
-            </md-slider>
-        </md-slider-container>
-    </div>
-    <div layout="row" layout-wrap flex ng-show="showPlotControl"> 
-        <md-slider-container>
-            ScrollX
-            <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgShiftX" min="-300" max="300" step="1">
-            </md-slider>
-        </md-slider-container>
-        <md-slider-container>
-            ScrollY
-            <md-slider class="md-primary" ng-model="svgShiftY" min="-100" max="100" step="1">
-            </md-slider>
-        </md-slider-container>
-    </div>
-    <div>
+        <jd-directive-svg daten="werteALL" plotfilter="export"></jd-directive-svg>   
 
-        
+        <div layout="row" layout-wrap flex ng-show="showPlotControl">
+            <md-slider-container>
+                ZoomX
+                <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgScaleX" min="0" max="0.2" step="0.001">
+                </md-slider>
+            </md-slider-container>
+            <md-slider-container>
+                ZoomY
+                <md-slider class="md-primary" ng-model="svgScaleY" min="1" max="4" step="0.01">
+                </md-slider>
+            </md-slider-container>
+        </div>
+        <div layout="row" layout-wrap flex ng-show="showPlotControl"> 
+            <md-slider-container>
+                ScrollX
+                <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgShiftX" min="-300" max="300" step="1">
+                </md-slider>
+            </md-slider-container>
+            <md-slider-container>
+                ScrollY
+                <md-slider class="md-primary" ng-model="svgShiftY" min="-100" max="100" step="1">
+                </md-slider>
+            </md-slider-container>
+        </div>
     </div>
+
     <div class=row><h4 style="z-index: 4;">Details</h4></div>
     <div style="height: 30vh; overflow-y: scroll;">
 

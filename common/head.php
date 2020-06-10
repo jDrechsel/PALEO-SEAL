@@ -22,7 +22,7 @@
     <!-- LOCAL CSS Styles -->
     <!-- <link rel="stylesheet" href="common/css/bootstrap.css"> -->
     <!-- <link rel="stylesheet" href="common/css/nv.d3.css"> -->
-    <link rel="stylesheet" href="common/ressource/locationfilter.css">
+    <!-- <link rel="stylesheet" href="common/ressource/locationfilter.css"> -->
    
 
     

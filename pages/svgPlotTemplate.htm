@@ -30,7 +30,7 @@ ng-mouse-wheel-up="ZoomSvgIn()"
         <g id="axes">
 
             <g id="age">
-                <text id="ageLabel"
+                <text id="ageLabel" class="axisTitle"
                 ng-attr-x="{{svgBox_dX*0.5}}"
                 ng-attr-y="{{svgBox_dY-marginAxisX*1.7}}"
                 >
@@ -62,7 +62,7 @@ ng-mouse-wheel-up="ZoomSvgIn()"
             
             <g ng-attr-transform="rotate(90, -20, -{{svgBox_dY*0.5}})">
                 
-                <text id="elevationLabel"
+                <text id="elevationLabel" class="axisTitle"
                 ng-attr-x="-20"
                 ng-attr-y="{{svgBox_dY*0.5}}"
                 
@@ -123,6 +123,10 @@ ng-mouse-wheel-up="ZoomSvgIn()"
             ng-class="{'plotMarkerSelected': punkt.export === true}"
             >
                 <g id="head">
+                    <circle ng-click="punkt.export = !punkt.export "
+                        ng-attr-cx="{{punkt.age * svgScaleX}}" 
+                        ng-attr-cy="{{punkt.elevation * svgScaleY}}" 
+                        ng-attr-r="3" />
                     <line id="horizontal" class="MarkerCross" ng-class="{'plotMarkerRejected': punkt.rejected === true}"
                     ng-attr-x1="{{ ((punkt.age - punkt.ageError ) * svgScaleX) + svgShiftX}}" 
                     ng-attr-y1="{{(punkt.elevation * svgScaleY) - svgShiftY}}" 
@@ -138,7 +142,8 @@ ng-mouse-wheel-up="ZoomSvgIn()"
                     <circle class="markerSelect" 
                     ng-attr-cx ="{{(punkt.age * svgScaleX) + svgShiftX}}" 
                     ng-attr-cy ="{{(punkt.elevation * svgScaleY) - svgShiftY}}"
-                    r="3"></circle>
+                    r="3"
+                    style="fill: blue;"></circle>
                    
                 </g>
             </g>

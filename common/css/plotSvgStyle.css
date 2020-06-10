@@ -55,8 +55,11 @@ svg  text{
     stroke:rgba(143, 143, 143, 0.719)
 }
 #elevation text{
-    stroke:rgba(143, 143, 143, 0.719);
+    stroke:rgba(184, 184, 184, 0.719);
 
+}
+.axisTitle{
+    fill: rgb(160, 160, 160);
 }
 .MarkerCross{
     stroke:black;

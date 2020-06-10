@@ -1,4 +1,12 @@
 expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $http){
+  // initial view
+  $scope.sortierung2="Region";
+  
+  // initialize groups:
+  // $scope.groupBy( 'region', 'Region' );
+  
+  
+  
   // SIDENAV ///
     $scope.openSidenav=function(){
 

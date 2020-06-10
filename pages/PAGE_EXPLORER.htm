@@ -43,7 +43,10 @@
                 </md-slider>
             </md-slider-container>
         </div>
-        <jd-directive-svg daten="werteALL" plotfilter="export"></jd-directive-svg>   
+        <div class="plotContainer">
+
+            <jd-directive-svg daten="werteALL" plotfilter="export"></jd-directive-svg>   
+        </div>
     </div>
 
     <!-- <div class=row><h4 style="z-index: 4;">Details</h4></div> -->
@@ -135,18 +138,14 @@
 
 <div class="col-md-3" style="background-color: darkgrey; height: 90vh; overflow-y: scroll; padding: 0px;">
     <md-card class="special">
-        <!-- <md-card-title>
-            <md-card-title-text>
-                Select 
-            </md-card-title-text>
-        </md-card-title> -->
+       
         <md-card-content>
             <div layout="row" layout-align="space-between center">
                 <span>Select category:</span>
                 <md-select ng-model="sortierung2"  placeholder="Select" class="md-no-underline" style="margin: 2px;">
                 <!-- <md-option value="'Type'" data-kategorie="'D5_01'">Type</md-option> -->
                 <md-option value="Type" ng-click="groupBy( 'type', 'Type' ); sortierung2 = 'Type'">Type</md-option>
-                <md-option value="Region" ng-click="groupBy( 'region', 'Region' ); sortierung2 = 'Region'">Region</md-option>
+                <md-option value="Region" ng-click="groupBy( 'region', 'Region' ); sortierung2 = 'Region'" ng-selected="true">Region</md-option>
                 <md-option value="Subregion" ng-click="groupBy( 'subregion', 'Subregion' ); sortierung2 = 'Subregion'">Subregion</md-option>
                 <md-option value="Reference" ng-click="groupBy( 'reference', 'Reference' ); sortierung2 = 'Reference'">Reference</md-option>
                 <md-option value="pubYear" ng-click="groupBy( 'publicationYear', 'Reference' ); sortierung2 = 'Reference'">Publication Year</md-option>
@@ -154,7 +153,7 @@
                 <md-option value="None" ng-click="groupBy(); sortierung2 = 'None'">All Samples</md-option>
                 </md-select>
             </div>
-            <p ng-show="sortierung != ''">{{groups.length}} classes</p>
+            <p ng-show="sortierung2 != ''">{{groups.length}} classes</p>
             <div>
                 <form name="eineForm">
                     <md-input-container style="padding: 0px; margin: 0px;">

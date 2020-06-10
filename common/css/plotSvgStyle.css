@@ -1,4 +1,6 @@
-
+#timeSeries{
+    /* max-height: 65%; */
+}
 svg {
     /* background-color:white; */
     transform: scale(1,-1);

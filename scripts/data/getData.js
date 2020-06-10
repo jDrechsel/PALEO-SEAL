@@ -85,7 +85,8 @@
                 };
                 $scope.werteALL=werteALL;
                 // console.log("end", $scope.werteALL);
-            
+                $scope.groupBy( 'region', 'Region' );
+
             })
         }; //end of $scope.getProben
 

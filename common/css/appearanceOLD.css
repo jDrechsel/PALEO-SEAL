@@ -1,0 +1,157 @@
+
+/* OLD STYLES - Check if necessary!!! */
+/* OLD STYLES - Check if necessary!!! */
+/* OLD STYLES - Check if necessary!!! */
+/* OLD STYLES - Check if necessary!!! */
+md-card {
+    transition: all 0.5s;
+}
+
+md-fab-speed-dial md-fab-trigger {
+    transition: all 0.4s ease-in-out;
+    transform: scale(1);
+}
+
+md-fab-speed-dial.md-scale.ng-hide md-fab-trigger,  md-fab-speed-dial.md-fling.ng-hide md-fab-trigger {
+    transform: scale(0); 
+}
+md-radio-button .md-on {
+    background-color: blue;
+}
+md-radio-button .md-off {
+    border-color: rgb(148, 21, 21);
+
+}
+md-radio-button .md-checked {
+    border-color: black;
+
+}
+.sites {
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 10px;
+    transition: all 1s;
+}
+
+.sites:hover {
+    background-color: rgba(0,0,255,0.5);
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.aqua {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+.fenster200 {
+            background-color: rgba(240, 240, 240, 240);
+            height: 250px;
+        }
+.container_chart_1 {
+    position: relative;
+    padding-top: 10%;
+    padding-bottom: 90%;
+    padding-right:  30%;
+    height: 200;
+    top: 10;
+    overflow: hidden;
+}
+    
+.container_chart_1 iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 1%;
+    height: 1%;
+}
+.affix {
+        top: 0;
+        width: 100%;
+        z-index: 9999 !important;
+    }
+
+    .affix + .container-fluid {
+        padding-top: 70px;
+    }
+.plotbereich {
+    width: 200px;
+    height: 200px;
+}
+
+/* .table {
+
+} */
+.tdleft {
+    width:20%;
+    min-width:200px;
+}
+.auswahl {
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
+    z-index: 10000;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+}
+
+    .samplesContainer {
+    text-align: center;
+    position: fixed;
+    right: 20px;
+    max-height: 800px;
+    overflow-y: auto;
+}
+
+    .samples {
+    margin-bottom: 10px;
+    padding: 5px;
+    cursor: pointer;
+    /*width: 100px;*/
+    background-color: rgb(228, 228, 228);
+  
+    /* border-radius: 0px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 0px 10px 0px 0px; */
+    border: 1px solid #000000;
+    transition: all 0.5s;
+}
+
+    .samples:hover {
+    /* background-color: aqua; */
+    background-image: radial-gradient(circle at top left, white, rgb(194, 191, 191));
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(51, 51, 51, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.349);
+}
+
+    .selected {
+    /* background-color: lime; */
+    background-image: radial-gradient(circle at top left, rgba(184, 255, 188, 0.658), rgba(0, 145, 31, 0.623));
+
+}
+    .selected:hover {
+    background-image: radial-gradient(circle at top left, white, rgb(0, 99, 21));
+    }
+.box__uploading,
+.box__success,
+.box__error {
+    display: none;
+}
+/*	path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}*/
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+

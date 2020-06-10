@@ -1,0 +1,157 @@
+/* NEW STYLES 
+certainly in use! 
+*/
+/* Bigger elements (Divs Navs Sidebar etc) */
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid #5252523b;;
+}
+
+.special{
+    background-color: rgb(207, 207, 207);
+    border-style: groove;
+    border-color: rgb(56, 56, 56);
+    margin: 2px;
+}
+
+.md-toolbar{
+    min-height: 30px;
+    min-height: 30px;
+}
+.md-dialog-content{
+    min-height: 100vh;
+}
+.md-tab-content{
+    height: 100vh;
+}
+/* Buttons, Badges and other small elements */
+.md-button.md-small{
+    width: 10px;
+    height: 20px;
+    line-height: 20px;
+    min-height: 20px;
+    vertical-align: top;
+    font-size: 12px;
+    padding: 2 2;
+    margin: 02;
+}
+
+.badge-custom{    
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: top;
+    background-color: #777;
+    border-radius: 10px;
+    /* border:1px solid black; */
+    box-shadow: 1px 1px 2px rgba(58, 58, 58, 0.404);
+}
+.badge-indicator {
+    background-color: rgb(255, 127, 14);
+}
+.badge-marine {
+    background-color: rgb(31, 119, 180);
+}
+.badge-terrestrial {
+    background-color: rgb(44, 160, 44);
+}
+
+/*Addititonal stuff */
+text {
+    font: 12px sans-serif;
+}
+svg {
+    display: block;
+}
+html, body, #test1, svg {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+input {
+    width: 120px;
+    margin-right: 10px;
+}
+
+.angular-leaflet-map svg{
+    width: initial;
+    height: initial;
+    z-index: 1;
+  } 
+
+.map{
+    z-index: 1;
+}
+
+.subheading{
+    background-color: rgb(129, 129, 129);
+    margin: 0pt;
+}
+
+.sampleTable{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+.sampleTable td, .sampleTable th {
+    border: 1px solid rgb(146, 146, 146);
+    padding: 1px;
+    }   
+
+.sampleTable tr:nth-child(even){
+        background-color: #f2f2f2;
+    }
+
+.sampleTable tr:hover {
+        background-color: #ddd;
+        font-weight: bold;
+    }
+
+.sampleTable th {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+    position: sticky;
+    top: 0;
+  }
+
+  .myFocus{
+      color: black;
+      /* background-color: rgb(126, 126, 126); */
+      font-weight: bold;
+      border: 2px solid rgb(75, 75, 75);     
+  }
+  /* SVG PLOT STYLE */
+  
+
+  /* INTERFACE ELEMENTS */
+  /*CheckBox */ 
+  md-checkbox.md-checked.myCheckbox .md-icon {
+    background-color: rgb(24, 16, 97);
+   }
+   md-slider.md-checked.mySlider .md-icon {
+    background-color: rgb(24, 16, 97);
+   }
+   md-slider {
+       width: 30vw;
+       /* background-color: blue; */
+       border-color: crimson;
+   }
+   md-slider  .md-checked .md-focus-ring .md-track{
+       background-color: rgb(8, 29, 146);
+       border-color: rgb(8, 29, 146);
+       color: rgb(8, 29, 146);
+   }

@@ -21,12 +21,85 @@ certainly in use!
     min-height: 30px;
 }
 .md-dialog-content{
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 .md-tab-content{
     height: 100vh;
 }
 /* Buttons, Badges and other small elements */
+.md-card{
+    padding: 3px;
+}
+.md-card-title{
+    padding: 3px;
+}
+.groupContainer{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    /* padding: 5px 5px 5px 5px; */
+    /* border-radius: 10px; */
+    height: auto;
+    min-height: 45px;
+    /* margin: 5px 1% 5px 1%; */
+    position: relative;
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: inherit;
+    white-space: normal;
+    font-size: 13px;
+    font-weight: 500;
+    /* letter-spacing: 1px; */
+    line-height: normal;
+    outline: 0 none;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+}
+ .groupContainer:hover{
+    overflow: visible;
+    white-space: normal;
+    height: auto;
+}
+.groupPristine{
+    background-color: rgb(255, 255, 255);
+}
+.groupSelected{
+    background-color: rgb(151, 151, 151);
+}
+.mySampleBadge{
+    /* background-color: rgb(110, 110, 110); */
+    /* padding: 5px 5px 5px 5px; */
+    position: absolute;    
+    right: 10px;
+    border-radius: 20px;
+
+    margin: 5px 4px;
+    outline: 1 black;
+    display: inline-block;
+    text-justify: auto;
+    min-width: 40px;
+    min-height: 25px;
+    padding: 5px 5px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    /* line-height: 1; */
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    /* vertical-align: top; */
+    background-color: #777;
+    box-shadow: 1px 1px 2px rgba(58, 58, 58, 0.404);
+
+}
+.myPadding{
+    padding: 5px;
+}
+.alignRight{
+    align-self: flex-end;
+}
 .md-button.md-small{
     width: 10px;
     height: 20px;
@@ -92,6 +165,12 @@ input {
 .map{
     z-index: 1;
 }
+.myHeading{
+    font-size: 13pt;
+    margin: 10px;
+    /* padding-left: 10px; */
+    /* font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; */
+}
 
 .subheading{
     background-color: rgb(129, 129, 129);
@@ -122,7 +201,7 @@ input {
     padding-top: 1px;
     padding-bottom: 1px;
     text-align: left;
-    background-color: #4CAF50;
+    background-color: rgb(24, 16, 97);
     color: white;
     position: sticky;
     top: 0;

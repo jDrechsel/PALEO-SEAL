@@ -214,7 +214,15 @@ input {
       border: 2px solid rgb(75, 75, 75);     
   }
   /* SVG PLOT STYLE */
-  
+  .myContainer{
+      display: table;
+  }
+
+  .myContainerContent{
+      display: table-row;
+      height: auto;
+      width: 100vw;
+  }
 
   /* INTERFACE ELEMENTS */
   /*CheckBox */ 

@@ -6,7 +6,7 @@
     <!-- D3 (+ NVD3 or other possibilities to Implement custom plots)                   -->
     <meta name="viewport" charset="utf-8">
     <!-- TITLE & ICONS                                                                  -->
-    <title>PalSeaLevIn 2</title>
+    <title>PalSeaLevIn Beta</title>
     <link rel="icon" href="common/img/slccLogo.svg" type="image/ico">
 
     <!-- CSS Styles                                                                     -->

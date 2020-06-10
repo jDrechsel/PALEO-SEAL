@@ -1,0 +1,98 @@
+[
+   {
+      "Key": 1,
+      "fullName": "Barents, White and Kara Sea"
+   },
+   {
+      "Key": 2,
+      "fullName": "Fennoscandia including Baltic Sea and North Sea European countries (excluding British Isles)"
+   },
+   {
+      "Key": 3,
+      "fullName": "British Isles (UK and Ireland)"
+   },
+   {
+      "Key": 4,
+      "fullName": "Atlantic Europe"
+   },
+   {
+      "Key": 5,
+      "fullName": "Mediterranean, Black, and Caspian Sea"
+   },
+   {
+      "Key": 6,
+      "fullName": "West Africa"
+   },
+   {
+      "Key": 7,
+      "fullName": "Indian Ocean"
+   },
+   {
+      "Key": 8,
+      "fullName": "Southeast Asia"
+   },
+   {
+      "Key": 9,
+      "fullName": "China, Taiwan, Korea"
+   },
+   {
+      "Key": 10,
+      "fullName": "Arctic-Pacific Russia"
+   },
+   {
+      "Key": 11,
+      "fullName": "Japan"
+   },
+   {
+      "Key": 12,
+      "fullName": "Micronesia"
+   },
+   {
+      "Key": 13,
+      "fullName": "Melanesia"
+   },
+   {
+      "Key": 14,
+      "fullName": "Polynesia (excluding New Zealand)"
+   },
+   {
+      "Key": 15,
+      "fullName": "New Zealand"
+   },
+   {
+      "Key": 16,
+      "fullName": "Australia"
+   },
+   {
+      "Key": 17,
+      "fullName": "Pacific North America (and Bering Sea)"
+   },
+   {
+      "Key": 18,
+      "fullName": "Pacific South America"
+   },
+   {
+      "Key": 19,
+      "fullName": "Antarctica"
+   },
+   {
+      "Key": 20,
+      "fullName": "US Atlantic and Gulf of Mexico"
+   },
+   {
+      "Key": 21,
+      "fullName": "Central America-Caribbean-Bermuda"
+   },
+   {
+      "Key": 22,
+      "fullName": "Atlantic South America"
+   },
+   {
+      "Key": 23,
+      "fullName": "Arctic-Atlantic Canada"
+   },
+   {
+      "Key": 24,
+      "fullName": "Greenland and Iceland"
+   }
+]

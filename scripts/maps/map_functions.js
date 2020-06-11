@@ -69,6 +69,7 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
         console.log("markers: @in: ",markers);
         for (var i = 0; i < id.proben.length; i++) {
           // console.log("Map Marker label[i]: ", id.proben[i].label)
+          if (id.proben[i].lat != NaN && id.proben[i].lng != NaN){
             markers[id.proben[i].xUID] = {
             lat: id.proben[i].lat,
             lng: id.proben[i].lng,
@@ -82,6 +83,9 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
             // message: <h3>id.proben[i].label</h3> + "Age: " + id.proben[i].age + "; Elevation: " +id.proben[i].elevation + "; Indicator Type: " + id.proben[i].type + "; Ref: "+ id.proben[i].reference
             message: '<h4>'+ id.proben[i].label +'</h4>'+  id.proben[i].reference + '<p>' + id.proben[i].type_string  + '</p><p> Age:'  + id.proben[i].age + '- Elevation:'  +id.proben[i].elevation + '</p>' 
             };
+          } else {
+
+          }
             // geoJSON option:
             let markerGeoJSON = {
               "type": "Feature",

@@ -66,25 +66,11 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
 
         var markers = {};
         let markersGeoJSON=[];
-        let mapMarkersRejected={};
+        let mapMarkersRejected=[];
         console.log("markers: @in: ",markers);
         for (var i = 0; i < id.proben.length; i++) {
           // console.log("Map Marker label[i]: ", id.proben[i].label)
-          if (id.proben[i].lat != NaN && id.proben[i].lng != NaN){
-            markers[id.proben[i].xUID] = {
-            lat: id.proben[i].lat,
-            lng: id.proben[i].lng,
-            focus: true,
-            title: id.proben[i].label,
-            icon: local_icons.jd_icon_custom,
-            layer: "samples",
-            xUID: id.proben[i].xUID,
-            indicatorType: id.proben[i].type_string,
-            reference: id.proben[i].reference,
-            // message: <h3>id.proben[i].label</h3> + "Age: " + id.proben[i].age + "; Elevation: " +id.proben[i].elevation + "; Indicator Type: " + id.proben[i].type + "; Ref: "+ id.proben[i].reference
-            message: '<h4>'+ id.proben[i].label +'</h4>'+  id.proben[i].reference + '<p>' + id.proben[i].type_string  + '</p><p> Age:'  + id.proben[i].age + '- Elevation:'  +id.proben[i].elevation + '</p>' 
-            };
-          } else {
+          if (isNaN(id.proben[i].lat) || isNaN(id.proben[i].lng)){
             mapMarkersRejected.push(
               markers[id.proben[i].xUID] = {
                 lat: id.proben[i].lat,
@@ -93,8 +79,26 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
                 xUID: id.proben[i].xUID,
                 indicatorType: id.proben[i].type_string,
                 reference: id.proben[i].reference,
-              }
+              }  
             );
+          } else {
+            markers[id.proben[i].xUID] = {
+              lat: id.proben[i].lat,
+              lng: id.proben[i].lng,
+              focus: true,
+              title: id.proben[i].label,
+              icon: local_icons.jd_icon_custom,
+              layer: "samples",
+              xUID: id.proben[i].xUID,
+              indicatorType: id.proben[i].type_string,
+              reference: id.proben[i].reference,
+              // message: <h3>id.proben[i].label</h3> + "Age: " + id.proben[i].age + "; Elevation: " +id.proben[i].elevation + "; Indicator Type: " + id.proben[i].type + "; Ref: "+ id.proben[i].reference
+              message: '<h4>'+ id.proben[i].label +'</h4>'+  id.proben[i].reference + '<p>' + id.proben[i].type_string  + '</p><p> Age:'  + id.proben[i].age + '- Elevation:'  +id.proben[i].elevation + '</p>' 
+              };
+
+            ////////////////////////
+            
+          
           }
             // geoJSON option:
             let markerGeoJSON = {

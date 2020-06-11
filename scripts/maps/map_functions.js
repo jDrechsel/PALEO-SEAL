@@ -64,8 +64,9 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
       });
 
 
-        var markers = {};
+        let markers = {};
         let markersGeoJSON=[];
+        let mapMarkersAccepted=[];
         let mapMarkersRejected=[];
         console.log("markers: @in: ",markers);
         for (var i = 0; i < id.proben.length; i++) {
@@ -82,6 +83,16 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
               }  
             );
           } else {
+            mapMarkersAccepted.push(
+              markers[id.proben[i].xUID] = {
+                lat: id.proben[i].lat,
+                lng: id.proben[i].lng,
+                title: id.proben[i].label,
+                xUID: id.proben[i].xUID,
+                indicatorType: id.proben[i].type_string,
+                reference: id.proben[i].reference,
+              }  
+            );
             markers[id.proben[i].xUID] = {
               lat: id.proben[i].lat,
               lng: id.proben[i].lng,
@@ -118,11 +129,12 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
             markersGeoJSON.push(markerGeoJSON);
         }
         $scope.markers=markers;
-        $scope,markersGeoJSON=markersGeoJSON;
+        $scope.markersGeoJSON=markersGeoJSON;
 
         console.log('>>> [M] Map User Input');
 
         console.log("Geladene \"Marker\" => ", markers); // Die Marker sind ein Objekt mit Objekten!! Kein Array mit Objekten o.ä.
+        console.log("Accepted \"Marker\" => ", mapMarkersAccepted); // Die Marker sind ein Objekt mit Objekten!! Kein Array mit Objekten o.ä.
         console.log("Rejected \"Marker\" => ", mapMarkersRejected); // Die Marker sind ein Objekt mit Objekten!! Kein Array mit Objekten o.ä.
         console.log("Geladene \"MarkersJSON\" => ", markersGeoJSON); // Die Marker sind ein Objekt mit Objekten!! Kein Array mit Objekten o.ä.
         // console.log("Geladene \"MarkersCONV\" => ", markersCONV); // Die Marker sind ein Objekt mit Objekten!! Kein Array mit Objekten o.ä.

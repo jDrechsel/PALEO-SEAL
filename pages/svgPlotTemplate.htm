@@ -123,10 +123,7 @@ ng-mouse-wheel-up="ZoomSvgIn()"
             ng-class="{'plotMarkerSelected': punkt.export === true}"
             >
                 <g id="head">
-                    <circle ng-click="punkt.export = !punkt.export "
-                        ng-attr-cx="{{punkt.age * svgScaleX}}" 
-                        ng-attr-cy="{{punkt.elevation * svgScaleY}}" 
-                        ng-attr-r="3" />
+                   
                     <line id="horizontal" class="MarkerCross" ng-class="{'plotMarkerRejected': punkt.rejected === true}"
                     ng-attr-x1="{{ ((punkt.age - punkt.ageError ) * svgScaleX) + svgShiftX}}" 
                     ng-attr-y1="{{(punkt.elevation * svgScaleY) - svgShiftY}}" 

@@ -73,7 +73,7 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
           // console.log("Map Marker label[i]: ", id.proben[i].label)
           if (isNaN(id.proben[i].lat) || isNaN(id.proben[i].lng)){
             mapMarkersRejected.push(
-              markers[id.proben[i].xUID] = {
+             {
                 lat: id.proben[i].lat,
                 lng: id.proben[i].lng,
                 title: id.proben[i].label,
@@ -84,7 +84,7 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
             );
           } else {
             mapMarkersAccepted.push(
-              markers[id.proben[i].xUID] = {
+             {
                 lat: id.proben[i].lat,
                 lng: id.proben[i].lng,
                 title: id.proben[i].label,
@@ -130,6 +130,8 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
         }
         $scope.markers=markers;
         $scope.markersGeoJSON=markersGeoJSON;
+        $scope.mapMarkersAccepted=mapMarkersAccepted;
+        $scope.mapMarkersRejected=mapMarkersRejected;
 
         console.log('>>> [M] Map User Input');
 

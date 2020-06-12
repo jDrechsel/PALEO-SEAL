@@ -117,7 +117,7 @@ ng-mouse-wheel-up="ZoomSvgIn()"
         <g id="indicator" >
 
             <g class="markerCross" 
-            ng-repeat="punkt in werteALL | filter: {plot: true, type_string: 'Indicator'}"
+            ng-repeat="punkt in werteALL | filter: {plot: true, rejected: false, type_string: 'Indicator'}"
             ng-click="punkt.export = !punkt.export ; scrollToSample(this.punkt.xUID) "
             ng-mouseover="scrollToSample(this.punkt.xUID)"
             ng-class="{'plotMarkerSelected': punkt.export === true}"
@@ -147,7 +147,7 @@ ng-mouse-wheel-up="ZoomSvgIn()"
         </g>
         <g id="marine" >
             <g class="markerCross" 
-            ng-repeat="punkt in werteALL | filter: {plot: true, type_string: 'Marine limiting'}"
+            ng-repeat="punkt in werteALL | filter: {plot: true, rejected: false, type_string: 'Marine limiting'}"
             ng-click="punkt.export = !punkt.export ; scrollToSample(this.punkt.xUID) "
             ng-mouseover="scrollToSample(this.punkt.xUID)"
             ng-class="{'plotMarkerSelected': punkt.export === true}"
@@ -176,7 +176,7 @@ ng-mouse-wheel-up="ZoomSvgIn()"
         </g>
         <g id="terrestrial" >
             <g class="markerCross" 
-            ng-repeat="punkt in werteALL | filter: {plot: true, type_string: 'Terrestrial limiting'}"
+            ng-repeat="punkt in werteALL | filter: {plot: true, rejected: false, type_string: 'Terrestrial limiting'}"
             ng-click="punkt.export = !punkt.export ; scrollToSample(this.punkt.xUID) "
             ng-mouseover="scrollToSample(this.punkt.xUID)"
             ng-class="{'plotMarkerSelected': punkt.export === true}"

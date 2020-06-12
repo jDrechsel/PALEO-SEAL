@@ -5,9 +5,9 @@ expandControllerPLOTsvgOPT = function( $scope, $parse){
 
     // SVG Dimensions ("canvas Size, margins, etc")
     $scope.svgBox_X = 0;
-    $scope.svgBox_Y = -260;
+    $scope.svgBox_Y = -280;
     $scope.svgBox_dX = 600;
-    $scope.svgBox_dY = 300;
+    $scope.svgBox_dY = 260;
     
     // margins
     $scope.marginAxisY = 30;

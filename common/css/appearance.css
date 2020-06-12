@@ -265,7 +265,7 @@ input {
        /* background-color: blue; */
        border-color: crimson;
        /* padding: 0px; */
-       height: 15px;
+       /* height: 5%; */
    }
    md-slider  .md-checked .md-focus-ring .md-track{
        background-color: rgb(8, 29, 146);

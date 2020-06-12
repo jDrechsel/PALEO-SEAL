@@ -219,6 +219,7 @@ input {
     color: white;
     position: sticky;
     top: 0;
+    z-index: 1000;
   }
 
   .myFocus{
@@ -257,6 +258,9 @@ input {
   md-checkbox.md-checked.myCheckbox .md-icon {
     background-color: rgb(24, 16, 97);
    }
+  md-checkbox.md-checked.myCheckboxHead .md-icon {
+    background-color: rgb(72, 58, 197);
+    left: 15px;   }
    md-slider.md-checked.mySlider .md-icon {
     background-color: rgb(24, 16, 97);
    }

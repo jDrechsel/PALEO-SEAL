@@ -158,6 +158,12 @@ svg {
     /* padding-bottom: 50%; */
     /* overflow: hidden; */
 }
+.plotControls{
+    background-color: rgb(167, 167, 167);
+    padding: 0px 20px;
+    border-style: outset;
+
+}
 html, body, #test1 {
     margin: 0px;
     padding: 0px;
@@ -260,7 +266,7 @@ input {
    }
   md-checkbox.md-checked.myCheckboxHead .md-icon {
     background-color: rgb(72, 58, 197);
-    left: 15px;   }
+  }
    md-slider.md-checked.mySlider .md-icon {
     background-color: rgb(24, 16, 97);
    }

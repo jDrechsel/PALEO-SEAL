@@ -45,7 +45,13 @@ $headers=mysqli_query($con, $headersSQL);
 $d=mysqli_query($con,$sql)
     or die("Error: ".mysqli_error($con));
 
-$ProbenKurz=mysqli_fetch_all($d);
+
+    $ProbenKurz=[];
+    while ($row = $d->fetch_assoc()) {
+        $ProbenKurz[] = $row;
+    }
+
+// $ProbenKurz=mysqli_fetch_all($d);
 
 // print json_encode($ProbenKurz);
 $retreived= json_encode($ProbenKurz);

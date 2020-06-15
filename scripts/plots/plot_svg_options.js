@@ -28,16 +28,22 @@ expandControllerPLOTsvgOPT = function( $scope, $parse){
     $scope.staticScaleX = 0.05;
     $scope.staticScaleY = 2;
 
-    // dynamic svg parameters
-    $scope.svgScaleX = 0.05;
-    $scope.svgScaleY = 2;
+    $scope.svgZoomX=1
+    $scope.svgZoomY=1;
+    $scope.svgScaleX = $scope.svgZoomX*$scope.staticScaleX;
+    $scope.svgScaleY = $scope.svgZoomY*$scope.staticScaleY;
     
     $scope.svgShiftX = 0;
     $scope.svgShiftY = 0;
-
-    // doenat update?!? (isnt changed on dom fncts)
-    $scope.svgZoomX=$scope.svgScaleX/$scope.staticScaleX;
-    $scope.svgZoomY=$scope.svgScaleY/$scope.staticScaleY;
+    
+    // // doenat update?!? (isnt changed on dom fncts)
+    // // dynamic svg parameters
+    // $scope.svgScaleX = 0.05;
+    // $scope.svgScaleY = 2;
+    
+    
+    // $scope.svgZoomX=$scope.svgScaleX/$scope.staticScaleX;
+    // $scope.svgZoomY=$scope.svgScaleY/$scope.staticScaleY;
 
     // Plot Dimensions 
     $scope.xScaleMin = 0;
@@ -53,5 +59,14 @@ expandControllerPLOTsvgOPT = function( $scope, $parse){
     $scope.showRejected = false;
     $scope.linkTable = true;
     $scope.showPlotControl = false;
+
+
+
+
+    // Calculations 
+    // INCLUDE ZOOM PAN in Plain XY values (x1 x2 y1 y2 if relevant)
+    // "Canvas"
+
+    // Markers (distinguish case?!)
 
 }; //endof Expander

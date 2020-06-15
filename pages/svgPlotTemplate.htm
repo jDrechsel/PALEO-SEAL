@@ -17,7 +17,7 @@
 
 
 <svg width="100%" height="55vh" id="timeSeries"
-ng-attr-view_box="{{viewBoxString}}" preserveAspectRatio="xMinYMin meet"
+ng-attr-view_box="{{viewBoxString}}" preserveAspectRatio="xMidYMax meet"
 ng-mousemove="plotPosition($event)" ng-mousedown="plotAction($event)" ng-mouseup="plotMouseUp($event)"  
 ng-mouse-wheel-down="ZoomSvgOut()" 
 ng-mouse-wheel-up="ZoomSvgIn()"
@@ -112,6 +112,13 @@ ng-mouse-wheel-up="ZoomSvgIn()"
                 ng-attr-y2="{{(tick.tickPos*svgScaleY)-svgShiftY}}" /> 
             </g>
 
+        </g>
+        <g id="plotDebug"> 
+            <!-- Test Various Pan & Zoom Parameters -->
+            <!-- middle of ranges -->
+            <circle ng-attr-cx ="{{(svgBox_dX/2 * svgZoomX) + svgShiftX}}" 
+            ng-attr-cy ="{{(-svgBox_dY/2 * svgZoomY) - svgShiftY}}"
+            ng-attr-r="{{3*svgZoomX}}"></circle>
         </g>
     </g>
     <!-- 

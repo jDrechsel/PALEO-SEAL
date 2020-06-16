@@ -38,7 +38,12 @@ $etwas2=createInString($etwas);
 $sql="SELECT * FROM holsea_dataworkbook_40 WHERE A_00 IN $etwas2";
 $headersSQL="SHOW COLUMNS FROM data_entries_newdata";
 $headersQuery=mysqli_query($con, $headersSQL);
-$headersResults = $headersQuery -> fetch_all();
+// $headersResults = $headersQuery -> fetch_all();
+$headersResults = array();
+while ($row = $headersQuery->fetch_assoc()){
+    // var_dump($row["Field"]);
+    $headersResults[] = $row["Field"];
+};
 
 function getHeaderStrings($var){
     // var_dump($var[0]);
@@ -75,9 +80,8 @@ $handle = fopen($filename, 'w+');
 // $handle = fopen('php://output', 'w+');
 // fputcsv($handle, $headers);
 // echo $headers;
-fputcsv($handle, $headers);
-// echo $headers;
-// var_dump($headers);
+fputcsv($handle, $headersResults);
+
 foreach ($ProbenKurz as $line){
     // var_dump($line);
     fputcsv($handle, $line);

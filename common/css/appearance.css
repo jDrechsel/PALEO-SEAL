@@ -4,6 +4,17 @@ certainly in use!
 .infoPage{
     min-height: 60px;
 }
+.introText{
+    padding: 0px 3vw;
+
+}
+.contentText{
+    padding: 0px 10vw;
+}
+.introDivider{
+    background-color: lightgray;
+    min-height: 10vh;
+}
 /* Bigger elements (Divs Navs Sidebar etc) */
 .navbar {
     position: relative;

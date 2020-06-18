@@ -29,7 +29,7 @@ function getHeaderStrings($n){
     if (array_key_exists('Unit_head',$n)){
         $stringB = ' '.$n['Unit_head'];
     } else {
-        $stringB = ' ';
+        $stringB = '';
     }
     echo $stringA.$stringB.',';
 };

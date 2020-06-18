@@ -27,7 +27,7 @@ $headerArray=json_decode($headerLookup, true);
 function getHeaderStrings($n){
     $stringA = $n['Name_head'];
     if (array_key_exists('Unit_head',$n)){
-        $stringB = ' '.$n['Unit_head'];
+        $stringB = " ".$n['Unit_head'];
     } else {
         $stringB = '';
     }

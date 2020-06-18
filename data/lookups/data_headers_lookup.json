@@ -2,7 +2,7 @@
    {
       "ID_head": "A_00",
       "Name_head": "xUID",
-      "Unit_head": "PRIMARY KEY"
+      "Unit_head": "(PRIMARY KEY)"
    },
    {
       "ID_head": "A_01",

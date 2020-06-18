@@ -23,7 +23,7 @@
             <div class="plotControls" layout="row"  ng-show="showPlotControl">
                 <md-slider-container>
                     ZoomX
-                    <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgZoomX" min="0.2" max="4" step="0.1">
+                    <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgScaleX" min="0.05" max="0.2" step="0.001">
                     </md-slider>
                     
                 </md-slider-container>
@@ -36,7 +36,7 @@
             <div class="plotControls" layout="row" layout-wrap flex ng-show="showPlotControl"> 
                 <md-slider-container>
                     ScrollX
-                    <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgShiftX" ng-attr-min="-1000" ng-attr-max="1000" >
+                    <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgShiftX" ng-attr-min="-1000" ng-attr-max="0" md-invert="true">
                         PanX
                     </md-slider>
                 </md-slider-container>
@@ -49,7 +49,7 @@
 
         <div class="plotContainer">
 
-            <jd-directive-svg daten="werteALL" plotfilter="export"></jd-directive-svg>   
+            <jd-directive-svg template="default" daten="werteALL" ></jd-directive-svg>   
         </div>
     </div>
 

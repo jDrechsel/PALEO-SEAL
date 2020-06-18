@@ -1,10 +1,11 @@
 <?php 
 require 'connect.php' ; // load $con
 
+// convert export list to php array
 $exportList=json_decode($_POST['data']);
 
+// convert php array to string for SQL
 function createInString($listEntry){
-    $tmp=array();
 
     return '(\'' .implode('\',\'', $listEntry ) . '\')';
 };
@@ -19,8 +20,23 @@ while ($row = $headersQuery->fetch_assoc()){
     $headersResults[] = $row["Field"];
 };
 
+//get strings (Name_header, Unit_header)
+$headerLookup=file_get_contents('../../data/lookups/data_headers_lookup.json');
+$headerArray=json_decode($headerLookup, true);
+
+function getHeaderStrings($n){
+    $stringA = $n['Name_head'];
+    if (array_key_exists('Unit_head',$n)){
+        $stringB = $n['Unit_head'];
+    } else {
+        $stringB = '';
+    }
+    echo $stringA." ".$stringB.',';
+};
+$retreivedStrings=array_map('getHeaderStrings', $headerArray);
 
 
+// Get all fields of selected entries
 $d=mysqli_query($con,$sql)
     or die("Error: ".mysqli_error($con));
 
@@ -34,7 +50,6 @@ $d=mysqli_query($con,$sql)
 
 $retreived= json_encode($ProbenKurz);
 
-$first=true;
 
 if (empty($retreived)) { 
     die("The JSON string is empty!");
@@ -44,7 +59,7 @@ $filename = "exportfile" .date("Y-m-d_H_i_s") . ".csv";
 
 $handle = fopen($filename, 'w+');
 
-fputcsv($handle, $headersResults);
+// fputcsv($handle, $headersResults);
 
 foreach ($ProbenKurz as $line){
     fputcsv($handle, $line);

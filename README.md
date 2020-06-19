@@ -15,9 +15,11 @@ The Data Explorer Interface allows selecting single data points from the Age/RSL
 ## Acknowledgments
 PALEO-SEAL was developed as part of the project SEASCHANGE (*Holocene sea level changes in SE Asia*), funded by the German Science Foundation as part of the Special Priority Program (SPP)-1889 “Regional Sea Level Change and Society” (RO-5245/1-1). The interface builds on the data structure compiled by the HOLSEA project, funded by INQUA, the International Union for Quaternary Research.
 
+PALEO-SEAL was coded by Jan Drechsel (IT consultant), under scientific supervision of Dr. Alessio Rovere (MARUM, University of Bremen). If you use the data in PALEO-SEAL, please remember to cite the original authors, and give credit to HOLSEA by citing Khan et al., 2019. Acknowledgments and citations of this code are always welcome, as are suggestions for improvement.
+
 ### References
-<a name="Khan2019"><sup>1</sup></a>Khan, N.S., Horton, B.P., Engelhart, S., Rovere, A., Vacchi, M., Ashe, E.L., Törnqvist, T.E., Dutton, A., Hijma, M.P. and Shennan, I., 2019. Inception of a global atlas of sea levels since the Last Glacial Maximum. Quaternary Science Reviews, 220, pp.359-371.
-<a name="Mann2019"><sup>2</sup></a>Mann, T., Bender, M., Lorscheid, T., Stocchi, P., Vacchi, M., Switzer, A.D. and Rovere, A., 2019. Holocene sea levels in southeast Asia, Maldives, India and Sri Lanka: the SEAMIS database. Quaternary Science Reviews, 219, pp.112-125. 
+<a name="Khan2019"><sup>1</sup></a> Khan, N.S., Horton, B.P., Engelhart, S., Rovere, A., Vacchi, M., Ashe, E.L., Törnqvist, T.E., Dutton, A., Hijma, M.P. and Shennan, I., 2019. Inception of a global atlas of sea levels since the Last Glacial Maximum. Quaternary Science Reviews, 220, pp.359-371.
+<a name="Mann2019"><sup>2</sup></a> Mann, T., Bender, M., Lorscheid, T., Stocchi, P., Vacchi, M., Switzer, A.D. and Rovere, A., 2019. Holocene sea levels in southeast Asia, Maldives, India and Sri Lanka: the SEAMIS database. Quaternary Science Reviews, 219, pp.112-125. 
 
 --------------------------JAN TEXT---------------------------
 Private Work Repository for Paleo Sea Level Database Interface

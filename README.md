@@ -4,7 +4,7 @@
 ## What is PALEO-SEAL?
 PALEO-SEAL is an interface for the visualization and download of Holocene sea-level index points. The data displayed in the interface are hosted in a MySQL database. The sea-level data structure is standardized following the template of the HOLSEA project (www.holsea.org), and is described by Khan et al., 2019<sup>[1](#Khan2019)</sup>.
 
-## What data can I find in PALEO-SEAL?
+## Which data can I find in PALEO-SEAL?
 PALEO-SEAL was initially developed to support a project based in South East Asia (see "About" section). As such, the initial dataset is limited to the one published in Mann et al., 2019<sup>[2](#Mann2019)</sup>, that includes sea-level datapoints from Southeast Asia, Maldives, India and Sri Lanka. This database was successively updated and is kept current at this link: https://doi.org/10.17632/wp4ctb4667.1. As we move forward, we will keep incorporating data from other papers compiled following the standard HOLSEA template.
 
 ## How do I use PALEO-SEAL?

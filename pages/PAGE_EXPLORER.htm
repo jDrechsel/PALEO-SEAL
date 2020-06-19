@@ -69,49 +69,44 @@
                         <th ng-click="sortType = 'A_01'; sortReverse = !sortReverse">
                             SampleID
                             <span ng-if="sortReverse == true && sortType == 'A_01'" class="fa fa-caret-down"> 
-                              <md-icon md-svg-src="img/expand_more.svg"></md-icon>
+                              <md-icon md-svg-src="common/img/expand_more.svg"></md-icon>
                             </span>
                             <span ng-if="sortReverse == false  && sortType == 'A_01'" class="fa fa-caret-down"> 
-                              <md-icon md-svg-src="img/expand_less.svg"></md-icon>
+                              <md-icon md-svg-src="common/img/expand_less.svg"></md-icon>
                             </span>
                         </th>
                         <th ng-click="sortType = 'C0_02'; sortReverse = !sortReverse">
                             Reference
                             <span ng-if="sortReverse == true && sortType == 'C0_02'" class="fa fa-caret-down"> 
-                                <md-icon md-svg-src="img/expand_more.svg"></md-icon>
+                                <md-icon md-svg-src="common/img/expand_more.svg"></md-icon>
                             </span>
                             <span ng-if="sortReverse == false && sortType == 'C0_02'" class="fa fa-caret-down"> 
-                              <md-icon md-svg-src="img/expand_less.svg"></md-icon>
+                              <md-icon md-svg-src="common/img/expand_less.svg"></md-icon>
                             </span>
                         </th>
-                        <th>Age-</th>
                         <th ng-click="sortType = 'D7_01'; sortReverse = !sortReverse">
-                            Age
+                            Age [a]
                             <span ng-if="sortReverse == true && sortType == 'D7_01'" class="fa fa-caret-down"> 
-                                <md-icon md-svg-src="img/expand_more.svg"></md-icon>
+                                <md-icon md-svg-src="common/img/expand_more.svg"></md-icon>
                             </span>
                             <span ng-if="sortReverse == false && sortType == 'D7_01'" class="fa fa-caret-down"> 
+                                <md-icon md-svg-src="common/img/expand_less.svg"></md-icon>
+                            </span>
+                        </th>
+                        <th ng-click="sortType = 'D3_11'; sortReverse = !sortReverse">
+                            Paleo RSL/Elevation [m]
+                            <span ng-if="sortReverse == true && sortType == 'elevation'" class="fa fa-caret-down"> 
+                                <md-icon md-svg-src="img/expand_more.svg"></md-icon>
+                            </span>
+                            <span ng-if="sortReverse == false && sortType == 'elevation'" class="fa fa-caret-down"> 
                                 <md-icon md-svg-src="img/expand_less.svg"></md-icon>
                             </span>
                         </th>
+                        <th>Indicator Type</th>
                         <th>
-                            Age+
+                            Primary Indicator
                         </th>
-                        <th>
-                            Elev-
-                        </th>
-                        <th ng-click="sortType = 'D3_11'; sortReverse = !sortReverse">
-                                elev
-                                <span ng-if="sortReverse == true && sortType == 'D3_11'" class="fa fa-caret-down"> 
-                                    <md-icon md-svg-src="img/expand_more.svg"></md-icon>
-                                </span>
-                                <span ng-if="sortReverse == false && sortType == 'D3_11'" class="fa fa-caret-down"> 
-                                    <md-icon md-svg-src="img/expand_less.svg"></md-icon>
-                                </span>
-                        </th>
-                        <th>
-                            Elev+
-                        </th>
+                        
                     </tr>
                 </thead>
                 <tr ng-attr-id="{{selected.xUID}}" 
@@ -126,12 +121,11 @@
                     </td>
                     <td > {{selected.label}} </td>
                     <td> {{selected.reference}} </td>
-                    <td> {{selected.age-selected.ageError}}</td>
-                    <td> {{selected.age}} </td>
-                    <td> {{selected.ageErrorPlus}} </td>
-                    <td> {{selected.sElevationErrorMinus}} </td>
-                    <td> {{selected.elevation}} </td>
-                    <td> {{selected.sElevationErrorPlus}} </td>
+                    <td style="text-align: right; padding-right:4px"> {{selected.age}} </td>
+                    <td style="text-align: right;padding-right: 10px;"> {{selected.elevation | number: 1}} </td>
+                    <td> {{selected.type_string}}</td>
+                    <td> {{selected.feature}} </td>
+                    
                 </tr>
             </table>
         </div>

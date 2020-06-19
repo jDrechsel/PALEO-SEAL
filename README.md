@@ -19,9 +19,11 @@ PALEO-SEAL was coded by Jan Drechsel (IT consultant), under scientific supervisi
 
 ### References
 <a name="Khan2019"><sup>1</sup></a> Khan, N.S., Horton, B.P., Engelhart, S., Rovere, A., Vacchi, M., Ashe, E.L., Törnqvist, T.E., Dutton, A., Hijma, M.P. and Shennan, I., 2019. Inception of a global atlas of sea levels since the Last Glacial Maximum. Quaternary Science Reviews, 220, pp.359-371.
+
 <a name="Mann2019"><sup>2</sup></a> Mann, T., Bender, M., Lorscheid, T., Stocchi, P., Vacchi, M., Switzer, A.D. and Rovere, A., 2019. Holocene sea levels in southeast Asia, Maldives, India and Sri Lanka: the SEAMIS database. Quaternary Science Reviews, 219, pp.112-125. 
 
 --------------------------JAN TEXT---------------------------
+
 Private Work Repository for Paleo Sea Level Database Interface
 
 Version 0.1.1 [PreRelease]

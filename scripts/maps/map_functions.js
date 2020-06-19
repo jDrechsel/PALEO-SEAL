@@ -104,7 +104,7 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
               indicatorType: id.proben[i].type_string,
               reference: id.proben[i].reference,
               // message: <h3>id.proben[i].label</h3> + "Age: " + id.proben[i].age + "; Elevation: " +id.proben[i].elevation + "; Indicator Type: " + id.proben[i].type + "; Ref: "+ id.proben[i].reference
-              message: '<h4>'+ id.proben[i].label +'</h4>'+  id.proben[i].reference + '<p>' + id.proben[i].type_string  + '</p><p> Age:'  + id.proben[i].age + '- Elevation:'  +id.proben[i].elevation + '</p>' 
+              message: '<h4>'+ id.proben[i].label +'</h4>'+  id.proben[i].reference + '<p>' + id.proben[i].type_string + '</p><p>' +  id.proben[i].feature + '</p><p> Age:'  + id.proben[i].age + ' a </p><p> PaleoRSL/Elevation:'  +id.proben[i].elevation + ' m</p>' 
               };
 
             ////////////////////////

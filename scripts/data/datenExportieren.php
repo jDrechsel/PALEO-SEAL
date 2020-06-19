@@ -34,7 +34,7 @@ function getHeaderStrings($n){
     echo $stringA.$stringB.',';
 };
 $retreivedStrings=array_map('getHeaderStrings', $headerArray);
-
+echo "\n";
 
 // Get all fields of selected entries
 $d=mysqli_query($con,$sql)

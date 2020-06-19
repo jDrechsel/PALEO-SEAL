@@ -128,7 +128,16 @@ expandControllerDATA = function($scope, $mdSidenav, $q){
             };
 
             return Bezeichnung;
-        } else if($scope.sortierung2==='None'){
+        } else if(category==='primaryType'){
+            for ( var i = 0 ; i < $scope.dictPRIMARY.length ; i++ ) {
+                // console.log($scope.dictPRIMARY[i].fullName);
+                if ($scope.dictPRIMARY[i].Key == postKey){
+                    var Bezeichnung=$scope.dictPRIMARY[i].fullName;
+                }
+            };
+
+            return Bezeichnung;
+        }else if($scope.sortierung2==='None'){
             // show "All samples" when grouped by "none"
             Bezeichnung="All samples";
             return Bezeichnung;

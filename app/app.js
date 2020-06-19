@@ -15,6 +15,6 @@ var myApp = angular.module('myApp', ["ngRoute","ngMaterial", "leaflet-directive"
 	        templateUrl : "pages/PAGE_MAP.htm"
 	    })
 	    .when("/PAGEabout", {
-	        templateUrl : "pages/PAGE_about.htm"
+	        templateUrl : "pages/PAGE_ABOUT.htm"
 	    });
     });

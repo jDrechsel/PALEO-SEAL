@@ -6,8 +6,8 @@
     <!-- D3 (+ NVD3 or other possibilities to Implement custom plots)                   -->
     <meta name="viewport" charset="utf-8">
     <!-- TITLE & ICONS                                                                  -->
-    <title>PalSeaLevIn Beta</title>
-    <link rel="icon" href="common/img/slccLogo.svg" type="image/ico">
+    <title>PALEO SEAL Beta</title>
+    <link rel="icon" href="common/img/Logo.svg" type="image/ico">
 
     <!-- CSS Styles                                                                     -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.21/angular-material.css" integrity="sha256-xAan9ZNylg0LT1xAHn8Qkpr8b+VSo3PmPEPjhn9ecak=" crossorigin="anonymous" />    

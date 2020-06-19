@@ -8,8 +8,7 @@
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="#">
-                            <span><img src="common/img/slccLogo.svg" width="30" height="30" class="d-inline-block align-top" alt=""  color="#616161"></span>
-                            PAL SEA LEV IN
+                            <img src="common/img/Logo.svg" height="40vh"  alt="PALEO SEAL"  color="#616161">
                         </a>
                     </div>
                     <ul class="nav navbar-nav">

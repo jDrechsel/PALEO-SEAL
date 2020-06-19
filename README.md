@@ -13,7 +13,7 @@ Both Map and Data Explorer allow filtering which data to visualize by Region-Sub
 The Data Explorer Interface allows selecting single data points from the Age/RSL plot.
 
 ## Acknowledgments
-PALEO-SEAL was developed as part of the project SEASCHANGE- Holocene sea level changes in SE Asia, funded by the German Science Foundation as part of the Special Priority Program (SPP)-1889 “Regional Sea Level Change and Society” (RO-5245/1-1).
+PALEO-SEAL was developed as part of the project SEASCHANGE (*Holocene sea level changes in SE Asia*), funded by the German Science Foundation as part of the Special Priority Program (SPP)-1889 “Regional Sea Level Change and Society” (RO-5245/1-1). The interface builds on the data structure compiled by the HOLSEA project, funded by INQUA, the International Union for Quaternary Research.
 
 ### References
 <a name="Khan2019"><sup>1</sup></a>Khan, N.S., Horton, B.P., Engelhart, S., Rovere, A., Vacchi, M., Ashe, E.L., Törnqvist, T.E., Dutton, A., Hijma, M.P. and Shennan, I., 2019. Inception of a global atlas of sea levels since the Last Glacial Maximum. Quaternary Science Reviews, 220, pp.359-371.

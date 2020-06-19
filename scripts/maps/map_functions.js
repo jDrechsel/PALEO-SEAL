@@ -163,6 +163,7 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
           }
         };
         // $scope.processMapInfo();
+        $scope.select(id);
         console.log("MAP: processed samples", samples);
 
       };// endof showMap()

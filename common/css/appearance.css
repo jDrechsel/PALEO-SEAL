@@ -4,17 +4,15 @@ certainly in use!
 .infoPage{
     min-height: 60px;
 }
-.introText{
-    padding: 0px 3vw;
+.pageLogo{
+    
+    position: absolute;
+    right: 13vw;
+    height: inherit;
+    padding-top: 3px; 
+    padding-left: 3px;
+}
 
-}
-.contentText{
-    padding: 0px 10vw;
-}
-.introDivider{
-    background-color: lightgray;
-    min-height: 10vh;
-}
 /* Bigger elements (Divs Navs Sidebar etc) */
 .navbar {
     position: relative;
@@ -251,25 +249,53 @@ input {
       table-layout: fixed;
       height: 80vh;
       max-height: 90vh;
+      align-content: flex-end;
   }
 
-  .myContainerContent{
-      display: table-row;
-      /* height: auto; */
-      width: 100%;
-      
-  }
-    .textCenter{
-        text-align: center;
+    .myContainerContent{
+        display: table-row;
+        /* height: auto; */
+        width: 100%;
+        
     }
-  .myContainerContentResponsive{
-      display: block;
-      width: 100%;
-      height: 100%;
-      overflow-y: scroll;
+    .myContainerContentResponsive{
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
 
-  }
+    }
+    .introDivider h2, h3{
+        /* box-shadow: rgb(0, 0, 0); */
+        position: absolute;
+        /* vertical-align: bottom; */
 
+    }
+    .textCenter{
+        /* text-align: center; */
+        padding-left: 15vw;
+        padding-top: inherit;
+        vertical-align: bottom;
+        
+        position: relative;
+
+
+    }
+  
+    .introText{
+        padding: 0px 3vw;
+
+    }
+    .contentText{
+        padding: 0px 20vw;
+    }
+    .introDivider{
+        background-color: lightgray;
+        min-height: 10vh;
+        display: table-row;
+        vertical-align: bottom;
+        align-content: center;
+    }
   /* INTERFACE ELEMENTS */
   /*CheckBox */ 
   md-checkbox.md-checked.myCheckbox .md-icon {

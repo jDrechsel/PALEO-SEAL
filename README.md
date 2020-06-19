@@ -1,5 +1,5 @@
 # PALEO-SEAL
-<img src="common/img/Logo.png" width="48">
+<img src="common/img/Logo.png" width="100">
 PALEO-SEAL is an interface for the visualization and download of Holocene sea-level index points. The data displayed in the interface are hosted in a MySQL database. The sea-level data structure is standardized following the template of the HOLSEA project (www.holsea.org), and is described by Khan et al., 2017, Quaternary Science Reviews<sup>[1](#Khan2017)</sup>.
 
 

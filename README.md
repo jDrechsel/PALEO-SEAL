@@ -8,14 +8,9 @@ PALEO-SEAL is an interface for the visualization and download of Holocene sea-le
 PALEO-SEAL was initially developed to support a project based in South East Asia (see "About" section). As such, the initial dataset is limited to the one published in Mann et al., 2019<sup>[2](#Mann2019)</sup>, that includes sea-level datapoints from Southeast Asia, Maldives, India and Sri Lanka. This database was successively updated and is kept current at this link: https://doi.org/10.17632/wp4ctb4667.1. As we move forward, we will keep incorporating data from other papers compiled following the standard HOLSEA template.
 
 ## How do I use PALEO-SEAL?
-PALEO-SEAL is hosted at this <a href="https://warmcoasts.eu/SeaLevelInterfaceBeta/#!/">link link</a>. The data can be accessed either via a Map or via a Data Explorer interface, plotting 
-
-
-
-
-
-
-
+PALEO-SEAL is hosted at this <a href="https://warmcoasts.eu/SeaLevelInterfaceBeta/#!/">link link</a>. The data can be accessed either via a Map or via a Data Explorer interface. 
+Both Map and Data Explorer allow filtering which data to visualize by Region-Sub Region-Reference-Publication Year-Dating Method. An option to visualize all samples is also given. Once selected, the data can be visualized in the map or in an Age/RSL plot, and added to the export list. All samples added to the export list can be then downloaded as CSV files.
+The Data Explorer Interface allows selecting single data points from the Age/RSL plot.
 
 ## References
 <a name="Khan2019"><sup>1</sup></a>Khan, N.S., Horton, B.P., Engelhart, S., Rovere, A., Vacchi, M., Ashe, E.L., Törnqvist, T.E., Dutton, A., Hijma, M.P. and Shennan, I., 2019. Inception of a global atlas of sea levels since the Last Glacial Maximum. Quaternary Science Reviews, 220, pp.359-371.

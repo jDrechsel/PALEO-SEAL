@@ -26,7 +26,7 @@
                 <form name="eineForm">
                     <md-input-container style="padding: 0px; margin: 0px;">
                         <label>Filter by Publication</label>
-                        <input ng-model="auswahl.suche.A_02">
+                        <input ng-model="auswahl.suche.reference">
                     </md-input-container>
                 </form>
             </div>
@@ -34,7 +34,8 @@
     </md-card>
     <div style="overflow-y: scroll; height: 69vh;">
 
-    <div ng-repeat="group in groups | orderBy: 'label'" >
+    <!-- <div ng-repeat="group in groups  | filter: auswahl.suche.reference | orderBy: 'label'" > -->
+    <div ng-repeat="group in groups  | filter: auswahl.suche.reference " >
         <md-card>
             <md-card-title>
                 

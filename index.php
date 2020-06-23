@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <?php require 'common/head.php'; 
-    ?>
+    <?php require 'common/head.php'?>
     <body ng-app="myApp" ng-controller="myController">
         <!-- NAVBAR --------------------------------------------------------------------->
             <nav class="navbar navbar-default">
@@ -15,13 +14,10 @@
                         <li><a href="#!">Intro</a></li>
                         <li><a href="#!ChartVIEW">Data Explorer</a></li>
                         <li><a href="#!Map">Map</a></li>
-                        <!-- <li><a href="#!AddSample">Add Sample</a></li> -->
-                        <!-- <li><a href="#!Login">Login</a></li> -->
                         <li><a href="#!PAGEabout">about</a></li>
-                        <!-- <li>{{message}}</li> -->
                     </ul>
                     <div style="float: right;">
-                        {{werteENDEXP}}
+                        <!-- {{werteENDEXP}} -->
                         <md-button class="md-raised " ng-click="dialogExport()" style="float: right;">
                             Export
                         </md-button>

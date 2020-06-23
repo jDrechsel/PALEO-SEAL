@@ -1,84 +1,42 @@
 <md-dialog style="max-height: 90vh; min-width: 60vw; min-height: 80vh; z-index: 5;">
     <md-toolbar>
         
-        <h3>Export</h3>
-            <span flex>
-        </span>
+        <!-- <h3>Export {{werteALL | filter: {'export': 'true'} }}</h3> -->
+        <h3 style="padding-left: 16px;">Export </h3>
+            <!-- <span flex>
+        </span> -->
             
     </md-toolbar>
     <md-dialog-content style="min-height: 70vh;">
         <md-tabs md-dynamic-height>
-            <md-tab label="Plot">
-                <jd-directive-svg></jd-directive-svg>   
-                
-                <!-- <div ng-repeat="samples in werteEXPORT | filter: {export: true}">
-                    {{samples}}
-                </div>
-                <div ng-repeat="samples in werteALL">
-                    {{samples}}
-                </div> -->
-            </md-tab>
-            <md-tab label="Map">
-                <div class="md-dialog-content" >
-
-                    <leaflet lf-center="ansicht" controls="controls" layers="layers" markers="markers" width="100%" height="90vh"></leaflet>
-                </div>
-            </md-tab>
+            
             <md-tab label="List">
                 <div style="min-height: 60vh;">
-
-                    <table class=" table-bordered" width="100%" height="60vh">
+                    <table  class="sampleTable " width="95%" id="tabelle" >
                         <thead>
-                      <tr>
-                          <th ng-click="sortType = '$index'; sortReverse = !sortReverse">
-                              SampleID
-                              <span ng-if="sortReverse == true && sortType == 'A_01'" class="fa fa-caret-down"> 
-                                  <md-icon md-svg-src="img/expand_more.svg"></md-icon>
-                                </span>
-                                <span ng-if="sortReverse == false  && sortType == 'A_01'" class="fa fa-caret-down"> 
-                                    <md-icon md-svg-src="img/expand_less.svg"></md-icon>
-                                </span>
-                            </th>
-                            <th ng-click="sortType = '$A_02'; sortReverse = !sortReverse">
-                                Reference
-                                <span ng-if="sortReverse == true && sortType == 'A_02'" class="fa fa-caret-down"> 
-                                    <md-icon md-svg-src="img/expand_more.svg"></md-icon>
-                                </span>
-                                <span ng-if="sortReverse == false  && sortType == 'A_02'" class="fa fa-caret-down"> 
-                                    <md-icon md-svg-src="img/expand_less.svg"></md-icon>
-                                </span>
-                            </th>
-                            <th ng-click="sortType = 'C0_02'; sortReverse = !sortReverse"">
-                                Age
-                                <span ng-if="sortReverse == true && sortType == 'C0_02'" class="fa fa-caret-down"> 
-                                    <md-icon md-svg-src="img/expand_more.svg"></md-icon>
-                                </span>
-                                <span ng-if="sortReverse == false && sortType == 'C0_02'" class="fa fa-caret-down"> 
-                                <md-icon md-svg-src="img/expand_less.svg"></md-icon>
-                            </span>
-                          </th>
-                          <th ng-click="sortType = 'D7_01'; sortReverse = !sortReverse"">
-                              RSL
-                              <span ng-if="sortReverse == true && sortType == 'D7_01'" class="fa fa-caret-down"> 
-                                  <md-icon md-svg-src="img/expand_more.svg"></md-icon>
-                                </span>
-                                <span ng-if="sortReverse == false && sortType == 'D7_01'" class="fa fa-caret-down"> 
-                                    <md-icon md-svg-src="img/expand_less.svg"></md-icon>
-                                </span>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tr ng-repeat="werte in werteEXPORT  | filter: {'export': 'true'} | orderBy:sortType:sortReverse">
-                        <!--  -->
-                        <!-- <tr ng-repeat="werte in werteEXPORT  | filter: {export: 'false'} | orderBy:sortType:sortReverse"> -->
-                            <td> {{werte.label}} </td>
-                            <td> {{werte.reference}} </td>
-                            <td> {{werte.age}} </td>
-                            <td> {{werte.elevation}} </td>
-                        </tr>
+                            <tr class="">
+                                <th>SampleID</th>
+                                <th>Reference</th>
+                                <th>Age [a]</th>
+                                <th>Paleo RSL/Elevation [m]</th>
+                            </tr>
+                        </thead>
+                            <tr ng-repeat="werte in werteALL | filter: {'export': true} ">
+                                <td> {{werte.label}} </td>
+                                <td> {{werte.reference}} </td>
+                                <td style="text-align: right;"> {{werte.age}} </td>
+                                <td style="text-align: right;"> {{werte.elevation | number: 2}} </td>
+                            </tr>
                     </table>
+
                 </div>
                 </md-tab>
+                <md-tab label="Plot">
+                    <jd-directive-svg template="dialog" display="export"></jd-directive-svg>   
+                    
+                
+                </md-tab>
+                
             </md-tabs>
             
         </md-dialog-content>

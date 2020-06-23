@@ -7,45 +7,49 @@
                 <!--  -->
                 show Controls
             </md-checkbox>
-            <md-checkbox class="myCheckbox" ng-checked="showRejected == true; " ng-click="showRejected = !showRejected " >
-                <!--  -->
+            <!-- <md-checkbox class="myCheckbox" ng-checked="showRejected == true; " ng-click="showRejected = !showRejected " >
+               
                 show Rejected
-            </md-checkbox>
-            <md-checkbox  class="myCheckbox" ng-checked="linkTable == true; " ng-click="linkTable = !linkTable " >
-                <!--  -->
+            </md-checkbox> -->
+            <!-- <md-checkbox  class="myCheckbox" ng-checked="linkTable == true; " ng-click="linkTable = !linkTable " >
+               
                 link Table
-            </md-checkbox>
+            </md-checkbox> -->
             
         </span>
         
 
-        <div layout="row" layout-wrap flex ng-show="showPlotControl">
-            <md-slider-container>
-                ZoomX
-                <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgScaleX" min="0" max="0.2" step="0.001">
-                </md-slider>
-            </md-slider-container>
-            <md-slider-container>
-                ZoomY
-                <md-slider class="md-primary" ng-model="svgScaleY" min="1" max="4" step="0.01">
-                </md-slider>
-            </md-slider-container>
-        </div>
-        <div layout="row" layout-wrap flex ng-show="showPlotControl"> 
-            <md-slider-container>
-                ScrollX
-                <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgShiftX" min="-300" max="300" step="1">
-                </md-slider>
-            </md-slider-container>
-            <md-slider-container>
-                ScrollY
-                <md-slider class="md-primary" ng-model="svgShiftY" min="-100" max="100" step="1">
-                </md-slider>
-            </md-slider-container>
-        </div>
+            
+            <div class="plotControls" layout="row"  ng-show="showPlotControl">
+                <md-slider-container>
+                    ZoomX
+                    <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgScaleX" min="0.04" max="0.2" step="0.001">
+                    </md-slider>
+                    
+                </md-slider-container>
+                <md-slider-container>
+                    ZoomY
+                    <md-slider class="md-primary" ng-model="svgScaleY" min="1" max="4" step="0.01">
+                    </md-slider>
+                </md-slider-container>
+            </div>
+            <div class="plotControls" layout="row" layout-wrap flex ng-show="showPlotControl"> 
+                <md-slider-container>
+                    ScrollX
+                    <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgShiftX" ng-attr-min="-1000" ng-attr-max="0" md-invert="true">
+                        PanX
+                    </md-slider>
+                </md-slider-container>
+                <md-slider-container>
+                    ScrollY
+                    <md-slider class="md-primary" ng-model="svgShiftY" min="-100" max="100" step="1">
+                    </md-slider>
+                </md-slider-container>
+            </div>
+
         <div class="plotContainer">
 
-            <jd-directive-svg daten="werteALL" plotfilter="export"></jd-directive-svg>   
+            <jd-directive-svg template="default" daten="werteALL" ></jd-directive-svg>   
         </div>
     </div>
 
@@ -56,7 +60,7 @@
                 <thead>
                     <tr class="">
                         <th>
-                            <md-checkbox ng-model="allSelected" ng-checked="allSelected == true; " ng-click="selectAll()">
+                            <md-checkbox class="myCheckboxHead"ng-model="allSelected" ng-checked="allSelected == true; " ng-click="selectAll()">
     
                                 Export
                             </md-checkbox>
@@ -65,49 +69,44 @@
                         <th ng-click="sortType = 'A_01'; sortReverse = !sortReverse">
                             SampleID
                             <span ng-if="sortReverse == true && sortType == 'A_01'" class="fa fa-caret-down"> 
-                              <md-icon md-svg-src="img/expand_more.svg"></md-icon>
+                              <md-icon md-svg-src="common/img/expand_more.svg"></md-icon>
                             </span>
                             <span ng-if="sortReverse == false  && sortType == 'A_01'" class="fa fa-caret-down"> 
-                              <md-icon md-svg-src="img/expand_less.svg"></md-icon>
+                              <md-icon md-svg-src="common/img/expand_less.svg"></md-icon>
                             </span>
                         </th>
                         <th ng-click="sortType = 'C0_02'; sortReverse = !sortReverse">
                             Reference
                             <span ng-if="sortReverse == true && sortType == 'C0_02'" class="fa fa-caret-down"> 
-                                <md-icon md-svg-src="img/expand_more.svg"></md-icon>
+                                <md-icon md-svg-src="common/img/expand_more.svg"></md-icon>
                             </span>
                             <span ng-if="sortReverse == false && sortType == 'C0_02'" class="fa fa-caret-down"> 
-                              <md-icon md-svg-src="img/expand_less.svg"></md-icon>
+                              <md-icon md-svg-src="common/img/expand_less.svg"></md-icon>
                             </span>
                         </th>
-                        <th>Age-</th>
                         <th ng-click="sortType = 'D7_01'; sortReverse = !sortReverse">
-                            Age
+                            Age [a]
                             <span ng-if="sortReverse == true && sortType == 'D7_01'" class="fa fa-caret-down"> 
-                                <md-icon md-svg-src="img/expand_more.svg"></md-icon>
+                                <md-icon md-svg-src="common/img/expand_more.svg"></md-icon>
                             </span>
                             <span ng-if="sortReverse == false && sortType == 'D7_01'" class="fa fa-caret-down"> 
+                                <md-icon md-svg-src="common/img/expand_less.svg"></md-icon>
+                            </span>
+                        </th>
+                        <th ng-click="sortType = 'D3_11'; sortReverse = !sortReverse">
+                            Paleo RSL/Elevation [m]
+                            <span ng-if="sortReverse == true && sortType == 'elevation'" class="fa fa-caret-down"> 
+                                <md-icon md-svg-src="img/expand_more.svg"></md-icon>
+                            </span>
+                            <span ng-if="sortReverse == false && sortType == 'elevation'" class="fa fa-caret-down"> 
                                 <md-icon md-svg-src="img/expand_less.svg"></md-icon>
                             </span>
                         </th>
+                        <th>Indicator Type</th>
                         <th>
-                            Age+
+                            Primary Indicator
                         </th>
-                        <th>
-                            Elev-
-                        </th>
-                        <th ng-click="sortType = 'D3_11'; sortReverse = !sortReverse">
-                                elev
-                                <span ng-if="sortReverse == true && sortType == 'D3_11'" class="fa fa-caret-down"> 
-                                    <md-icon md-svg-src="img/expand_more.svg"></md-icon>
-                                </span>
-                                <span ng-if="sortReverse == false && sortType == 'D3_11'" class="fa fa-caret-down"> 
-                                    <md-icon md-svg-src="img/expand_less.svg"></md-icon>
-                                </span>
-                        </th>
-                        <th>
-                            Elev+
-                        </th>
+                        
                     </tr>
                 </thead>
                 <tr ng-attr-id="{{selected.xUID}}" 
@@ -122,12 +121,11 @@
                     </td>
                     <td > {{selected.label}} </td>
                     <td> {{selected.reference}} </td>
-                    <td> {{selected.age-selected.ageError}}</td>
-                    <td> {{selected.age}} </td>
-                    <td> {{selected.ageErrorPlus}} </td>
-                    <td> {{selected.sElevationErrorMinus}} </td>
-                    <td> {{selected.elevation}} </td>
-                    <td> {{selected.sElevationErrorPlus}} </td>
+                    <td style="text-align: right; padding-right:4px"> {{selected.age}} </td>
+                    <td style="text-align: right;padding-right: 10px;"> {{selected.elevation | number: 1}} </td>
+                    <td> {{selected.type_string}}</td>
+                    <td> {{selected.feature}} </td>
+                    
                 </tr>
             </table>
         </div>
@@ -167,7 +165,7 @@
 
     <div style="overflow-y: scroll; height: 69vh;">
         <div ng-repeat="group in groups| filter: auswahl.suche.reference" >
-            <md-card>
+            <md-card >
                 <div class="groupContainer myPadding">
 
                     
@@ -179,12 +177,12 @@
                 </div>
                 <!-- <div class=" myPadding"> -->
                 <!-- </md-card-title> -->
-                <md-content>
+                <md-content ng-class="{groupSelected: selectedPanel.selectedNode == group}">
                     
-                    <div class="col-md-2">
-                        <md-button class="md-raised md-small" ng-click="select(group); status!=status"
-                        [ng-class]="status ? 'groupPristine' : 'groupSelected' "
-                        ng-show="status ? 'groupPristine' : 'groupSelected' ">
+                    <div class="col-md-2" ng-init="selectedPanel = {selectedNode: null}">
+                        <md-button class="md-raised md-small" ng-click="showMap(group); selectedPanel.selectedNode=group"
+                        ng-class="{groupSelected: selectedPanel.selectedNode == group}"
+                        >
                             Show
                         </md-button>
                     </div>

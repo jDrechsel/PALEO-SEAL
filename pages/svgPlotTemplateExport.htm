@@ -1,0 +1,246 @@
+<!-- <h3>SVG Directive running...</h3> -->
+<!-- <table class="svgDebugTable">
+    <thead>
+
+        <th>viewBox x y w h</th>
+        <th>Shift X:Y</th>
+        <th>Scale X:Y</th>
+        <th>Zoom X:Y</th>
+        <th>Position X:Y</th>
+    </thead>
+        <td>{{viewBoxString}}</td>
+        <td>{{svgShiftX}} : {{svgShiftY}}</td>
+        <td>{{svgScaleX | number: 3}} : {{svgScaleY | number: 3}}</td>
+        <td>{{svgScaleX/staticScaleX | number: 3}} : {{svgScaleY/staticScaleY | number: 3}}</td>
+        <td>{{dragStart.x}} : {{dragStart.y}}</td>
+</table> -->
+
+
+<svg width="100%" height="50vh" id="timeSeries"
+ng-attr-view_box="{{viewBoxString}}" preserveAspectRatio="xMidYMax meet"
+ng-mousemove="plotPosition($event)" ng-mousedown="plotAction($event)" ng-mouseup="plotMouseUp($event)"  
+ng-mouse-wheel-down="ZoomSvgOut()" 
+ng-mouse-wheel-up="ZoomSvgIn()"
+    >
+    <!-- PLOT: BASE
+        Axes, Labels etc
+    -->
+    
+    <g id="plotBase">
+        <g id="axes">
+
+            <g id="age">
+                <text id="ageLabel" class="axisTitle"
+                ng-attr-x="{{svgBox_dX*0.5}}"
+                ng-attr-y="{{-posAxisX*staticScaleY+20}}"
+                >
+                    {{xAxisLabel}}
+                </text>
+                <line x1="0" ng-attr-y1="{{posAxisX*staticScaleY}}" ng-attr-x2="{{svgBox_dX}}" ng-attr-y2="{{posAxisX*staticScaleY}}"  />   
+                <g ng-repeat="tick in ticksX">
+                    <line 
+                    ng-attr-x1="{{(tick.tickPos*svgScaleX)+svgShiftX}}" 
+                    ng-attr-y1="{{posAxisX*staticScaleY-2}}" 
+                    ng-attr-x2="{{(tick.tickPos*svgScaleX)+svgShiftX}}" 
+                    ng-attr-y2="{{posAxisX*staticScaleY+5}}"  />   
+                    <text id="text_S" 
+                    ng-attr-x="{{(tick.tickPos*svgScaleX)+svgShiftX-10}}"
+                    ng-attr-y="{{-posAxisX*staticScaleY+10}}">
+                    {{tick.tickPos}}
+                    </text>
+                </g> 
+                <g>
+                    <line 
+                    ng-attr-x1="{{xScaleMax*(staticScaleX)}}" 
+                    ng-attr-y1="{{posAxisX*staticScaleY+5}}" 
+                    ng-attr-x2="{{xScaleMax*(staticScaleX)}}" 
+                    ng-attr-y2="{{posAxisX*staticScaleY-5}}"  />   
+                    <text id="ageMaxLabel"
+                    ng-attr-x="{{xScaleMax*(staticScaleX)-30}}"
+                    ng-attr-y="{{-posAxisX*staticScaleY-5}}"
+                    >
+                        {{(svgBox_dX-svgShiftX)/svgScaleX | number: 0}}
+                    </text>
+                </g>
+             </g>
+        <g id="elevation">
+            
+            <g ng-attr-transform="rotate(90, -20, -{{svgBox_dY*0.5}})">
+                
+                <text id="elevationLabel" class="axisTitle"
+                ng-attr-x="-20"
+                ng-attr-y="{{svgBox_dY*0.5}}"
+                
+                >
+                {{yAxisLabel}}
+            </text>
+        </g>
+            <line stroke-dasharray="10,10" ng-attr-x1="0" ng-attr-y1="{{-svgShiftY}}" ng-attr-x2="{{svgBox_dX}}" ng-attr-y2="{{-svgShiftY}}"  />   
+            <line x1="0" ng-attr-y1="{{10 * staticScaleY}}" x2="0" ng-attr-y2="{{ - 120 * staticScaleY}}"  />  
+            <g ng-repeat="tick in ticksY">
+                <line 
+                ng-attr-x1="-2" 
+                ng-attr-y1="{{(tick.tickPos * svgScaleY)-svgShiftY}}" 
+                ng-attr-x2="5" 
+                ng-attr-y2="{{(tick.tickPos * svgScaleY)-svgShiftY}}"  />   
+                <text id="text_S" 
+                text-anchor="end"
+                ng-attr-x="-5"
+                ng-attr-y="{{( - tick.tickPos * svgScaleY)+svgShiftY +3}}">
+                    {{tick.tickPos}}
+                </text>
+            </g>
+            </g>
+            <g id="xaxisEnd" visibility="hidden">
+                <polygon id="eins" 
+                ng-attr-points="600,-235 600,-245 620,-240"/>
+            </g>
+        </g>
+        <g id="grid" visibility="hidden">
+            <g ng-repeat="tick in ticksX">
+                <line 
+                    ng-attr-x1="{{(tick.tickPos*svgScaleX)+svgShiftX}}" 
+                    ng-attr-y1="{{0}}" 
+                    ng-attr-x2="{{(tick.tickPos*svgScaleX)+svgShiftX}}" 
+                    ng-attr-y2="{{-svgBox_dY}}"  />   
+            </g>
+            <g ng-repeat="tick in ticksY">
+                <line 
+                ng-attr-x1="{{0}}" 
+                ng-attr-y1="{{(tick.tickPos*svgScaleY)-svgShiftY}}" 
+                ng-attr-x2="{{svgBox_dX}}"    
+                ng-attr-y2="{{(tick.tickPos*svgScaleY)-svgShiftY}}" /> 
+            </g>
+
+        </g>
+        <g id="plotDebug" visibility="hidden"> 
+            <!-- Test Various Pan & Zoom Parameters -->
+            <!-- middle of ranges -->
+            <circle ng-attr-cx ="{{(svgBox_dX/2 * svgZoomX) + svgShiftX}}" 
+            ng-attr-cy ="{{(-svgBox_dY/2 * svgZoomY) - svgShiftY}}"
+            ng-attr-r="{{3*svgZoomX}}"></circle>
+        </g>
+    </g>
+    <!-- 
+        PLOT: Content
+     -->
+     <g id="markers">
+         <!-- Plot 3 different plot makers, based on indicator type -->
+        <g id="indicator" >
+
+            <g class="markerCross" 
+            ng-repeat="punkt in werteALL | filter: {export: true, rejected: false, type_string: 'Indicator'}"
+            ng-click="punkt.export = !punkt.export ; scrollToSample(this.punkt.xUID) "
+            ng-mouseover="scrollToSample(this.punkt.xUID)"
+            ng-class="{'plotMarkerSelected': punkt.export === true}"
+            >
+                <g id="head">
+                   
+                    <line id="horizontal" class="MarkerCross" ng-class="{'plotMarkerRejected': punkt.rejected === true}"
+                    ng-attr-x1="{{ ((punkt.age - punkt.ageError ) * svgScaleX) + svgShiftX}}" 
+                    ng-attr-y1="{{(punkt.elevation * svgScaleY) - svgShiftY}}" 
+                    ng-attr-x2="{{ ((punkt.age + punkt.ageError)* svgScaleX) + svgShiftX}}" 
+                    ng-attr-y2="{{(punkt.elevation * svgScaleY) - svgShiftY}}" 
+                    />   
+                    <line id="vertical " class="MarkerCross" ng-class="{'plotMarkerRejected': punkt.rejected === true}"
+                    ng-attr-x1="{{(punkt.age * svgScaleX) + svgShiftX}}" 
+                    ng-attr-y1="{{ ((punkt.elevation + punkt.sElevationErrorMinus) * svgScaleY) - svgShiftY}}" 
+                    ng-attr-x2="{{(punkt.age * svgScaleX) + svgShiftX}}" 
+                    ng-attr-y2="{{((punkt.elevation - punkt.sElevationErrorPlus) * svgScaleY) - svgShiftY}}" 
+                    />  
+
+                   
+                </g>
+            </g>
+        </g>
+        <g id="marine" >
+            <g class="markerCross" 
+            ng-repeat="punkt in werteALL | filter: {export: true, rejected: false, type_string: 'Marine limiting'}"
+            ng-click="punkt.export = !punkt.export ; scrollToSample(this.punkt.xUID) "
+            ng-mouseover="scrollToSample(this.punkt.xUID)"
+            ng-class="{'plotMarkerSelected': punkt.export === true}"
+            >
+                <g id="head">
+                    <line id="horizontal" class="MarkerCross" ng-class="{'plotMarkerRejected': punkt.rejected === true}"
+                    ng-attr-x1="{{ ((punkt.age - punkt.ageError ) * svgScaleX) + svgShiftX}}" 
+                    ng-attr-y1="{{ (punkt.elevation * svgScaleY) - svgShiftY}}" 
+                    ng-attr-x2="{{ ((punkt.age + punkt.ageError) * svgScaleX + svgShiftX)}}" 
+                    ng-attr-y2="{{(punkt.elevation * svgScaleY) - svgShiftY}}" 
+                     />   
+                    <line id="vertical" class="MarkerCross" ng-class="{'plotMarkerRejected': punkt.rejected === true}"
+                    ng-attr-x1="{{(punkt.age * svgScaleX) + svgShiftX}}" 
+                    ng-attr-y1="{{ ((punkt.elevation + 2*punkt.sElevationErrorPlus) * svgScaleY) - svgShiftY}}" 
+                    ng-attr-x2="{{(punkt.age * svgScaleX) + svgShiftX}}" 
+                    ng-attr-y2="{{((punkt.elevation ) * svgScaleY) - svgShiftY}}" 
+                     />   
+             
+                </g>
+            
+           </g>
+        </g>
+        <g id="terrestrial" >
+            <g class="markerCross" 
+            ng-repeat="punkt in werteALL | filter: {export: true, rejected: false, type_string: 'Terrestrial limiting'}"
+            ng-click="punkt.export = !punkt.export ; scrollToSample(this.punkt.xUID) "
+            ng-mouseover="scrollToSample(this.punkt.xUID)"
+            ng-class="{'plotMarkerSelected': punkt.export === true}"
+            >
+            
+            <g id="head">
+                <title>{{punkt.title}}</title>
+                <line id="horizontal"
+                ng-attr-x1="{{ ((punkt.age - punkt.ageError ) * svgScaleX) + svgShiftX}}" 
+                ng-attr-y1="{{punkt.elevation * svgScaleY - svgShiftY}}" 
+                ng-attr-x2="{{( (punkt.age + punkt.ageError)* svgScaleX) + svgShiftX}}" 
+                ng-attr-y2="{{punkt.elevation * svgScaleY - svgShiftY}}" 
+                stroke="black" />   
+                <line id="vertical"
+                ng-attr-x1="{{punkt.age * svgScaleX + svgShiftX}}" 
+                ng-attr-y1="{{ (punkt.elevation) * svgScaleY - svgShiftY}}" 
+                ng-attr-x2="{{punkt.age * svgScaleX + svgShiftX}}" 
+                ng-attr-y2="{{(punkt.elevation - 2*punkt.sElevationErrorPlus) * svgScaleY - svgShiftY}}" 
+                stroke="black" />  
+                <text class="sampleLabel"
+                ng-attr-x="{{punkt.age * svgScaleX}}" 
+                ng-attr-y="{{ (-punkt.elevation) * svgScaleY}}"
+                >{{punkt.title}}</text> 
+
+            </g>
+           </g>
+        </g>
+     </g>
+</svg>
+
+
+
+
+<!-- <table class="svgDebugTable">
+    <thead>
+
+        <th>viewBox x y w h</th>
+        <th>Click X:Y</th>
+        <th>unClick X:Y</th>
+        <th>Distance X:Y</th>
+        <th>Position X:Y</th>
+    </thead>
+        <td>{{viewBoxString}}</td>
+        <td>{{dragStart.x}} : {{dragStart.y}}</td>
+        <td>{{dragStop.x}} : {{dragStop.y}}</td>
+        <td>{{dragDist.x}} : {{dragDist.y}}</td>
+        <td>{{dragStart.x}} : {{dragStart.y}}</td>
+</table> -->
+<!-- <table class="svgDebugTable">
+    <thead>
+
+        <th>clicked Sample</th>
+        <th>Age : Elevation</th>
+        <th>plot: </th>
+        <th>Distance X:Y</th>
+        <th>plotfilter</th>
+    </thead>
+        <td>{{this}}</td>
+        <td>{{dragStart.x}} : {{dragStart.y}}</td>
+        <td>{{dragStop.x}} : {{dragStop.y}}</td>
+        <td>{{dragDist.x}} : {{dragDist.y}}</td>
+        <td>{{plotfilter}}</td>
+</table> -->

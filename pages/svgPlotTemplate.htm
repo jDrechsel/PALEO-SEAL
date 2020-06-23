@@ -16,8 +16,8 @@
 </table> -->
 
 
-<svg width="100%" height="60vh" id="timeSeries"
-ng-attr-view_box="{{viewBoxString}}"
+<svg width="100%" height="55vh" id="timeSeries"
+ng-attr-view_box="{{viewBoxString}}" preserveAspectRatio="xMidYMax meet"
 ng-mousemove="plotPosition($event)" ng-mousedown="plotAction($event)" ng-mouseup="plotMouseUp($event)"  
 ng-mouse-wheel-down="ZoomSvgOut()" 
 ng-mouse-wheel-up="ZoomSvgIn()"
@@ -32,7 +32,7 @@ ng-mouse-wheel-up="ZoomSvgIn()"
             <g id="age">
                 <text id="ageLabel" class="axisTitle"
                 ng-attr-x="{{svgBox_dX*0.5}}"
-                ng-attr-y="{{svgBox_dY-marginAxisX*1.7}}"
+                ng-attr-y="{{-posAxisX*staticScaleY+20}}"
                 >
                     {{xAxisLabel}}
                 </text>
@@ -40,22 +40,27 @@ ng-mouse-wheel-up="ZoomSvgIn()"
                 <g ng-repeat="tick in ticksX">
                     <line 
                     ng-attr-x1="{{(tick.tickPos*svgScaleX)+svgShiftX}}" 
-                    ng-attr-y1="{{-svgBox_dY*0.8-2}}" 
+                    ng-attr-y1="{{posAxisX*staticScaleY-2}}" 
                     ng-attr-x2="{{(tick.tickPos*svgScaleX)+svgShiftX}}" 
-                    ng-attr-y2="{{-svgBox_dY*0.8+5}}"  />   
+                    ng-attr-y2="{{posAxisX*staticScaleY+5}}"  />   
                     <text id="text_S" 
-                    ng-attr-x="{{(tick.tickPos*svgScaleX)+svgShiftX}}"
-                    ng-attr-y="{{svgBox_dY*0.8+10}}">
+                    ng-attr-x="{{(tick.tickPos*svgScaleX)+svgShiftX-10}}"
+                    ng-attr-y="{{-posAxisX*staticScaleY+10}}">
                     {{tick.tickPos}}
                     </text>
                 </g> 
                 <g>
+                    <line 
+                    ng-attr-x1="{{xScaleMax*(staticScaleX)}}" 
+                    ng-attr-y1="{{posAxisX*staticScaleY+5}}" 
+                    ng-attr-x2="{{xScaleMax*(staticScaleX)}}" 
+                    ng-attr-y2="{{posAxisX*staticScaleY-5}}"  />   
                     <text id="ageMaxLabel"
-                ng-attr-x="{{xScaleMax*(staticScaleX)-30}}"
-                ng-attr-y="{{svgBox_dY*0.8}}"
-                >
-                    {{(svgBox_dX-svgShiftX)/svgScaleX | number: 0}}
-                </text>
+                    ng-attr-x="{{xScaleMax*(staticScaleX)-30}}"
+                    ng-attr-y="{{-posAxisX*staticScaleY-5}}"
+                    >
+                        {{(svgBox_dX-svgShiftX)/svgScaleX | number: 0}}
+                    </text>
                 </g>
              </g>
         <g id="elevation">
@@ -108,6 +113,13 @@ ng-mouse-wheel-up="ZoomSvgIn()"
             </g>
 
         </g>
+        <g id="plotDebug" visibility="hidden"> 
+            <!-- Test Various Pan & Zoom Parameters -->
+            <!-- middle of ranges -->
+            <circle ng-attr-cx ="{{(svgBox_dX/2 * svgZoomX) + svgShiftX}}" 
+            ng-attr-cy ="{{(-svgBox_dY/2 * svgZoomY) - svgShiftY}}"
+            ng-attr-r="{{3*svgZoomX}}"></circle>
+        </g>
     </g>
     <!-- 
         PLOT: Content
@@ -117,16 +129,13 @@ ng-mouse-wheel-up="ZoomSvgIn()"
         <g id="indicator" >
 
             <g class="markerCross" 
-            ng-repeat="punkt in werteALL | filter: {plot: true, type_string: 'Indicator'}"
+            ng-repeat="punkt in werteALL | filter: {plot: true, rejected: false, type_string: 'Indicator'}"
             ng-click="punkt.export = !punkt.export ; scrollToSample(this.punkt.xUID) "
             ng-mouseover="scrollToSample(this.punkt.xUID)"
             ng-class="{'plotMarkerSelected': punkt.export === true}"
             >
                 <g id="head">
-                    <circle ng-click="punkt.export = !punkt.export "
-                        ng-attr-cx="{{punkt.age * svgScaleX}}" 
-                        ng-attr-cy="{{punkt.elevation * svgScaleY}}" 
-                        ng-attr-r="3" />
+                   
                     <line id="horizontal" class="MarkerCross" ng-class="{'plotMarkerRejected': punkt.rejected === true}"
                     ng-attr-x1="{{ ((punkt.age - punkt.ageError ) * svgScaleX) + svgShiftX}}" 
                     ng-attr-y1="{{(punkt.elevation * svgScaleY) - svgShiftY}}" 
@@ -150,7 +159,7 @@ ng-mouse-wheel-up="ZoomSvgIn()"
         </g>
         <g id="marine" >
             <g class="markerCross" 
-            ng-repeat="punkt in werteALL | filter: {plot: true, type_string: 'Marine limiting'}"
+            ng-repeat="punkt in werteALL | filter: {plot: true, rejected: false, type_string: 'Marine limiting'}"
             ng-click="punkt.export = !punkt.export ; scrollToSample(this.punkt.xUID) "
             ng-mouseover="scrollToSample(this.punkt.xUID)"
             ng-class="{'plotMarkerSelected': punkt.export === true}"
@@ -179,7 +188,7 @@ ng-mouse-wheel-up="ZoomSvgIn()"
         </g>
         <g id="terrestrial" >
             <g class="markerCross" 
-            ng-repeat="punkt in werteALL | filter: {plot: true, type_string: 'Terrestrial limiting'}"
+            ng-repeat="punkt in werteALL | filter: {plot: true, rejected: false, type_string: 'Terrestrial limiting'}"
             ng-click="punkt.export = !punkt.export ; scrollToSample(this.punkt.xUID) "
             ng-mouseover="scrollToSample(this.punkt.xUID)"
             ng-class="{'plotMarkerSelected': punkt.export === true}"

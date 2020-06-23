@@ -60,6 +60,16 @@
 
 </div>
 <div class="col-md-9">
+    <div class="myMapToast" ng-show="mapMarkersRejected.length >= 1"> 
+        {{mapMarkersRejected.length}}!<em>
+            Samples have invalid Lat/Lng
+        </em> 
+            
+        
+    </div>
+    <!-- <div ng-hide="mapMarkersRejected.length == 0">
+        {{mapMarkersRejected.length}} Rejected!
+    </div> -->
     <leaflet class="map" lf-center="ansicht" controls="controls" layers="layers" markers="markers" width="100%" height="90vh"></leaflet>
 </div>
 

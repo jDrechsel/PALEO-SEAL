@@ -34,8 +34,12 @@
                     // Get RSL for SL indicators and Sample Elevation for MArine & Terrestrial Limiting 
                     if ($scope.proben[i].D5_01 === 0) {
                         var elevation_temp = parseFloat($scope.proben[i].D7_01);
+                        let elevation_errorPlus = parseFloat($scope.proben[i].D7_02);
+                        let elevation_errorMinus = parseFloat($scope.proben[i].D7_03);
                     } else {
                         var elevation_temp = parseFloat($scope.proben[i].D3_11);
+                        let elevation_errorPlus = parseFloat($scope.proben[i].D3_13);
+                        let elevation_errorMinus = parseFloat($scope.proben[i].D3_14);
                     }
                     // replace wrong coordinates
                     if ($scope.proben[i].B_02 == "Modern") {
@@ -64,7 +68,7 @@
                         region: $scope.proben[i].B_01,
                         subregion: $scope.proben[i].B_02,
                         dating: $scope.proben[i].C_01,
-                        feature: $scope.proben[i].D5_02,
+                        feature: nachSchlagen(parseInt($scope.proben[i].D5_02),'primaryType'),
                         rejected: Boolean(parseInt($scope.proben[i].E_01)),
                         ageErrorPlus: parseFloat($scope.proben[i].C_05),
                         ageErrorMinus: parseFloat($scope.proben[i].C_06),

@@ -182,4 +182,11 @@ expandControllerPLOTsvg = function( $scope, $parse){
 
         // get Y min max
     };
+
+    function convertToPlotCoords(x, y){
+        let plotX=x*$scope.svgBox_dX/$scope.xScaleMax;
+        let plotY=y*$scope.svgBox_dY/$scope.yScaleMax;
+        return plotX, plotY;
+        
+    }
 }; //endof Expander

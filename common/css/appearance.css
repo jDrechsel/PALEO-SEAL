@@ -4,6 +4,15 @@ certainly in use!
 .infoPage{
     min-height: 60px;
 }
+.pageLogo{
+    
+    /* position: initial; */
+    align-self: center;
+    height: inherit;
+    padding-top: 3px; 
+    padding-left: 3px;
+}
+
 /* Bigger elements (Divs Navs Sidebar etc) */
 .navbar {
     position: relative;
@@ -68,7 +77,8 @@ certainly in use!
     background-color: rgb(255, 255, 255);
 }
 .groupSelected{
-    background-color: rgb(151, 151, 151);
+    background-color: rgb(3, 126, 30);
+    font-weight: bolder;
 }
 .mySampleBadge{
     /* background-color: rgb(110, 110, 110); */
@@ -97,6 +107,7 @@ certainly in use!
     box-shadow: 1px 1px 2px rgba(58, 58, 58, 0.404);
 
 }
+
 .myPadding{
     padding: 5px;
 }
@@ -148,7 +159,20 @@ svg {
     /* display: block; */
 }
 .plotContainer{
- max-height: 50%;
+    /* margin-top: -2%; */
+    max-height:40%;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    /* padding-bottom: 50%; */
+    /* overflow: hidden; */
+}
+.plotControls{
+    background-color: rgb(167, 167, 167);
+    padding: 0px 20px;
+    border-style: outset;
+
 }
 html, body, #test1 {
     margin: 0px;
@@ -211,6 +235,7 @@ input {
     color: white;
     position: sticky;
     top: 0;
+    /* z-index: 100; */
   }
 
   .myFocus{
@@ -225,30 +250,64 @@ input {
       table-layout: fixed;
       height: 80vh;
       max-height: 90vh;
+      align-content: flex-end;
   }
 
-  .myContainerContent{
-      display: table-row;
-      /* height: auto; */
-      width: 100%;
-      
-  }
-    .textCenter{
-        text-align: center;
+    .myContainerContent{
+        display: table-row;
+        /* height: auto; */
+        width: 100%;
+        
     }
-  .myContainerContentResponsive{
-      display: block;
-      width: 100%;
-      height: 100%;
-      overflow-y: scroll;
+    .myContainerContentResponsive{
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
 
-  }
+    }
 
+    .introDivider h2, h3{
+        /* box-shadow: rgb(0, 0, 0); */
+        position: relative;
+        /* vertical-align: bottom; */
+
+    }
+    .textCenter{
+        /* text-align: center; */
+        padding-left: 15vw;
+        padding-top: inherit;
+        vertical-align: bottom;
+        
+        position: relative;
+
+
+    }
+  
+    .introText{
+        padding: 0px 3vw;
+
+    }
+    .contentText{
+        padding: 0px 20vw;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+    .introDivider{
+        background-color: lightgray;
+        min-height: 10vh;
+        display: table-row;
+        vertical-align: bottom;
+        align-content: center;
+    }
   /* INTERFACE ELEMENTS */
   /*CheckBox */ 
   md-checkbox.md-checked.myCheckbox .md-icon {
     background-color: rgb(24, 16, 97);
    }
+  md-checkbox.md-checked.myCheckboxHead .md-icon {
+    background-color: rgb(72, 58, 197);
+  }
    md-slider.md-checked.mySlider .md-icon {
     background-color: rgb(24, 16, 97);
    }
@@ -257,7 +316,7 @@ input {
        /* background-color: blue; */
        border-color: crimson;
        /* padding: 0px; */
-       height: 15px;
+       /* height: 5%; */
    }
    md-slider  .md-checked .md-focus-ring .md-track{
        background-color: rgb(8, 29, 146);
@@ -265,3 +324,87 @@ input {
        color: rgb(8, 29, 146);
 
    }
+
+   /* Map */
+   .myToast{
+       margin-top: 8px;
+       padding: 10px 30px;
+       background-color: rgb(167, 167, 167);
+       position: fixed;
+       z-index: 2;
+       right: 6%;
+       left: 60%;
+       border-style: outset;
+       
+       font-weight: bold;
+       fill: dimgray;
+       box-shadow: 1px 1px 2px rgba(58, 58, 58, 0.404);
+
+   }
+   .myMapToast{
+       margin-top: 8px;
+       padding: 6px 10px;
+       background-color: rgb(128, 14, 14);
+       position: fixed;
+       z-index: 2;
+       max-width: 4%;
+       max-height: 5%;
+       right: 6%;
+       /* left: 85%; */
+       overflow: hidden;
+       border-style: outset;
+       border-radius: 5px;
+       border-color: firebrick;
+       font-weight: bold;
+       line-height: 1.6;
+       color: rgb(224, 224, 224);
+       box-shadow: 1px 1px 2px rgba(58, 58, 58, 0.404);
+
+   }
+   .myMapToast em{
+       /* visibility: hidden; */
+   }
+   .myMapToast em:hover{
+       visibility: initial;
+   }
+   .myMapToast:hover{
+    /* overflow:auto; */
+    max-width: 30%;
+
+
+   }
+   .myToastBadge{
+    position: absolute;    
+    right: 10px;
+    min-height: 25px;
+    min-width: 40px;
+
+    /* padding: 5px 4px; */
+
+   }
+   .myWarning{
+    
+    border-radius: 20px;
+
+    outline: 1 black;
+    display: inline-block;
+    text-justify: auto;
+    min-width: 40px;
+    min-height: 25px;
+    padding: 5px 5px;
+    font-size: 13px;
+    font-weight: bolder;
+    letter-spacing: 0px;
+
+    /* line-height: 1; */
+    color: rgb(196, 196, 196);
+    text-align: center;
+    white-space: nowrap;
+    /* vertical-align: top; */
+    background-color: rgb(150, 18, 18);
+    box-shadow: 1px 1px 2px rgba(58, 58, 58, 0.404);
+}
+
+.navbar-brand {
+    padding: 5px 5px;
+}

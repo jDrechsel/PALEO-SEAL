@@ -1,10 +1,12 @@
 #timeSeries{
     /* max-height: 65%; */
 }
+
 svg {
     /* background-color:white; */
-    transform: scale(1,-1);
+    transform:  scale(1,-1) 
 }
+
 svg  text{
     transform: scale(1,-1);
     pointer-events: none;

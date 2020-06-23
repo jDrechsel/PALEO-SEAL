@@ -4,6 +4,7 @@ expandControllerINIT = function($scope, $http, $mdSidenav){
     tabelleREGION="data/lookups/regionCodes_lookup.json";
     tabelleDATING="data/lookups/datingMethod_lookup.json";
     tabelleTYPE="data/lookups/IndicatorType_lookup.json";
+    tabellePRIMARY="data/lookups/primaryIndicatorTypes_lookup.json";
 
     $http({
         method: 'GET',
@@ -26,6 +27,12 @@ expandControllerINIT = function($scope, $http, $mdSidenav){
         $scope.dictDATING = response.data;
     })
     
+    $http({
+        method: 'GET',
+        url: tabellePRIMARY
+    }).then(function mySuccess(response){
+        $scope.dictPRIMARY = response.data;
+    })
     // /* MAP & PLOT: initial settings and set up  watch options */
     // angular.extend($scope, {
     //     watchOptions:{

@@ -104,7 +104,9 @@ expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $htt
               // console.log('Daten fuer Export PHP response.config.data:',response.config.data);
               // console.log("$scope.probenExport: ", $scope.probenExport);
               let exportBlob = new Blob([$scope.probenExport], {type: 'text/csv'});
-              let fileName = "Download.csv";
+              // date("Y-m-d_H_i_s")+
+              let exportDate = new Date();
+              let fileName = "PALEOSEALexport_"+ exportDate.toISOString().slice(0,10) +  ".csv";
               console.log("exportBlob: ", exportBlob);
               saveData($scope.probenExport, fileName);
           }, function myError(response) {

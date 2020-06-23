@@ -195,14 +195,14 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
 
             var layer = e.layer;
             drawnItems.addLayer(layer);
-            
+            $scope.mapHint="Click rectangle to continue...";
 
           });
 
           drawnItems.on('click', rectangleClick);
 
           function rectangleClick(e){
-
+            $scope.mapHint="";
             var rectMarkers = jsonToArray(leafletData.getMarkers().$$state.value);
             var result = e.layer.contains(rectMarkers);
             $scope.result = result;

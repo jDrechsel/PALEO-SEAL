@@ -31,10 +31,10 @@ function getHeaderStrings($n){
     } else {
         $stringB = '';
     }
-    echo $stringA.$stringB.',';
+    return "$stringA$stringB";
+    // echo $stringA.$stringB.',';
 };
 $retreivedStrings=array_map('getHeaderStrings', $headerArray);
-echo "\n";
 
 // Get all fields of selected entries
 $d=mysqli_query($con,$sql)
@@ -55,26 +55,28 @@ if (empty($retreived)) {
     die("The JSON string is empty!");
   }
 
-$filename = "exportfile" .date("Y-m-d_H_i_s") . ".csv";
+// $filename = "exportfilePHP" .date("Y-m-d_H_i_s") . ".csv";
+$filename = "exportfilePHP.csv";
 
 $handle = fopen($filename, 'w+');
 
-// fputcsv($handle, $headersResults);
+fputcsv($handle, $retreivedStrings);
 
 foreach ($ProbenKurz as $line){
     fputcsv($handle, $line);
+    // echo  $line;
 }
 
 fclose($handle);
 
-header('Content-Description: File Transfer');
-header('Content-Type: application/octet-stream');
-header('Content-Disposition: attachment; filename="$filename"');
-header('Content-Transfer-Encoding: binary');
-header('Expires: 0');
-header('Cache-Control: must-revalidate');
-header('Pragma: public');
-header('Content-Length: ' . filesize($filename));
+// header('Content-Description: File Transfer');
+// header('Content-Type: application/octet-stream');
+// header('Content-Disposition: attachment; filename="$filename"');
+// header('Content-Transfer-Encoding: binary');
+// header('Expires: 0');
+// header('Cache-Control: must-revalidate');
+// header('Pragma: public');
+// header('Content-Length: ' . filesize($filename));
 readfile($filename);
-
+unlink($filename)
  ?>

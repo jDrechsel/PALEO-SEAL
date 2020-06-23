@@ -155,27 +155,7 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
 
       };// endof showMap()
 
-    // I. process markers
-    $scope.allePunkte = false;
-
-    // Show all samples on map (set map visibility to true)
-    // !! samples[i].selected is old !! change to samples[i].map !! better: come up with better structure!
-
     
-    var markers = {};
-   
-
-
-
-    // $scope.$on("leafletDirectiveMap.click", function(event, args){
-    //       console.log("map clicked");
-    //       console.log("args",args);
-    //     // a. draw rectangle
-    //     // b. select markers inside rectangle
-    //     // !! could be easier with esri draw stuff
-    //     // c. show preliminary export list
-        
-    //   });
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////INIT MAP//////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////

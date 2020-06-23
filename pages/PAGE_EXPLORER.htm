@@ -165,7 +165,7 @@
 
     <div style="overflow-y: scroll; height: 69vh;">
         <div ng-repeat="group in groups| filter: auswahl.suche.reference" >
-            <md-card>
+            <md-card >
                 <div class="groupContainer myPadding">
 
                     
@@ -177,12 +177,12 @@
                 </div>
                 <!-- <div class=" myPadding"> -->
                 <!-- </md-card-title> -->
-                <md-content>
+                <md-content ng-class="{groupSelected: selectedPanel.selectedNode == group}">
                     
-                    <div class="col-md-2">
-                        <md-button class="md-raised md-small" ng-click="select(group); status!=status"
-                        [ng-class]="status ? 'groupPristine' : 'groupSelected' "
-                        ng-show="status ? 'groupPristine' : 'groupSelected' ">
+                    <div class="col-md-2" ng-init="selectedPanel = {selectedNode: null}">
+                        <md-button class="md-raised md-small" ng-click="showMap(group); selectedPanel.selectedNode=group"
+                        ng-class="{groupSelected: selectedPanel.selectedNode == group}"
+                        >
                             Show
                         </md-button>
                     </div>

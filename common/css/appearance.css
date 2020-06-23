@@ -6,8 +6,8 @@ certainly in use!
 }
 .pageLogo{
     
-    position: absolute;
-    right: 13vw;
+    /* position: initial; */
+    align-self: center;
     height: inherit;
     padding-top: 3px; 
     padding-left: 3px;
@@ -77,7 +77,8 @@ certainly in use!
     background-color: rgb(255, 255, 255);
 }
 .groupSelected{
-    background-color: rgb(151, 151, 151);
+    background-color: rgb(3, 126, 30);
+    font-weight: bolder;
 }
 .mySampleBadge{
     /* background-color: rgb(110, 110, 110); */
@@ -265,9 +266,10 @@ input {
         overflow-y: scroll;
 
     }
+
     .introDivider h2, h3{
         /* box-shadow: rgb(0, 0, 0); */
-        position: absolute;
+        position: relative;
         /* vertical-align: bottom; */
 
     }
@@ -288,6 +290,8 @@ input {
     }
     .contentText{
         padding: 0px 20vw;
+        font-size: 16px;
+        line-height: 1.8;
     }
     .introDivider{
         background-color: lightgray;

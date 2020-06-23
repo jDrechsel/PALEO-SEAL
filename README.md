@@ -26,7 +26,7 @@ PALEO-SEAL was coded by Jan Drechsel (IT consultant), under scientific supervisi
 
 Private Work Repository for Paleo Sea Level Database Interface
 
-Version 0.1.1 [PreRelease]
+Version 0.1.2 -> 0.1.3 [PreRelease]
 
 To Do:
 * Introduction Text	

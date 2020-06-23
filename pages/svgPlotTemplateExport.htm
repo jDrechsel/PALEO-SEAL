@@ -144,9 +144,9 @@ ng-mouse-wheel-up="ZoomSvgIn()"
                     />   
                     <line id="vertical " class="MarkerCross" ng-class="{'plotMarkerRejected': punkt.rejected === true}"
                     ng-attr-x1="{{(punkt.age * svgScaleX) + svgShiftX}}" 
-                    ng-attr-y1="{{ ((punkt.elevation + punkt.sElevationErrorMinus) * svgScaleY) - svgShiftY}}" 
+                    ng-attr-y1="{{ ((punkt.elevation + (punkt.elevationMinus + punkt.elevationPlus)) * svgScaleY) - svgShiftY}}" 
                     ng-attr-x2="{{(punkt.age * svgScaleX) + svgShiftX}}" 
-                    ng-attr-y2="{{((punkt.elevation - punkt.sElevationErrorPlus) * svgScaleY) - svgShiftY}}" 
+                    ng-attr-y2="{{((punkt.elevation - punkt.elevationPlus) * svgScaleY) - svgShiftY}}" 
                     />  
 
                    
@@ -169,7 +169,7 @@ ng-mouse-wheel-up="ZoomSvgIn()"
                      />   
                     <line id="vertical" class="MarkerCross" ng-class="{'plotMarkerRejected': punkt.rejected === true}"
                     ng-attr-x1="{{(punkt.age * svgScaleX) + svgShiftX}}" 
-                    ng-attr-y1="{{ ((punkt.elevation + 2*punkt.sElevationErrorPlus) * svgScaleY) - svgShiftY}}" 
+                    ng-attr-y1="{{ ((punkt.elevation + (punkt.elevationPlus + punkt.elevationPlus)) * svgScaleY) - svgShiftY}}" 
                     ng-attr-x2="{{(punkt.age * svgScaleX) + svgShiftX}}" 
                     ng-attr-y2="{{((punkt.elevation ) * svgScaleY) - svgShiftY}}" 
                      />   
@@ -198,7 +198,7 @@ ng-mouse-wheel-up="ZoomSvgIn()"
                 ng-attr-x1="{{punkt.age * svgScaleX + svgShiftX}}" 
                 ng-attr-y1="{{ (punkt.elevation) * svgScaleY - svgShiftY}}" 
                 ng-attr-x2="{{punkt.age * svgScaleX + svgShiftX}}" 
-                ng-attr-y2="{{(punkt.elevation - 2*punkt.sElevationErrorPlus) * svgScaleY - svgShiftY}}" 
+                ng-attr-y2="{{(punkt.elevation - (punkt.elevationPlus + punkt.elevationPlus)) * svgScaleY - svgShiftY}}" 
                 stroke="black" />  
                 <text class="sampleLabel"
                 ng-attr-x="{{punkt.age * svgScaleX}}" 

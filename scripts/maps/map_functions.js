@@ -1,4 +1,4 @@
-expandControllerMAPfunc = function($scope, $filter, leafletData){
+expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
     /* 
     Here all functions concerning data preparation for the map can be found.
     I. Function to create markers from selected samples (conversion to leaflet standard)
@@ -252,6 +252,7 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
           const result2 = $scope.werteALL.findIndex( sample => sample.xUID === $scope.result[i].options.xUID );
           $scope.werteALL[result2].export = true;
         };
+
       };
 
       $scope.removeSelectedFromExport = function (){

@@ -14,7 +14,7 @@ expandControllerGET($scope, $http, $q, $sce, $parse, nachSchlagen);
 // Expand controller for map operations (generate markers based on selection in Data)
 expandControllerMAP($scope);
 // Expand controller for map selection functions
-expandControllerMAPfunc($scope,$filter, leafletData);
+expandControllerMAPfunc($scope,$filter, leafletData, $mdDialog);
 
 // expandControllerPLOT($scope);
 expandControllerPLOTfunc($scope, $parse);

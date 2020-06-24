@@ -242,7 +242,7 @@ input {
     text-align: left;
     background-color: rgb(24, 16, 97);
     color: white;
-    position: relative;
+    position: sticky;
     top: 0;
     /* z-index: 100; */
   }

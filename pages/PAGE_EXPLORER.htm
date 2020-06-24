@@ -57,8 +57,8 @@
     <div class="myContainerContentResponsive" >
         <div >
             <table  class="sampleTable " width="100%" id="tabelle" >
-                <thead>
-                    <tr class="">
+                <thead >
+                    <tr class="" >
                         <th>
                             <md-checkbox class="myCheckboxHead"ng-model="allSelected" ng-checked="allSelected == true; " ng-click="selectAll()">
     
@@ -111,7 +111,7 @@
                         
                     </tr>
                 </thead>
-                <tbody>
+                <tbody >
 
                     <tr ng-attr-id="{{selected.xUID}}" 
                     ng-repeat="selected in werteALL |filter: {plot: 'true'} |orderBy:sortType:sortReverse" 

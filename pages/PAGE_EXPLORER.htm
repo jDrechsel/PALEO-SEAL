@@ -29,20 +29,20 @@
                 </md-slider-container>
                 <md-slider-container>
                     ZoomY
-                    <md-slider class="md-primary" ng-model="svgScaleY" min="1" max="4" step="0.01">
+                    <md-slider class="md-primary" aria-label="Zoom Y" ng-model="svgScaleY" min="1" max="4" step="0.01">
                     </md-slider>
                 </md-slider-container>
             </div>
             <div class="plotControls" layout="row" layout-wrap flex ng-show="showPlotControl"> 
                 <md-slider-container>
                     ScrollX
-                    <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgShiftX" ng-attr-min="-1000" ng-attr-max="0" md-invert="true">
+                    <md-slider class="md-primary" aria-label="Scroll X" ng-model="svgShiftX" ng-attr-min="-1000" ng-attr-max="0" md-invert="true">
                         PanX
                     </md-slider>
                 </md-slider-container>
                 <md-slider-container>
                     ScrollY
-                    <md-slider class="md-primary" ng-model="svgShiftY" min="-100" max="100" step="1">
+                    <md-slider class="md-primary" aria-label="Scroll Y" ng-model="svgShiftY" min="-100" max="100" step="1">
                     </md-slider>
                 </md-slider-container>
             </div>

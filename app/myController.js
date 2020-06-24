@@ -22,22 +22,27 @@ expandControllerPLOTfunc($scope, $parse);
 expandControllerPLOTsvgOPT($scope, $parse);
 expandControllerPLOTsvg($scope, $parse);
 
-// create lookuptables
-
+// Console Disclaimer
+console.log("%cPALEO SEAL - 1.0"," font-family:sans-serif; font-size: 20px; font-weight: bold");
+console.log("%cThe Console is intended for developer use only! "," font-family:sans-serif; font-size: 14px; font-weight: bold");
+console.log("%cPALEO-SEAL was developed by Jan Drechsel, M.Sc. (IT consultant), under scientific supervision of Dr. Alessio Rovere (MARUM, University of Bremen). "," font-family:sans-serif; font-size: 12px;");
+console.log("%cIf you use the data in PALEO-SEAL, please remember to cite the original authors, and give credit to HOLSEA by citing Khan et al., 2019. Acknowledgments and citations of this code are always welcome, as are suggestions for improvement."," font-family:sans-serif; font-size: 12px;");
+console.log("%c2020 jDrechsel, M.Sc. "," font-family:sans-serif; font-size: 14px; font-weight: bold");
 
 // Load data array 
 $scope.getProben();
 
-// $scope.drawBarChart();
+/*Debug function: Check if data exists */
+// setTimeout(function(){
+//     console.log("fetched wA", $scope.werteALL)
+//     console.log("fetched p", $scope.proben)
+//     console.log("dicts: (delay)", $scope.dictTYPE, $scope.dictREGION, $scope.dictDATING);
 
-setTimeout(function(){
-    console.log("fetched wA", $scope.werteALL)
-    console.log("fetched p", $scope.proben)
-    console.log("dicts: (delay)", $scope.dictTYPE, $scope.dictREGION, $scope.dictDATING);
-
-    console.log($scope.dictDATING[2].Key);
-    console.log("dict Testing : ", $scope.dictTYPE[0].Name);
+//     console.log($scope.dictDATING[2].Key);
+//     console.log("dict Testing : ", $scope.dictTYPE[0].Name);
 
 
-}, 1000);
+// }, 1000);
+
+
 }]);

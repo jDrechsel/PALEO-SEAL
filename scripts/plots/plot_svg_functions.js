@@ -23,10 +23,10 @@ expandControllerPLOTsvg = function( $scope, $parse){
     // $viewBoxString = `${newViewBox.x} ${newViewBox.y} ${viewBox.width} ${viewBox.height}`;
     // $scope.viewBoxString = `${$scope.svgBox_X} ${$scope.svgBox_Y} ${$scope.svgBox_dX} ${$scope.svgBox_dY}`;
     $scope.viewBoxStringInit = `${$scope.svgBox_X} ${$scope.svgBox_Y} ${$scope.svgBox_dX} ${$scope.svgBox_dY}`;
-    console.log("$scope.viewBoxString:",$scope.viewBoxString);
-    console.log("document:",document);
+    // console.log("$scope.viewBoxString:",$scope.viewBoxString);
+    // console.log("document:",document);
     $scope.handlePlot = document.getElementById('#svgPlot');
-    console.log("handlePlot:",$scope.handlePlot);
+    // console.log("handlePlot:",$scope.handlePlot);
     // let plotElement = angular.element(document.getElementById("svgPlot"));
     // console.log("plot element...>",plotElement);
 
@@ -70,8 +70,8 @@ expandControllerPLOTsvg = function( $scope, $parse){
     $scope.ticksF(yScaleMin, yScaleMax, 7, ticksY);
     $scope.ticksX=ticksX;
     $scope.ticksY=ticksY;
-    console.log($scope.ticksX);
-    console.log($scope.ticksY);
+    // console.log($scope.ticksX);
+    // console.log($scope.ticksY);
 
     $scope.plotClicked=false;
 

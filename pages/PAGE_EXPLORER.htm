@@ -117,11 +117,12 @@
                     ng-repeat="selected in werteALL |filter: {plot: 'true'} |orderBy:sortType:sortReverse" 
                     ng-class="">
                         <td>
-                            <md-checkbox class="myCheckbox" aria-label=""
-                            ng-checked="selected.export == true; " ng-click="selected.export = !selected.export " style="z-index: 10;">
-                            <!--  -->
+                            <div class="exportCheckbox" ng-click="selected.export = !selected.export " 
+                            ng-class="{exportCheckboxChecked: selected.export == true }"></div>
+                            <!-- <md-checkbox class="myCheckbox" aria-label=""
+                            ng-checked="selected.export == true; " ng-click="selected.export = !selected.export " >
                             
-                            </md-checkbox>
+                            </md-checkbox> -->
                         </td>
                         <td > {{selected.label}} </td>
                         <td> {{selected.reference}} </td>

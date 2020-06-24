@@ -311,6 +311,20 @@ input {
     }
   /* INTERFACE ELEMENTS */
   /*CheckBox */ 
+
+  .exportCheckbox{
+    width: 15px ;
+    height:  15px ;
+    margin: 5px;
+    outline: solid 1px;
+    outline-color: rgb(112, 112, 112);
+    background-color: rgb(209, 209, 209);
+  }
+  .exportCheckboxChecked{
+    outline-color: rgb(36, 36, 36);
+    background-color: rgb(24, 16, 97);
+  }
+
   md-checkbox.md-checked.myCheckbox .md-icon {
     background-color: rgb(24, 16, 97);
    }

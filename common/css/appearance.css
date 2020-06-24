@@ -324,6 +324,10 @@ input {
     outline-color: rgb(36, 36, 36);
     background-color: rgb(24, 16, 97);
   }
+  .exportCheckboxCheckedAll{
+    outline-color: rgb(202, 202, 202);
+    background-color: rgb(72, 58, 197);
+  }
 
   md-checkbox.md-checked.myCheckbox .md-icon {
     background-color: rgb(24, 16, 97);

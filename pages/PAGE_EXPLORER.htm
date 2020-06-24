@@ -60,10 +60,12 @@
                 <thead >
                     <tr class="" >
                         <th>
-                            <md-checkbox class="myCheckboxHead"ng-model="allSelected" ng-checked="allSelected == true; " ng-click="selectAll()">
+                            <!-- <md-checkbox class="myCheckboxHead"ng-model="allSelected" ng-checked="allSelected == true; " ng-click="selectAll()">
     
                                 
-                            </md-checkbox>
+                            </md-checkbox> -->
+                            <div class="exportCheckbox" ng-model="allSelected" ng-checked="allSelected == true; " ng-click="selectAll()"
+                            ng-class="{exportCheckboxCheckedAll: allSelected == true }"></div>
                             
                         </th>
                         <th ng-click="sortType = 'label'; sortReverse = !sortReverse">

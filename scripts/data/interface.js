@@ -1,12 +1,5 @@
 expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $http){
-  // initial view
-  $scope.sortierung2="Region";
-  
-  // initialize groups:
-  // $scope.groupBy( 'region', 'Region' );
-  
-  
-  
+
   // SIDENAV ///
     $scope.openSidenav=function(){
 
@@ -29,7 +22,6 @@ expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $htt
 
   // MODAL // 
   $scope.dialogExport = function(){
-    // var newScope = $scope.$new();
 
     $mdDialog.show({
       templateUrl: 'pages/MODAL_EXPORT.htm',
@@ -42,9 +34,7 @@ expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $htt
         $scope.werteEXPORT = proben;
         let listeEXPORT = [];
         let listeNOT = [];
-        // $scope.werteEXPORT = function(){
         for (var i = 0; i < $scope.werteEXPORT.length; i++){
-          console.log("$scope.werteEXP.export: ", $scope.werteEXPORT[i].export);
           if ($scope.werteEXPORT[i].export == true){
             listeEXPORT.push(proben[i].xUID);
           } else {
@@ -53,38 +43,21 @@ expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $htt
         }
         $scope.listeEXPORT=listeEXPORT;
         $scope.listeNOT=listeNOT;
-        console.log('>>> [X] Export Dialog');
-        console.log('>>> [X] $scope.werteEXPORT', $scope.werteEXPORT);
-        console.log('>>> [X] $scope.listeEXPORT', $scope.listeEXPORT);
-        console.log('>>> [X] $scope.listeNOT', $scope.listeNOT);
-        // console.log('>>> [X] proben', proben);
+
 
         $scope.dialogExportClose = function(buttonGedruckt){
       
           $mdDialog.hide(buttonGedruckt);
           let listeEXPORT = $scope.listeEXPORT;
-        //   function passVal(dataExport){
-        //     $.post("scripts/data/datenExportieren.php", {"list4export": dataExport});
-        //   }
-        //  passVal(listeEXPORT);
-        console.log("listeExport: 1", $scope.listeEXPORT);
+
         return $scope.listeEXPORT;
       }
-      console.log("listeExport: 2", $scope.listeEXPORT);
       return $scope.listeEXPORT;
     }
     
   })
-  // .then(function(response){
-    //   console.log("$export-response:",response);
-    //   console.log("listeExport(before POST1):",listeEXPORT);
-    
-    // })
+
     .then(function(buttonGedruckt, listeEXPORT){
-      console.log("listeExport: 3", $scope.listeEXPORT, $scope.listeEXPORT.length);
-        console.log("buuton gedrueckt:",buttonGedruckt);
-        console.log("btn etwas-> $scope:",$scope);
-        console.log("btn etwas-> $sc.listeExp:",$scope.listeEXPORT);
       if (buttonGedruckt === 'etwas'){
         $scope.SamplesExportieren = function(liste) {
           let listePOST = liste;

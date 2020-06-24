@@ -5,7 +5,6 @@ expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $htt
 
         $scope.linksOpen = true;
         $mdSidenav('links').open();
-        // $mdSidenav('rechts').open();
         console.log("sidenav button clicked...");
     };
     $scope.closeSideNav = function(dieses) {

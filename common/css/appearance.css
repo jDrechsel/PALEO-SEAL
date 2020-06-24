@@ -211,7 +211,16 @@ input {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+
+    table-layout: auto;
     }
+
+.sampleTable tbody{
+    /* display:block; */
+    width: unset;
+    overflow: auto;
+    height: 100%;
+}
 
 .sampleTable td, .sampleTable th {
     border: 1px solid rgb(146, 146, 146);
@@ -233,7 +242,7 @@ input {
     text-align: left;
     background-color: rgb(24, 16, 97);
     color: white;
-    position: sticky;
+    position: relative;
     top: 0;
     /* z-index: 100; */
   }

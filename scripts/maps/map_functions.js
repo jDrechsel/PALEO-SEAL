@@ -252,7 +252,14 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
           const result2 = $scope.werteALL.findIndex( sample => sample.xUID === $scope.result[i].options.xUID );
           $scope.werteALL[result2].export = true;
         };
-
+        $scope.closeSideNav('links');
+        $mdDialog.show(
+          $mdDialog.alert()
+            .clickOutsideToClose(true)
+            .title('Done!')
+            .textContent('Added to Export')
+            .ok('OK')
+        );
       };
 
       $scope.removeSelectedFromExport = function (){
@@ -260,6 +267,15 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
           const result2 = $scope.werteALL.findIndex( sample => sample.xUID === $scope.result[i].options.xUID );
           $scope.werteALL[result2].export = false;
         };
+        $scope.closeSideNav('links');
+        $mdDialog.show(
+          $mdDialog.alert()
+            .clickOutsideToClose(true)
+            .title('Done!')
+            .textContent('Removed from Export')
+            .ok('OK')
+        );
+
       };
       
     };// end of map init     

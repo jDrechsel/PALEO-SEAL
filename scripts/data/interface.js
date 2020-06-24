@@ -76,14 +76,7 @@ expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $htt
             });     
         };
         $scope.phpResponse=$scope.SamplesExportieren($scope.listeEXPORT);
-        // function: get DB records based on xUIDs in selection
-        $mdDialog.show(
-          $mdDialog.alert()
-            .clickOutsideToClose(true)
-            .title('Done!')
-            .textContent('Generated CSV!')
-            .ok('OK')
-        );
+      
       } else if (buttonGedruckt === 'abbruch'){
         console.log('Dialog geschlossen!');
       }

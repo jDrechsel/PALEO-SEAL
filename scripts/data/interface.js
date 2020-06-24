@@ -91,38 +91,20 @@ expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $htt
           $http({
               method : "POST",
               headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-              // headers: {'Content-Type': 'text/csv; charset=utf-8','Content-Disposition': 'attachment;filename="$filename.csv"'},
-              // header('Content-Type: text/csv; charset=utf-8');
-              // header('Content-Disposition: attachment;filename="$filename.csv"');
               url : "scripts/data/datenExportieren.php",
               data: "data=" + JSON.stringify(listePOST),
               async: false
           }).then(function mySuccess(response) {
            $scope.probenExport = response.data;
-              // console.log('Daten fuer Export PHP response:',response);
-              // console.log('Daten fuer Export PHP response.data:',response.data);
-              // console.log('Daten fuer Export PHP response.config.data:',response.config.data);
-              // console.log("$scope.probenExport: ", $scope.probenExport);
-              let exportBlob = new Blob([$scope.probenExport], {type: 'text/csv'});
-              // date("Y-m-d_H_i_s")+
               let exportDate = new Date();
               let fileName = "PALEOSEALexport_"+ exportDate.toISOString().slice(0,10) +  ".csv";
-              console.log("exportBlob: ", exportBlob);
               saveData($scope.probenExport, fileName);
           }, function myError(response) {
-              console.log('Daten NICHT geladen', response);
+              console.log('Data not loaded! ->', response);
             });     
         };
-        console.log("Connect to DB retreive all marked records")
         $scope.phpResponse=$scope.SamplesExportieren($scope.listeEXPORT);
-      //   function passVal(dataExport){
-      //     $.post("scripts/data/datenExportieren.php", {"list4export": dataExport});
-      //   }
-      //  passVal($scope.listeEXPORT);
-        console.log("Connect to DB retreive all marked records")
         // function: get DB records based on xUIDs in selection
-        console.log("$scope.listeExport(before POST2):",$scope.listeEXPORT);
-        // $scope.getFullRecords($scope.listeEXPORT);
         $mdDialog.show(
           $mdDialog.alert()
             .clickOutsideToClose(true)
@@ -140,17 +122,13 @@ expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $htt
     });
   }
 
-  // mark for export in werteALL
-  $scope.markForExport = function(sample){
-    console.log("m4ex: ", sample);
-    
-  }
+
   let saveData = (function (){
     let a = document.createElement("a");
     document.body.appendChild(a);
     a.style = "display: none";
     return function (data, fileName) {
-      let exportBlob = new Blob([$scope.probenExport], {type: 'text/csv'}),
+      let exportBlob = new Blob([data], {type: 'text/csv'}),
           url = window.URL.createObjectURL(exportBlob);
       a.href = url;
       a.download = fileName;
@@ -159,13 +137,5 @@ expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $htt
 
     };
   }());
-  // $scope.getFullRecord = function(){
-  //   // $scope.ExportListFinal=$filter('filter')($scope.werteEXPORT, {export=true})
-  //   $scope.ExportListFinal=$scope.werteEXPORT.filter(function(proben){
-  //     return (proben.export == true)
-  //   });
-
-  //   console.log("get full Records");
-  //   console.log("get full Records: ", $scope.ExportListFinal);
-  // }
+ 
 };

@@ -1,4 +1,5 @@
-<div class="col-md-9 myContainer" style="background-color: rgb(228, 228, 228); height: 90vh;">
+<div class="col-md-9 myContainer" style="background-color: rgb(228, 228, 228); height: 90vh;"
+>
     <!-- <nvd3 options="options" data="werteSCATTER" class="ng-scope" width=600px height=400px></nvd3> -->
     <div class="myContainerContent" style="height: 55vh;">
         <h4>{{sortierung2}} : {{detailName}}</h4>
@@ -171,10 +172,10 @@
         </md-card-content>
     </md-card>
 
-    <div style="overflow-y: scroll; height: 69vh;">
+    <div style="overflow-y: scroll; height: 69vh;" >
         <div ng-repeat="group in groups| filter: auswahl.suche.reference" >
-            <md-card >
-                <div class="groupContainer myPadding">
+            <md-card  >
+                <div class="groupContainer myPadding" id="card-{{group.label2}}" ng-class="{'groupSelected': group.label2 == detailName}">
 
                     
                     <div class="myHeading" >
@@ -185,11 +186,11 @@
                 </div>
                 <!-- <div class=" myPadding"> -->
                 <!-- </md-card-title> -->
-                <md-content ng-class="{groupSelected: selectedPanel.selectedNode == group}">
+                <md-content >
+                    <!-- ng-class="{groupSelected: selectedPanel.selectedNode == group}" -->
                     
                     <div class="col-md-2" ng-init="selectedPanel = {selectedNode: null}">
                         <md-button class="md-raised md-small" ng-click="showMap(group); selectedPanel.selectedNode=group"
-                        ng-class="{groupSelected: selectedPanel.selectedNode == group}"
                         >
                             Show
                         </md-button>

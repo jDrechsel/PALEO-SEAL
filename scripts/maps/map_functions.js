@@ -62,8 +62,17 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
       angular.extend($scope, {
           icons: local_icons
       });
+
+
+
+      // elemntCard.classList.toggle("groupSelected");
       $scope.selected = id;
       $scope.detailName=$scope.selected.label2;
+
+      // $("[id^='card-']").toggleClass("active")
+
+      
+      // toggle visibility in Plot ()
       for (var i = 0; i < $scope.werteALL.length; i++) {
           $scope.werteALL[i].plot = false;
       };
@@ -71,7 +80,7 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
           $scope.selected.proben[i].plot = true;
       };
 
-
+      // Generate markers (have to me mapped to fit leaflet & leaflet cluster standards)
         let markers = {};
         let mapMarkersAccepted=[];
         let mapMarkersRejected=[];
@@ -137,10 +146,13 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
        
 
         // Die "markers" der Funktion an die leaflet "markers" geben...
+        // 
         angular.extend($scope, {
             markers: markers
-        });
+        }); 
+        //ENDOF::: --> Generate markers
 
+       
 
         // get scope
         var samples = $scope.werteALL;
@@ -155,9 +167,28 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
         // $scope.select(id);
         console.log("MAP: processed samples", samples);
 
+
+         //toggle CSS of selected element (card)
+      //  let elemntCardsAll=document.querySelectorAll("[id^='card-']");
+      //  for (var i = 0; i < elemntCardsAll.length; i++) {
+      //   elemntCardsAll[i].classList.remove("groupSelected");
+      //   console.log("all cards: i ",i, "->",elemntCardsAll[i]);
+
+      //  };
+      //  let elemntCard=document.getElementById("card-"+$scope.detailName);
+      //  elemntCard.classList.add("groupSelected");
+      //  console.log("all cards: ",elemntCardsAll);
+      //  console.log("selected card: ",elemntCard);
+
+
       };// endof showMap()
 
-    
+    $scope.initStyle=function(targetID){
+      // let elemntCard=document.getElementById("card-"+targetID);
+      // elemntCard.classList.toggle("groupSelected");
+      // console.log("initStyle: ", targetID);
+      // console.log("initStyle: ", elemntCard);
+    }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////INIT MAP//////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////

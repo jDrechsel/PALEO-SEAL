@@ -78,7 +78,15 @@ certainly in use!
     background-color: rgb(255, 255, 255);
 }
 .groupSelected{
-    background-color: rgb(3, 126, 30);
+    background-color: rgb(39, 41, 148);
+    color: white;
+    font-weight: bolder;
+}
+.groupCard{
+    background-color: rgb(255, 255, 255);
+}
+.groupCard.active{
+    background-color: rgb(39, 41, 148);
     font-weight: bolder;
 }
 .mySampleBadge{
@@ -351,7 +359,8 @@ input {
   md-select-menu, md-select-menu md-content {
     max-height: 385px;
     }
-  md-select-menu, md-select-menu md-option {
+  /* md-select-menu, md-select-menu  */
+  md-option {
     /* max-height: 385px; */
     height: 36px;
     }

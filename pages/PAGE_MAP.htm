@@ -1,4 +1,4 @@
-<div class="col-md-3" style="background-color: darkgrey; height: 90vh; padding: 0px;" ng-init="initMap()">
+<div class="col-md-3" style="background-color: darkgrey; height: 90vh; padding: 0px;" ng-init="initMap(); initStyle()">
     <md-card class="special" 
     data-toggle="tooltip" data-placement="right" 
     title="Choose category to show samples">
@@ -9,6 +9,7 @@
         </md-card-title> -->
         <md-card-content>
             <div layout="row" layout-align="space-between center">
+
                 <span>Select category:</span>
                 <md-select ng-model="sortierung2"  placeholder="Select" class="md-no-underline" style="margin: 2px;">
                 <!-- <md-option value="'Type'" data-kategorie="'D5_01'">Type</md-option> -->
@@ -37,16 +38,24 @@
     <!-- <div ng-repeat="group in groups  | filter: auswahl.suche.reference | orderBy: 'label'" > -->
     <div ng-repeat="group in groups  | filter: auswahl.suche.reference " >
         <md-card>
-            <md-card-title>
+            <div class="groupContainer myPadding" id="card-{{group.label2}}" ng-class="{'groupSelected': group.label2 == detailName}">
+
+                    
+                <div class="myHeading" >
+                    
+                    {{group.label2}}
+                </div>
+                <div class="mySampleBadge" >{{group.proben.length}}</div>
+            </div>
+            <!-- <md-card-title>
                 
                 <h4>
                     {{group.label2}}
                 </h4> 
                 
-            </md-card-title>
-            <md-content>
-                <div class="col-md-7">
-                    {{group.proben.length}}  Samples
+            </md-card-title> -->
+            <md-content >
+                <div class="col-md-6">
                 </div>
                 <div class="col-md-2">
                     <md-button class="md-raised md-small" ng-click="showMap(group)">

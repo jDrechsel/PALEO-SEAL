@@ -225,7 +225,15 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
             editableLayers.clearLayers();
           })
           map.on('draw:created', function (e) {
-
+            e.layer.bindTooltip("Click selection to continue...",
+            {
+              permanent: true, 
+              sticky: true,
+              className: "selectionTooltip", 
+              // position: "top"
+            })
+              // .setLatLng(new L.LatLng(e.layer.getBounds().getNorth(),e.layer.getBounds().getWest()))
+              // .openTooltip();
             var layer = e.layer;
             drawnItems.addLayer(layer);
             $scope.mapHint="Click rectangle to continue...";

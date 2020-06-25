@@ -17,7 +17,7 @@
                         <li><a href="#!PAGEabout">about</a></li>
                     </ul>
                     <div style="float: right;">
-                        <!-- {{werteENDEXP}} -->
+                        <!-- {{exportLength}} -->
                         <md-button class="md-raised " ng-click="dialogExport()" style="float: right;">
                             Export
                         </md-button>

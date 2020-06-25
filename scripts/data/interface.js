@@ -1,4 +1,4 @@
-expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $http){
+expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $http, $filter){
 
   // SIDENAV ///
     $scope.openSidenav=function(){
@@ -102,5 +102,7 @@ expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $htt
 
     };
   }());
- 
+  // $scope.werteLength = $filter('objLength')($scope.werteALL);
+  $scope.exportArray = $filter('filter')($scope.werteALL, { export: true});
+  // $scope.exportLength = Object.keys($scope.exportArray).length;
 };

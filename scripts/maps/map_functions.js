@@ -78,6 +78,8 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
         console.log("markers: @in: ",markers);
         for (var i = 0; i < id.proben.length; i++) {
           
+
+
           if (isNaN(id.proben[i].lat) || isNaN(id.proben[i].lng)){
             mapMarkersRejected.push(
              {

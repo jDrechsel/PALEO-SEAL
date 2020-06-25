@@ -43,35 +43,40 @@
                     var match1 = parseInt(regExpYear.exec($scope.proben[i].A_02)[0]);
 
                     // Push entry into werteAll
-                    werteALL.push({
-                        xUID: parseInt($scope.proben[i].A_00),
-                        label: $scope.proben[i].A_01,
-                        type: parseInt($scope.proben[i].D5_01),
-                        type_string: nachSchlagen(parseInt($scope.proben[i].D5_01), 'Type'),
-                        age: age_temp,
-                        elevation: elevation_temp,
-                        elevationMinus: elevation_errorMinus,
-                        elevationPlus: elevation_errorPlus,
-                        lat: parseFloat($scope.proben[i].B_03),
-                        lng: parseFloat($scope.proben[i].B_04),
-                        reference: $scope.proben[i].A_02.trim(),
-                        publicationYear: match1,
-                        region: $scope.proben[i].B_01,
-                        subregion: $scope.proben[i].B_02,
-                        dating: $scope.proben[i].C_01,
-                        feature: nachSchlagen(parseInt($scope.proben[i].D5_02),'primaryType'),
-                        rejected: Boolean(parseInt($scope.proben[i].E_01)),
-                        ageErrorPlus: parseFloat($scope.proben[i].C_05),
-                        ageErrorMinus: parseFloat($scope.proben[i].C_06),
-                        ageError: parseFloat($scope.proben[i].C_03),
-                        export: false,
-                        map: false,
-                        plot: false,
-                        myFocus: false,
-                      
-                    })
+                    if ($scope.proben[i].E_01 == true){
+                        // don't convert rejected entries
+                        } else {
+                            werteALL.push({
+                                xUID: parseInt($scope.proben[i].A_00),
+                                label: $scope.proben[i].A_01,
+                                type: parseInt($scope.proben[i].D5_01),
+                                type_string: nachSchlagen(parseInt($scope.proben[i].D5_01), 'Type'),
+                                age: age_temp,
+                                elevation: elevation_temp,
+                                elevationMinus: elevation_errorMinus,
+                                elevationPlus: elevation_errorPlus,
+                                lat: parseFloat($scope.proben[i].B_03),
+                                lng: parseFloat($scope.proben[i].B_04),
+                                reference: $scope.proben[i].A_02.trim(),
+                                publicationYear: match1,
+                                region: $scope.proben[i].B_01,
+                                subregion: $scope.proben[i].B_02,
+                                dating: $scope.proben[i].C_01,
+                                feature: nachSchlagen(parseInt($scope.proben[i].D5_02),'primaryType'),
+                                rejected: Boolean(parseInt($scope.proben[i].E_01)),
+                                ageErrorPlus: parseFloat($scope.proben[i].C_05),
+                                ageErrorMinus: parseFloat($scope.proben[i].C_06),
+                                ageError: parseFloat($scope.proben[i].C_03),
+                                export: false,
+                                map: false,
+                                plot: false,
+                                myFocus: false,
+                            
+                            })
+                        }
                 };
                 $scope.werteALL=werteALL;
+
                 // initialize with Region selected
                 $scope.groupBy( 'region', 'Region' );
 

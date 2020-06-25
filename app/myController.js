@@ -6,7 +6,7 @@ $scope.message = "myController loaded...";
 // Load custom Expansions (&directives)
 // Preloading requisites
 expandControllerINIT($scope, $http, $mdSidenav);
-expandControllerINTERFACE($scope, $mdSidenav, $mdDialog, $parse, $http);
+expandControllerINTERFACE($scope, $mdSidenav, $mdDialog, $parse, $http, $filter);
 // Expand controller for data operations ( Functions, groupBy(), sortOn(),...)
 expandControllerDATA($scope, $mdSidenav, $q);
 // Connect to DB and get Data 

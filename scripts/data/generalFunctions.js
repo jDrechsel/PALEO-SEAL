@@ -213,4 +213,10 @@ $scope.exportLength = function(){
         // }).length;
         return $scope.werteENDEXP;
     };
+
+    myApp.filter('objLength', function() { 
+        return function(object) { 
+         return object ? Object.keys(object).length : "";
+        } 
+       });
 } //endof expand

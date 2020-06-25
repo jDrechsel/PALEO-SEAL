@@ -4,11 +4,12 @@ certainly in use!
 .infoPage{
     min-height: 60px;
 }
-.pageLogo{
-    
-    /* position: initial; */
-    align-self: center;
-    height: inherit;
+.introDivider .pageLogo{
+    /* display: table-column; */
+    position: absolute;
+    right: 0;
+    /* align-self: center; */
+    height: 120px;
     padding-top: 3px; 
     padding-left: 3px;
 }
@@ -286,9 +287,9 @@ input {
         /* text-align: center; */
         padding-left: 15vw;
         padding-top: inherit;
-        vertical-align: bottom;
+        /* vertical-align: bottom; */
         
-        position: relative;
+        /* position: relative; */
 
 
     }
@@ -328,7 +329,32 @@ input {
     outline-color: rgb(202, 202, 202);
     background-color: rgb(72, 58, 197);
   }
-
+  .selectContainer md-select-menu{
+    margin: 0px; 
+    /* height: fit-content;
+    overflow-y: auto; */
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);    
+  }
+  /* .selectContainer {
+    margin: 0px; 
+    padding: 2px;
+    height: fit-content;
+    overflow-y: auto;
+ 
+  }
+  .selectContainer .md-select-menu-container{
+    margin: 0px; 
+    padding: 2px;
+    min-height: fit-content;
+    overflow-y: auto;
+  } */
+  md-select-menu, md-select-menu md-content {
+    max-height: 385px;
+    }
+  md-select-menu, md-select-menu md-option {
+    /* max-height: 385px; */
+    height: 36px;
+    }
   md-checkbox.md-checked.myCheckbox .md-icon {
     background-color: rgb(24, 16, 97);
    }

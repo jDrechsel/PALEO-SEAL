@@ -135,8 +135,8 @@ expandControllerDATA = function($scope, $mdSidenav, $q){
                     var Bezeichnung=$scope.dictPRIMARY[i].fullName;
                 }
             };
-
             return Bezeichnung;
+
         }else if($scope.sortierung2==='None'){
             // show "All samples" when grouped by "none"
             Bezeichnung="All samples";

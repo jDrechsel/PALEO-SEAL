@@ -145,10 +145,10 @@
 <div class="col-md-3" style="background-color: darkgrey; height: 90vh; overflow-y: scroll; padding: 0px;">
     <md-card class="special">
        
-        <md-card-content>
-            <div layout="row" layout-align="space-between center">
+        <md-card-content style="padding: 6px;">
+            <div layout="row" layout-align="space-between center" style="padding: 6px;">
                 <span>Select category:</span>
-                <md-select ng-model="sortierung2"  placeholder="Select" class="md-no-underline" style="margin: 0px;">
+                <md-select ng-model="sortierung2"  placeholder="Select" class="selectContainer" md-container-class="selectContainer" style="margin: 0;">
                 <!-- <md-option value="'Type'" data-kategorie="'D5_01'">Type</md-option> -->
                 <md-option value="Type" ng-click="groupBy( 'type', 'Type' ); sortierung2 = 'Type'">Type</md-option>
                 <md-option value="Region" ng-click="groupBy( 'region', 'Region' ); sortierung2 = 'Region'" ng-selected="true">Region</md-option>

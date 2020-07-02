@@ -150,14 +150,13 @@
             <div layout="row" layout-align="space-between center" style="padding: 6px;">
                 <span>Select category:</span>
                 <md-select ng-model="sortierung2"  placeholder="Select" class="selectContainer" md-container-class="selectContainer" style="margin: 0;">
-                <!-- <md-option value="'Type'" data-kategorie="'D5_01'">Type</md-option> -->
-                <md-option value="Type" ng-click="groupBy( 'type', 'Type' ); sortierung2 = 'Type'">Type</md-option>
-                <md-option value="Region" ng-click="groupBy( 'region', 'Region' ); sortierung2 = 'Region'" ng-selected="true">Region</md-option>
-                <md-option value="Subregion" ng-click="groupBy( 'subregion', 'Subregion' ); sortierung2 = 'Subregion'">Subregion</md-option>
-                <md-option value="Reference" ng-click="groupBy( 'reference', 'Reference' ); sortierung2 = 'Reference'">Reference</md-option>
-                <md-option value="pubYear" ng-click="groupBy( 'publicationYear', 'Reference' ); sortierung2 = 'Reference'">Publication Year</md-option>
-                <md-option value="Dating" ng-click="groupBy( 'dating' , 'Dating'); sortierung2 = 'Dating'">Dating</md-option>
-                <md-option value="None" ng-click="groupBy(); sortierung2 = 'None'">All Samples</md-option>
+                <md-option value="Type" ng-click="groupBy( 'type'); ">Type</md-option>
+                <md-option value="Region" ng-click="groupBy( 'region');" ng-selected="true">Region</md-option>
+                <md-option value="Subregion" ng-click="groupBy( 'subregion');">Subregion</md-option>
+                <md-option value="Reference" ng-click="groupBy( 'reference');">Reference</md-option>
+                <md-option value="pubYear" ng-click="groupBy( 'publicationYear');">Publication Year</md-option>
+                <md-option value="Dating" ng-click="groupBy( 'dating');">Dating</md-option>
+                <md-option value="None" ng-click="groupBy('none');">All Samples</md-option>
                 </md-select>
             </div>
             <p ng-show="sortierung2 != ''">{{groups.length}} classes</p>
@@ -238,56 +237,3 @@
 
 
 
-<!-- SIDENAV -->
-<div layout="row">
-	<!-- <div ng-show="linksOpen" flex> -->
-		<md-sidenav style="min-width: 60vw; position: fixed;" class="md-sidenav-left" md-component-id="links" md-disable-backdrop md-whiteframe="4">
-			<md-toolbar class="md-theme-indigo">
-                
-                <span>
-
-                    <h2 class="md-toolbar-tools">Export list:       
-                        <span>
-                            <md-button ng-click="closeSideNav('links')" class="md-accent" style="position: absolute; right: 20px; top: 15px;">
-                                Close
-                            </md-button>
-                        </span>
-                    </h2>
-                </span>
-				
-			</md-toolbar>
-			<md-content layout-margin>
-
-                <div id="test1" class='with-3d-shadow with-transitions'>
-                    <svg></svg>
-                </div>
-        
-                <div layout="row" layout-wrap flex>
-                    <p>Samples:<span class="badge">{{selected.proben.length}}</span> [
-                        Marine<span class="badge badge-marine" >{{werteSCATTER[2].values.length}}</span> 
-                        Indicator <span class="badge badge-indicator">{{werteSCATTER[1].values.length}}</span>
-                        Terrestrial: <span class="badge badge-terrestrial">{{werteSCATTER[0].values.length}}</span>]
-                    </p>
-                </div>
-                <div layout="row" layout-wrap flex>
-                    <h4>Test scopes</h4>
-                </div>
-
-                <div layout="row" layout-wrap flex>
-                    <p>labels: {{labelsXY}}</p>
-                </div>
-
-                <div layout="row" layout-wrap flex>
-                    <p>werteXY: {{werteXY}}</p>
-                </div>
-
-                <div layout="row" layout-wrap flex>
-                    <p>werteSCATTER: {{werteSCATTER}}</p>
-                </div>
-            </md-content>
-        </md-sidenav>
-    <!-- </div> -->
-</div>
-<script>
-        console.log("explorer opened...")
-</script>

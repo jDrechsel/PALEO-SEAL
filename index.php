@@ -14,7 +14,7 @@
                         <li><a href="#!">Intro</a></li>
                         <li><a href="#!ChartVIEW">Data Explorer</a></li>
                         <li><a href="#!Map">Map</a></li>
-                        <li><a href="#!PAGEabout">about</a></li>
+                        <li><a href="#!PAGEabout">About</a></li>
                     </ul>
                     <div style="float: right;">
                         <!-- {{exportLength}} -->

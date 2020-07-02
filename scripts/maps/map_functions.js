@@ -24,9 +24,9 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
         /* PURPOSE: 
             Process group samples and append them to map
             -> Layers (?watch?) */
-        console.log("Map Button clicked... ->ID: ",id);
-        console.log("Map Button clicked... ->ID: ",id.label);
-        console.log("Map Button clicked... ->ID: ",id.proben);
+        // console.log("Map Button clicked... ->ID: ",id);
+        // console.log("Map Button clicked... ->ID: ",id.label);
+        // console.log("Map Button clicked... ->ID: ",id.proben);
 
         // process proben in group
         var local_icons = {
@@ -84,7 +84,7 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
         let markers = {};
         let mapMarkersAccepted=[];
         let mapMarkersRejected=[];
-        console.log("markers: @in: ",markers);
+        // console.log("markers: @in: ",markers);
         for (var i = 0; i < id.proben.length; i++) {
           
 
@@ -136,11 +136,11 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
         $scope.mapMarkersAccepted=mapMarkersAccepted;
         $scope.mapMarkersRejected=mapMarkersRejected;
 
-        console.log('>>> [M] Map User Input');
+        // console.log('>>> [M] Map User Input');
 
-        console.log("Geladene \"Marker\" => ", markers); // Die Marker sind ein Objekt mit Objekten!! Kein Array mit Objekten o.ä.
-        console.log("Accepted \"Marker\" => ", mapMarkersAccepted); // Die Marker sind ein Objekt mit Objekten!! Kein Array mit Objekten o.ä.
-        console.log("Rejected \"Marker\" => ", mapMarkersRejected); // Die Marker sind ein Objekt mit Objekten!! Kein Array mit Objekten o.ä.
+        // console.log("Geladene \"Marker\" => ", markers); // Die Marker sind ein Objekt mit Objekten!! Kein Array mit Objekten o.ä.
+        // console.log("Accepted \"Marker\" => ", mapMarkersAccepted); // Die Marker sind ein Objekt mit Objekten!! Kein Array mit Objekten o.ä.
+        // console.log("Rejected \"Marker\" => ", mapMarkersRejected); // Die Marker sind ein Objekt mit Objekten!! Kein Array mit Objekten o.ä.
         // console.log("Geladene \"MarkersCONV\" => ", markersCONV); // Die Marker sind ein Objekt mit Objekten!! Kein Array mit Objekten o.ä.
        
        
@@ -156,39 +156,18 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
 
         // get scope
         var samples = $scope.werteALL;
-        console.log("var samples: ", samples);
+        // console.log("var samples: ", samples);
         for (var i = 0; i < samples.length; i++) {
           if (samples[i].id===id) {
               samples[i].map = !samples[i].map; // Toggler true <==> false
               break;
           }
         };
-        // $scope.processMapInfo();
-        // $scope.select(id);
-        console.log("MAP: processed samples", samples);
-
-
-         //toggle CSS of selected element (card)
-      //  let elemntCardsAll=document.querySelectorAll("[id^='card-']");
-      //  for (var i = 0; i < elemntCardsAll.length; i++) {
-      //   elemntCardsAll[i].classList.remove("groupSelected");
-      //   console.log("all cards: i ",i, "->",elemntCardsAll[i]);
-
-      //  };
-      //  let elemntCard=document.getElementById("card-"+$scope.detailName);
-      //  elemntCard.classList.add("groupSelected");
-      //  console.log("all cards: ",elemntCardsAll);
-      //  console.log("selected card: ",elemntCard);
 
 
       };// endof showMap()
 
-    $scope.initStyle=function(targetID){
-      // let elemntCard=document.getElementById("card-"+targetID);
-      // elemntCard.classList.toggle("groupSelected");
-      // console.log("initStyle: ", targetID);
-      // console.log("initStyle: ", elemntCard);
-    }
+    
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////INIT MAP//////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////

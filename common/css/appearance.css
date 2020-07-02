@@ -206,7 +206,6 @@ input {
 }
 .selectionTooltip{
     background: rgba(64, 67, 235, 0);
-    /* border: 2px solid cyan */
 }
 .leaflet-tooltip {
     position: inherit;

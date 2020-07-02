@@ -1,30 +1,9 @@
-<!-- <h3>SVG Directive running...</h3> -->
-<!-- <table class="svgDebugTable">
-    <thead>
-
-        <th>viewBox x y w h</th>
-        <th>Shift X:Y</th>
-        <th>Scale X:Y</th>
-        <th>Zoom X:Y</th>
-        <th>Position X:Y</th>
-    </thead>
-        <td>{{viewBoxString}}</td>
-        <td>{{svgShiftX}} : {{svgShiftY}}</td>
-        <td>{{svgScaleX | number: 3}} : {{svgScaleY | number: 3}}</td>
-        <td>{{svgScaleX/staticScaleX | number: 3}} : {{svgScaleY/staticScaleY | number: 3}}</td>
-        <td>{{dragStart.x}} : {{dragStart.y}}</td>
-</table> -->
-
-
 <svg width="100%" height="50vh" id="timeSeries"
 ng-attr-view_box="{{viewBoxString}}" preserveAspectRatio="xMidYMax meet"
 ng-mousemove="plotPosition($event)" ng-mousedown="plotAction($event)" ng-mouseup="plotMouseUp($event)"  
 ng-mouse-wheel-down="ZoomSvgOut()" 
-ng-mouse-wheel-up="ZoomSvgIn()"
-    >
-    <!-- PLOT: BASE
-        Axes, Labels etc
-    -->
+ng-mouse-wheel-up="ZoomSvgIn()">
+
     
     <g id="plotBase">
         <g id="axes">
@@ -212,35 +191,3 @@ ng-mouse-wheel-up="ZoomSvgIn()"
 </svg>
 
 
-
-
-<!-- <table class="svgDebugTable">
-    <thead>
-
-        <th>viewBox x y w h</th>
-        <th>Click X:Y</th>
-        <th>unClick X:Y</th>
-        <th>Distance X:Y</th>
-        <th>Position X:Y</th>
-    </thead>
-        <td>{{viewBoxString}}</td>
-        <td>{{dragStart.x}} : {{dragStart.y}}</td>
-        <td>{{dragStop.x}} : {{dragStop.y}}</td>
-        <td>{{dragDist.x}} : {{dragDist.y}}</td>
-        <td>{{dragStart.x}} : {{dragStart.y}}</td>
-</table> -->
-<!-- <table class="svgDebugTable">
-    <thead>
-
-        <th>clicked Sample</th>
-        <th>Age : Elevation</th>
-        <th>plot: </th>
-        <th>Distance X:Y</th>
-        <th>plotfilter</th>
-    </thead>
-        <td>{{this}}</td>
-        <td>{{dragStart.x}} : {{dragStart.y}}</td>
-        <td>{{dragStop.x}} : {{dragStop.y}}</td>
-        <td>{{dragDist.x}} : {{dragDist.y}}</td>
-        <td>{{plotfilter}}</td>
-</table> -->

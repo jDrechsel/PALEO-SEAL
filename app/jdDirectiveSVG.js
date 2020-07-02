@@ -13,23 +13,9 @@
           show markers based on criteria (plot === true, comes in handy for export=== true -> reusability)
           highlight markers marked for export in plot view, not export view
 */
-/* 
-    NOTES:
-      input attributes?
-
-      integrate or connect table?
-
-    ## General Plot functionality:
-      Pan zoom fixed axis (purge viewbox idea, calculate)
-        overlay (passepartout) to hide markers out of extent?
-
-      Legend? 
-*/
 
 myApp.directive('jdDirectiveSvg', function() {
-        // return function(scope, element, attrs) {
-    
-        // };
+
         return {
           restrict: 'E',
           replace: true,

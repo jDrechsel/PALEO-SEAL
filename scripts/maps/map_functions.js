@@ -24,16 +24,11 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
         /* PURPOSE: 
             Process group samples and append them to map
             -> Layers (?watch?) */
-        // console.log("Map Button clicked... ->ID: ",id);
-        // console.log("Map Button clicked... ->ID: ",id.label);
-        // console.log("Map Button clicked... ->ID: ",id.proben);
-
+       
         // process proben in group
         var local_icons = {
           default_icon: {},
           jd_icon_custom: {
-              // iconUrl: "common/img/jdMarkerCustom.png",
-              // shadowUrl: "common/img/jdMarkerCustomShadow.png",
               iconUrl: "common/ressource/images/marker-icon.png",
               shadowUrl: "common/ressource/images/marker-shadow.png",
               iconSize: [32, 42],
@@ -69,7 +64,6 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
       $scope.selected = id;
       $scope.detailName=$scope.selected.label2;
 
-      // $("[id^='card-']").toggleClass("active")
 
       
       // toggle visibility in Plot ()
@@ -84,7 +78,6 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
         let markers = {};
         let mapMarkersAccepted=[];
         let mapMarkersRejected=[];
-        // console.log("markers: @in: ",markers);
         for (var i = 0; i < id.proben.length; i++) {
           
 
@@ -121,7 +114,6 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
               xUID: id.proben[i].xUID,
               indicatorType: id.proben[i].type_string,
               reference: id.proben[i].reference,
-              // message: <h3>id.proben[i].label</h3> + "Age: " + id.proben[i].age + "; Elevation: " +id.proben[i].elevation + "; Indicator Type: " + id.proben[i].type + "; Ref: "+ id.proben[i].reference
               message: '<h4>'+ id.proben[i].label +'</h4>'+  id.proben[i].reference + '<p>' + id.proben[i].type_string + '</p><p>' +  id.proben[i].feature + '</p><p> Age:'  + id.proben[i].age + ' a </p><p> PaleoRSL/Elevation:'  +id.proben[i].elevation + ' m</p>' 
               };
 
@@ -136,27 +128,17 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
         $scope.mapMarkersAccepted=mapMarkersAccepted;
         $scope.mapMarkersRejected=mapMarkersRejected;
 
-        // console.log('>>> [M] Map User Input');
-
-        // console.log("Geladene \"Marker\" => ", markers); // Die Marker sind ein Objekt mit Objekten!! Kein Array mit Objekten o.ä.
-        // console.log("Accepted \"Marker\" => ", mapMarkersAccepted); // Die Marker sind ein Objekt mit Objekten!! Kein Array mit Objekten o.ä.
-        // console.log("Rejected \"Marker\" => ", mapMarkersRejected); // Die Marker sind ein Objekt mit Objekten!! Kein Array mit Objekten o.ä.
-        // console.log("Geladene \"MarkersCONV\" => ", markersCONV); // Die Marker sind ein Objekt mit Objekten!! Kein Array mit Objekten o.ä.
+        
        
-       
-
-        // Die "markers" der Funktion an die leaflet "markers" geben...
-        // 
+        // Hand "markers" of function to leaflet "Markers"
         angular.extend($scope, {
             markers: markers
-        }); 
-        //ENDOF::: --> Generate markers
+        }); //ENDOF::: --> Generate markers
 
        
 
         // get scope
         var samples = $scope.werteALL;
-        // console.log("var samples: ", samples);
         for (var i = 0; i < samples.length; i++) {
           if (samples[i].id===id) {
               samples[i].map = !samples[i].map; // Toggler true <==> false
@@ -209,10 +191,7 @@ expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
               permanent: true, 
               sticky: true,
               className: "selectionTooltip", 
-              // position: "top"
             })
-              // .setLatLng(new L.LatLng(e.layer.getBounds().getNorth(),e.layer.getBounds().getWest()))
-              // .openTooltip();
             var layer = e.layer;
             drawnItems.addLayer(layer);
             $scope.mapHint="Click rectangle to continue...";

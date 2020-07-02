@@ -7,9 +7,6 @@
             }).then(function mySuccess(response){
                 $scope.proben = [];
                 $scope.proben=response.data;
-                // console.log(response);
-                // console.log("Daten geladen", $scope.proben)
-                // console.log("Daten geladen", $scope.proben.length)
             }, function myError(response){
                 console.log("Daten NICHT geladen", response);
             }).then(function Konvertieren(){
@@ -78,7 +75,7 @@
                 $scope.werteALL=werteALL;
 
                 // initialize with Region selected
-                $scope.groupBy( 'region', 'Region' );
+                $scope.groupBy( 'region');
 
             })
         }; //end of $scope.getProben

@@ -55,7 +55,6 @@ if (empty($retreived)) {
     die("The JSON string is empty!");
   }
 
-// $filename = "exportfilePHP" .date("Y-m-d_H_i_s") . ".csv";
 $filename = "exportfilePHP.csv";
 
 $handle = fopen($filename, 'w+');
@@ -64,19 +63,10 @@ fputcsv($handle, $retreivedStrings);
 
 foreach ($ProbenKurz as $line){
     fputcsv($handle, $line);
-    // echo  $line;
 }
 
 fclose($handle);
 
-// header('Content-Description: File Transfer');
-// header('Content-Type: application/octet-stream');
-// header('Content-Disposition: attachment; filename="$filename"');
-// header('Content-Transfer-Encoding: binary');
-// header('Expires: 0');
-// header('Cache-Control: must-revalidate');
-// header('Pragma: public');
-// header('Content-Length: ' . filesize($filename));
 readfile($filename);
 unlink($filename)
  ?>

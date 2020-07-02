@@ -17,7 +17,6 @@ expandControllerDATA = function($scope, $mdSidenav, $q){
         if ($scope.sortierung2 == "None"){
         } else{
             sortierung = attribute[0].toUpperCase()+attribute.slice(1);
-            //     sortierung = '';
         }
         console.log("->",attribute, " - ",sortierung, " - ", $scope.sortCase)
 
@@ -170,14 +169,6 @@ $scope.selectWithinGroup = function(site){
 // custom class change for plot markers if export = true
 $scope.markerClass = "plotMarker";
 
-// $scope.changeClass = function(){
-//     if ($scope.markerClass === "plotMarker"){
-//         $scope.markerClass = "plotMarkerSelected";
-//     } else {
-//         $scope.markerClass = "plotMarker";
-//     }
-
-// };
 
 $scope.exportLength = function(){
        let werteEND =  $q.werteALL;

@@ -1,4 +1,4 @@
-expandControllerMAPfunc = function($scope, $filter, leafletData){
+expandControllerMAPfunc = function($scope, $filter, leafletData, $mdDialog){
     /* 
     Here all functions concerning data preparation for the map can be found.
     I. Function to create markers from selected samples (conversion to leaflet standard)
@@ -62,8 +62,17 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
       angular.extend($scope, {
           icons: local_icons
       });
+
+
+
+      // elemntCard.classList.toggle("groupSelected");
       $scope.selected = id;
       $scope.detailName=$scope.selected.label2;
+
+      // $("[id^='card-']").toggleClass("active")
+
+      
+      // toggle visibility in Plot ()
       for (var i = 0; i < $scope.werteALL.length; i++) {
           $scope.werteALL[i].plot = false;
       };
@@ -71,13 +80,15 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
           $scope.selected.proben[i].plot = true;
       };
 
-
+      // Generate markers (have to me mapped to fit leaflet & leaflet cluster standards)
         let markers = {};
         let mapMarkersAccepted=[];
         let mapMarkersRejected=[];
         console.log("markers: @in: ",markers);
         for (var i = 0; i < id.proben.length; i++) {
           
+
+
           if (isNaN(id.proben[i].lat) || isNaN(id.proben[i].lng)){
             mapMarkersRejected.push(
              {
@@ -135,10 +146,13 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
        
 
         // Die "markers" der Funktion an die leaflet "markers" geben...
+        // 
         angular.extend($scope, {
             markers: markers
-        });
+        }); 
+        //ENDOF::: --> Generate markers
 
+       
 
         // get scope
         var samples = $scope.werteALL;
@@ -153,29 +167,28 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
         // $scope.select(id);
         console.log("MAP: processed samples", samples);
 
+
+         //toggle CSS of selected element (card)
+      //  let elemntCardsAll=document.querySelectorAll("[id^='card-']");
+      //  for (var i = 0; i < elemntCardsAll.length; i++) {
+      //   elemntCardsAll[i].classList.remove("groupSelected");
+      //   console.log("all cards: i ",i, "->",elemntCardsAll[i]);
+
+      //  };
+      //  let elemntCard=document.getElementById("card-"+$scope.detailName);
+      //  elemntCard.classList.add("groupSelected");
+      //  console.log("all cards: ",elemntCardsAll);
+      //  console.log("selected card: ",elemntCard);
+
+
       };// endof showMap()
 
-    // I. process markers
-    $scope.allePunkte = false;
-
-    // Show all samples on map (set map visibility to true)
-    // !! samples[i].selected is old !! change to samples[i].map !! better: come up with better structure!
-
-    
-    var markers = {};
-   
-
-
-
-    // $scope.$on("leafletDirectiveMap.click", function(event, args){
-    //       console.log("map clicked");
-    //       console.log("args",args);
-    //     // a. draw rectangle
-    //     // b. select markers inside rectangle
-    //     // !! could be easier with esri draw stuff
-    //     // c. show preliminary export list
-        
-    //   });
+    $scope.initStyle=function(targetID){
+      // let elemntCard=document.getElementById("card-"+targetID);
+      // elemntCard.classList.toggle("groupSelected");
+      // console.log("initStyle: ", targetID);
+      // console.log("initStyle: ", elemntCard);
+    }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////INIT MAP//////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -212,17 +225,25 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
             editableLayers.clearLayers();
           })
           map.on('draw:created', function (e) {
-
+            e.layer.bindTooltip("Click selection to continue...",
+            {
+              permanent: true, 
+              sticky: true,
+              className: "selectionTooltip", 
+              // position: "top"
+            })
+              // .setLatLng(new L.LatLng(e.layer.getBounds().getNorth(),e.layer.getBounds().getWest()))
+              // .openTooltip();
             var layer = e.layer;
             drawnItems.addLayer(layer);
-            
+            $scope.mapHint="Click rectangle to continue...";
 
           });
 
           drawnItems.on('click', rectangleClick);
 
           function rectangleClick(e){
-
+            $scope.mapHint="";
             var rectMarkers = jsonToArray(leafletData.getMarkers().$$state.value);
             var result = e.layer.contains(rectMarkers);
             $scope.result = result;
@@ -272,6 +293,14 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
           const result2 = $scope.werteALL.findIndex( sample => sample.xUID === $scope.result[i].options.xUID );
           $scope.werteALL[result2].export = true;
         };
+        $scope.closeSideNav('links');
+        $mdDialog.show(
+          $mdDialog.alert()
+            .clickOutsideToClose(true)
+            .title('Done!')
+            .textContent('Added to Export')
+            .ok('OK')
+        );
       };
 
       $scope.removeSelectedFromExport = function (){
@@ -279,6 +308,15 @@ expandControllerMAPfunc = function($scope, $filter, leafletData){
           const result2 = $scope.werteALL.findIndex( sample => sample.xUID === $scope.result[i].options.xUID );
           $scope.werteALL[result2].export = false;
         };
+        $scope.closeSideNav('links');
+        $mdDialog.show(
+          $mdDialog.alert()
+            .clickOutsideToClose(true)
+            .title('Done!')
+            .textContent('Removed from Export')
+            .ok('OK')
+        );
+
       };
       
     };// end of map init     

@@ -1,4 +1,4 @@
-<div class="col-md-3" style="background-color: darkgrey; height: 90vh; padding: 0px;" ng-init="initMap()">
+<div class="col-md-3 col-lg-3" style="background-color: darkgrey; height: 90vh; padding: 0px;" ng-init="initMap();" >
     <md-card class="special" 
     data-toggle="tooltip" data-placement="right" 
     title="Choose category to show samples">
@@ -9,16 +9,16 @@
         </md-card-title> -->
         <md-card-content>
             <div layout="row" layout-align="space-between center">
+
                 <span>Select category:</span>
-                <md-select ng-model="sortierung2"  placeholder="Select" class="md-no-underline" style="margin: 2px;">
-                <!-- <md-option value="'Type'" data-kategorie="'D5_01'">Type</md-option> -->
-                <md-option value="Type" ng-click="groupBy( 'type', 'Type' ); sortierung2 = 'Type'">Type</md-option>
-                <md-option value="Region" ng-click="groupBy( 'region', 'Region' ); sortierung2 = 'Region'">Region</md-option>
-                <md-option value="Subregion" ng-click="groupBy( 'subregion', 'Subregion' ); sortierung2 = 'Subregion'">Subregion</md-option>
-                <md-option value="Reference" ng-click="groupBy( 'reference', 'Reference' ); sortierung2 = 'Reference'">Reference</md-option>
-                <md-option value="pubYear" ng-click="groupBy( 'publicationYear', 'Reference' ); sortierung2 = 'Reference'">Publication Year</md-option>
-                <md-option value="Dating" ng-click="groupBy( 'dating' , 'Dating'); sortierung2 = 'Dating'">Dating</md-option>
-                <md-option value="None" ng-click="groupBy(); sortierung2 = 'None'">All Samples</md-option>
+                <md-select ng-model="sortierung2"  ng-selected="sortierung2" placeholder="Select" class="selectContainer" md-container-class="selectContainer" style="margin: 0;">                <!-- <md-option value="'Type'" data-kategorie="'D5_01'">Type</md-option> -->
+                    <md-option value="Type" ng-click="groupBy( 'type', 'Type' ); console.log('$scope.sortierung2: ', $scope.sortierung2);">Type</md-option>
+                    <md-option value="Region" ng-click="groupBy( 'region', 'Region' ); ">Region</md-option>
+                    <md-option value="Subregion" ng-click="groupBy( 'subregion', 'Subregion' ); ">Subregion</md-option>
+                    <md-option value="Reference" ng-click="groupBy( 'reference', 'Reference' ); ">Reference</md-option>
+                    <md-option value="pubYear" ng-click="groupBy( 'publicationYear', 'Reference' ); ">Publication Year</md-option>
+                    <md-option value="Dating" ng-click="groupBy( 'dating' , 'Dating'); ">Dating</md-option>
+                    <md-option value="None" ng-click="groupBy(); sortierung2 = 'None'">All Samples</md-option>
                 </md-select>
             </div>
             <p ng-show="sortierung != ''">{{groups.length}} classes</p>
@@ -26,7 +26,7 @@
                 <form name="eineForm">
                     <md-input-container style="padding: 0px; margin: 0px;">
                         <label>Filter by Publication</label>
-                        <input ng-model="auswahl.suche.A_02">
+                        <input ng-model="auswahl.suche.reference">
                     </md-input-container>
                 </form>
             </div>
@@ -34,18 +34,27 @@
     </md-card>
     <div style="overflow-y: scroll; height: 69vh;">
 
-    <div ng-repeat="group in groups | orderBy: 'label'" >
+    <!-- <div ng-repeat="group in groups  | filter: auswahl.suche.reference | orderBy: 'label'" > -->
+    <div ng-repeat="group in groups  | filter: auswahl.suche.reference " >
         <md-card>
-            <md-card-title>
+            <div class="groupContainer myPadding" id="card-{{group.label2}}" ng-class="{'groupSelected': group.label2 == detailName}">
+
+                    
+                <div class="myHeading" >
+                    
+                    {{group.label2}}
+                </div>
+                <div class="mySampleBadge" >{{group.proben.length}}</div>
+            </div>
+            <!-- <md-card-title>
                 
                 <h4>
                     {{group.label2}}
                 </h4> 
                 
-            </md-card-title>
-            <md-content>
-                <div class="col-md-7">
-                    {{group.proben.length}}  Samples
+            </md-card-title> -->
+            <md-content >
+                <div class="col-md-6">
                 </div>
                 <div class="col-md-2">
                     <md-button class="md-raised md-small" ng-click="showMap(group)">

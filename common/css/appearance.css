@@ -4,11 +4,12 @@ certainly in use!
 .infoPage{
     min-height: 60px;
 }
-.pageLogo{
-    
-    /* position: initial; */
-    align-self: center;
-    height: inherit;
+.introDivider .pageLogo{
+    /* display: table-column; */
+    position: absolute;
+    right: 0;
+    /* align-self: center; */
+    height: 120px;
     padding-top: 3px; 
     padding-left: 3px;
 }
@@ -77,7 +78,15 @@ certainly in use!
     background-color: rgb(255, 255, 255);
 }
 .groupSelected{
-    background-color: rgb(3, 126, 30);
+    background-color: rgb(39, 41, 148);
+    color: white;
+    font-weight: bolder;
+}
+.groupCard{
+    background-color: rgb(255, 255, 255);
+}
+.groupCard.active{
+    background-color: rgb(39, 41, 148);
     font-weight: bolder;
 }
 .mySampleBadge{
@@ -195,6 +204,36 @@ input {
 .map{
     z-index: 1;
 }
+.selectionTooltip{
+    background: rgba(64, 67, 235, 0);
+    /* border: 2px solid cyan */
+}
+.leaflet-tooltip {
+    position: inherit;
+    padding: 6px;
+    background-color: rgba(255, 255, 255, 0.322);
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #222;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+.leaflet-tooltip-left.selectionTooltip::before {
+    border-left-color: cyan;
+    display: none;
+}
+.leaflet-tooltip-right.selectionTooltip::before {
+    border-right-color: cyan;
+    display: none;
+  }
+.leaflet-popup-tip-container {
+    display: none;
+} 
 .myHeading{
     font-size: 13pt;
     margin: 10px;
@@ -211,7 +250,16 @@ input {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+
+    table-layout: auto;
     }
+
+.sampleTable tbody{
+    /* display:block; */
+    width: unset;
+    overflow: auto;
+    height: 100%;
+}
 
 .sampleTable td, .sampleTable th {
     border: 1px solid rgb(146, 146, 146);
@@ -277,9 +325,9 @@ input {
         /* text-align: center; */
         padding-left: 15vw;
         padding-top: inherit;
-        vertical-align: bottom;
+        /* vertical-align: bottom; */
         
-        position: relative;
+        /* position: relative; */
 
 
     }
@@ -302,6 +350,50 @@ input {
     }
   /* INTERFACE ELEMENTS */
   /*CheckBox */ 
+
+  .exportCheckbox{
+    width: 15px ;
+    height:  15px ;
+    margin: 5px;
+    outline: solid 1px;
+    outline-color: rgb(112, 112, 112);
+    background-color: rgb(209, 209, 209);
+  }
+  .exportCheckboxChecked{
+    outline-color: rgb(36, 36, 36);
+    background-color: rgb(24, 16, 97);
+  }
+  .exportCheckboxCheckedAll{
+    outline-color: rgb(202, 202, 202);
+    background-color: rgb(72, 58, 197);
+  }
+  .selectContainer md-select-menu{
+    margin: 0px; 
+    /* height: fit-content;
+    overflow-y: auto; */
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);    
+  }
+  /* .selectContainer {
+    margin: 0px; 
+    padding: 2px;
+    height: fit-content;
+    overflow-y: auto;
+ 
+  }
+  .selectContainer .md-select-menu-container{
+    margin: 0px; 
+    padding: 2px;
+    min-height: fit-content;
+    overflow-y: auto;
+  } */
+  md-select-menu, md-select-menu md-content {
+    max-height: 385px;
+    }
+  /* md-select-menu, md-select-menu  */
+  md-option {
+    /* max-height: 385px; */
+    height: 36px;
+    }
   md-checkbox.md-checked.myCheckbox .md-icon {
     background-color: rgb(24, 16, 97);
    }

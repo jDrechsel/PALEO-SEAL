@@ -97,9 +97,11 @@ expandControllerDATA = function($scope, $mdSidenav, $q){
             for ( var i = 0 ; i < $scope.dictREGION.length ; i++ ) {
                 // console.log($scope.dictREGION[i].fullName);
                 if (isNaN(postKey)){
-                    var Bezeichnung="undefined";
+                    var Bezeichnung=postKey;
                 }else if ($scope.dictREGION[i].Key == postKey){
                     var Bezeichnung=$scope.dictREGION[i].fullName;
+                } else if (postKey === ""){
+                    var Bezeichnung="undefined";
                 }
             };
         
@@ -111,8 +113,12 @@ expandControllerDATA = function($scope, $mdSidenav, $q){
         } else if (category==='Dating') {
             for ( var i = 0 ; i < $scope.dictDATING.length ; i++ ) {
                 // console.log($scope.dictDATING[i].fullName);
-                if ($scope.dictDATING[i].Key == postKey){
+                if (isNaN(postKey)){
+                    var Bezeichnung=postKey;
+                }else if ($scope.dictDATING[i].Key == postKey){
                     var Bezeichnung=$scope.dictDATING[i].fullName;
+                }else if (postKey === ""){
+                    var Bezeichnung="undefined";
                 }
             };
 
@@ -124,6 +130,8 @@ expandControllerDATA = function($scope, $mdSidenav, $q){
                 // console.log($scope.dictTYPE[i].fullName);
                 if ($scope.dictTYPE[i].Key == postKey){
                     var Bezeichnung=$scope.dictTYPE[i].fullName;
+                } else if (postKey === ""){
+                    var Bezeichnung="undefined";
                 }
             };
 
@@ -133,10 +141,12 @@ expandControllerDATA = function($scope, $mdSidenav, $q){
                 // console.log($scope.dictPRIMARY[i].fullName);
                 if ($scope.dictPRIMARY[i].Key == postKey){
                     var Bezeichnung=$scope.dictPRIMARY[i].fullName;
+                } else if (postKey === ""){
+                    var Bezeichnung="undefined";
                 }
             };
-
             return Bezeichnung;
+
         }else if($scope.sortierung2==='None'){
             // show "All samples" when grouped by "none"
             Bezeichnung="All samples";
@@ -213,4 +223,12 @@ $scope.exportLength = function(){
         // }).length;
         return $scope.werteENDEXP;
     };
+
+    myApp.filter('objLength', function() { 
+        return function(object) { 
+         return object ? Object.keys(object).length : "";
+        } 
+       });
+
+    /* */
 } //endof expand

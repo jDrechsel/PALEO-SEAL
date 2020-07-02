@@ -1,7 +1,10 @@
 expandControllerPLOTsvgOPT = function( $scope, $parse){
-    // vscode://file/C:/xampp/htdocs/SeaLevelInterface/common/css/appearance.css:92:1
-    $scope.yAxisLabel="Elevation [m RSL]"
-    $scope.xAxisLabel="Age [a BP]"
+    colorIndicator = 'rgb(255, 127, 14)';
+    colorTerrestrial = 'rgb(44, 160, 44)';
+    colorMarine = 'rgb(31, 119, 180)';
+
+    $scope.yAxisLabel="Elevation [m RSL]";
+    $scope.xAxisLabel="Age [a BP]";
 
     // SVG Dimensions ("canvas Size, margins, etc")
     $scope.svgBox_X = 0;

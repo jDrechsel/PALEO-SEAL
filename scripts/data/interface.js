@@ -5,7 +5,6 @@ expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $htt
 
         $scope.linksOpen = true;
         $mdSidenav('links').open();
-        console.log("sidenav button clicked...");
     };
     $scope.closeSideNav = function(dieses) {
         if (dieses==='links') {
@@ -78,11 +77,9 @@ expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $htt
         $scope.phpResponse=$scope.SamplesExportieren($scope.listeEXPORT);
       
       } else if (buttonGedruckt === 'abbruch'){
-        console.log('Dialog geschlossen!');
       }
 
     }, function(keinButtongedruckt){
-      console.log('Dialog geschlossen ohne Button!');
 
     });
   }
@@ -102,7 +99,5 @@ expandControllerINTERFACE = function($scope, $mdSidenav, $mdDialog, $parse, $htt
 
     };
   }());
-  // $scope.werteLength = $filter('objLength')($scope.werteALL);
   $scope.exportArray = $filter('filter')($scope.werteALL, { export: true});
-  // $scope.exportLength = Object.keys($scope.exportArray).length;
 };

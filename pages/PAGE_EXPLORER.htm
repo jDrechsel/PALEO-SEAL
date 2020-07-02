@@ -1,26 +1,13 @@
 <div class="col-md-9 myContainer" style="background-color: rgb(228, 228, 228); height: 90vh;"
 >
-    <!-- <nvd3 options="options" data="werteSCATTER" class="ng-scope" width=600px height=400px></nvd3> -->
     <div class="myContainerContent" style="height: 55vh;">
         <h4>{{sortierung2}} : {{detailName}}</h4>
         <span style="position: absolute; right: 20px; top: 5px;">
             <md-checkbox class="myCheckbox" ng-checked="showPlotControl == true; " ng-click="showPlotControl = !showPlotControl " >
-                <!--  -->
                 show Controls
-            </md-checkbox>
-            <!-- <md-checkbox class="myCheckbox" ng-checked="showRejected == true; " ng-click="showRejected = !showRejected " >
-               
-                show Rejected
-            </md-checkbox> -->
-            <!-- <md-checkbox  class="myCheckbox" ng-checked="linkTable == true; " ng-click="linkTable = !linkTable " >
-               
-                link Table
-            </md-checkbox> -->
-            
+            </md-checkbox>           
         </span>
-        
-
-            
+          
             <div class="plotControls" layout="row"  ng-show="showPlotControl">
                 <md-slider-container>
                     ZoomX
@@ -54,56 +41,32 @@
         </div>
     </div>
 
-    <!-- <div class=row><h4 style="z-index: 4;">Details</h4></div> -->
     <div class="myContainerContentResponsive" >
         <div >
             <table  class="sampleTable " width="100%" id="tabelle" >
                 <thead >
                     <tr class="" >
                         <th>
-                            <!-- <md-checkbox class="myCheckboxHead"ng-model="allSelected" ng-checked="allSelected == true; " ng-click="selectAll()">
-    
-                                
-                            </md-checkbox> -->
+                         
                             <div class="exportCheckbox" ng-model="allSelected" ng-checked="allSelected == true; " ng-click="selectAll()"
                             ng-class="{exportCheckboxCheckedAll: allSelected == true }"></div>
                             
                         </th>
                         <th ng-click="sortType = 'label'; sortReverse = !sortReverse">
                             SampleID
-                            <!-- <span ng-if="sortReverse == true && sortType == 'label'" class="fa fa-caret-down"> 
-                              <md-icon md-svg-src="common/img/expand_more.svg"></md-icon>
-                            </span>
-                            <span ng-if="sortReverse == false  && sortType == 'label'" class="fa fa-caret-down"> 
-                              <md-icon md-svg-src="common/img/expand_less.svg"></md-icon>
-                            </span> -->
+                           
                         </th>
                         <th ng-click="sortType = 'reference'; sortReverse = !sortReverse">
                             Reference
-                            <!-- <span ng-if="sortReverse == true && sortType == 'reference'" class="fa fa-caret-down"> 
-                                <md-icon md-svg-src="common/img/expand_more.svg"></md-icon>
-                            </span>
-                            <span ng-if="sortReverse == false && sortType == 'reference'" class="fa fa-caret-down"> 
-                              <md-icon md-svg-src="common/img/expand_less.svg"></md-icon>
-                            </span> -->
+                           
                         </th>
                         <th ng-click="sortType = 'age'; sortReverse = !sortReverse">
                             Age [a]
-                            <!-- <span ng-if="sortReverse == true && sortType == 'age'" class="fa fa-caret-down"> 
-                                <md-icon md-svg-src="common/img/expand_more.svg"></md-icon>
-                            </span>
-                            <span ng-if="sortReverse == false && sortType == 'age'" class="fa fa-caret-down"> 
-                                <md-icon md-svg-src="common/img/expand_less.svg"></md-icon>
-                            </span> -->
+                           
                         </th>
                         <th ng-click="sortType = 'elevation'; sortReverse = !sortReverse">
                             Paleo RSL/Elevation [m]
-                            <!-- <span ng-if="sortReverse == true && sortType == 'elevation'" class="fa fa-caret-down"> 
-                                <md-icon md-svg-src="img/expand_more.svg"></md-icon>
-                            </span>
-                            <span ng-if="sortReverse == false && sortType == 'elevation'" class="fa fa-caret-down"> 
-                                <md-icon md-svg-src="img/expand_less.svg"></md-icon>
-                            </span> -->
+                           
                         </th>
                         <th ng-click="sortType = 'type'; sortReverse = !sortReverse">
                             Indicator Type
@@ -122,10 +85,7 @@
                         <td>
                             <div class="exportCheckbox" ng-click="selected.export = !selected.export " 
                             ng-class="{exportCheckboxChecked: selected.export == true }"></div>
-                            <!-- <md-checkbox class="myCheckbox" aria-label=""
-                            ng-checked="selected.export == true; " ng-click="selected.export = !selected.export " >
-                            
-                            </md-checkbox> -->
+                           
                         </td>
                         <td > {{selected.label}} </td>
                         <td> {{selected.reference}} </td>
@@ -150,14 +110,13 @@
             <div layout="row" layout-align="space-between center" style="padding: 6px;">
                 <span>Select category:</span>
                 <md-select ng-model="sortierung2"  placeholder="Select" class="selectContainer" md-container-class="selectContainer" style="margin: 0;">
-                <!-- <md-option value="'Type'" data-kategorie="'D5_01'">Type</md-option> -->
-                <md-option value="Type" ng-click="groupBy( 'type', 'Type' ); sortierung2 = 'Type'">Type</md-option>
-                <md-option value="Region" ng-click="groupBy( 'region', 'Region' ); sortierung2 = 'Region'" ng-selected="true">Region</md-option>
-                <md-option value="Subregion" ng-click="groupBy( 'subregion', 'Subregion' ); sortierung2 = 'Subregion'">Subregion</md-option>
-                <md-option value="Reference" ng-click="groupBy( 'reference', 'Reference' ); sortierung2 = 'Reference'">Reference</md-option>
-                <md-option value="pubYear" ng-click="groupBy( 'publicationYear', 'Reference' ); sortierung2 = 'Reference'">Publication Year</md-option>
-                <md-option value="Dating" ng-click="groupBy( 'dating' , 'Dating'); sortierung2 = 'Dating'">Dating</md-option>
-                <md-option value="None" ng-click="groupBy(); sortierung2 = 'None'">All Samples</md-option>
+                <md-option value="Type" ng-click="groupBy( 'type'); ">Type</md-option>
+                <md-option value="Region" ng-click="groupBy( 'region');" ng-selected="true">Region</md-option>
+                <md-option value="Subregion" ng-click="groupBy( 'subregion');">Subregion</md-option>
+                <md-option value="Reference" ng-click="groupBy( 'reference');">Reference</md-option>
+                <md-option value="pubYear" ng-click="groupBy( 'publicationYear');">Publication Year</md-option>
+                <md-option value="Dating" ng-click="groupBy( 'dating');">Dating</md-option>
+                <md-option value="None" ng-click="groupBy('none');">All Samples</md-option>
                 </md-select>
             </div>
             <p ng-show="sortierung2 != ''">{{groups.length}} classes</p>
@@ -184,14 +143,10 @@
                     </div>
                     <div class="mySampleBadge" >{{group.proben.length}}</div>
                 </div>
-                <!-- <div class=" myPadding"> -->
-                <!-- </md-card-title> -->
                 <md-content >
-                    <!-- ng-class="{groupSelected: selectedPanel.selectedNode == group}" -->
                     
                     <div class="col-md-2" ng-init="selectedPanel = {selectedNode: null}">
-                        <md-button class="md-raised md-small" ng-click="showMap(group); selectedPanel.selectedNode=group"
-                        >
+                        <md-button class="md-raised md-small" ng-click="showMap(group); selectedPanel.selectedNode=group">
                             Show
                         </md-button>
                     </div>
@@ -238,56 +193,3 @@
 
 
 
-<!-- SIDENAV -->
-<div layout="row">
-	<!-- <div ng-show="linksOpen" flex> -->
-		<md-sidenav style="min-width: 60vw; position: fixed;" class="md-sidenav-left" md-component-id="links" md-disable-backdrop md-whiteframe="4">
-			<md-toolbar class="md-theme-indigo">
-                
-                <span>
-
-                    <h2 class="md-toolbar-tools">Export list:       
-                        <span>
-                            <md-button ng-click="closeSideNav('links')" class="md-accent" style="position: absolute; right: 20px; top: 15px;">
-                                Close
-                            </md-button>
-                        </span>
-                    </h2>
-                </span>
-				
-			</md-toolbar>
-			<md-content layout-margin>
-
-                <div id="test1" class='with-3d-shadow with-transitions'>
-                    <svg></svg>
-                </div>
-        
-                <div layout="row" layout-wrap flex>
-                    <p>Samples:<span class="badge">{{selected.proben.length}}</span> [
-                        Marine<span class="badge badge-marine" >{{werteSCATTER[2].values.length}}</span> 
-                        Indicator <span class="badge badge-indicator">{{werteSCATTER[1].values.length}}</span>
-                        Terrestrial: <span class="badge badge-terrestrial">{{werteSCATTER[0].values.length}}</span>]
-                    </p>
-                </div>
-                <div layout="row" layout-wrap flex>
-                    <h4>Test scopes</h4>
-                </div>
-
-                <div layout="row" layout-wrap flex>
-                    <p>labels: {{labelsXY}}</p>
-                </div>
-
-                <div layout="row" layout-wrap flex>
-                    <p>werteXY: {{werteXY}}</p>
-                </div>
-
-                <div layout="row" layout-wrap flex>
-                    <p>werteSCATTER: {{werteSCATTER}}</p>
-                </div>
-            </md-content>
-        </md-sidenav>
-    <!-- </div> -->
-</div>
-<script>
-        console.log("explorer opened...")
-</script>

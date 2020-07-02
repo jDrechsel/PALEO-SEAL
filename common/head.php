@@ -1,6 +1,6 @@
 <head>
     <meta name="viewport" charset="utf-8">
-    <title>PALEO SEAL Beta</title>
+    <title>PALEO SEAL</title>
     <link rel="icon" href="common/img/Logo.svg" type="image/ico">
 
 
@@ -12,7 +12,6 @@
 
     <!-- CSS Styles                                                                     -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.21/angular-material.css" integrity="sha256-xAan9ZNylg0LT1xAHn8Qkpr8b+VSo3PmPEPjhn9ecak=" crossorigin="anonymous" />    
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.0/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous" /> -->
     <link rel="stylesheet" href="common/ressource/leaflet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css" integrity="sha256-+bdWuWOXMFkX0v9Cvr3OWClPiYefDQz9GGZP/7xZxdc=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css" integrity="sha256-LWhzWaQGZRsWFrrJxg+6Zn8TT84k0/trtiHBc6qcGpY=" crossorigin="anonymous" />

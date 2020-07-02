@@ -1,5 +1,4 @@
 myApp.controller("myController", ["$scope", "$filter", "$http", "$q", "$sce","$parse", "$mdSidenav","$mdDialog","leafletData", function ($scope, $filter, $http, $q, $sce, $parse, $mdSidenav, $mdDialog, leafletData){
-    // , $q, $http, $sce, $window, $compile, $interpolate, $parse, $interval, $mdDialog, $mdSidenav, $mdToast, $mdMenu, $timeout
 $scope.message = "myController loaded...";
 
 

@@ -22,10 +22,7 @@ PALEO-SEAL was coded by Jan Drechsel (IT consultant), under scientific supervisi
 
 <a name="Mann2019"><sup>2</sup></a> Mann, T., Bender, M., Lorscheid, T., Stocchi, P., Vacchi, M., Switzer, A.D. and Rovere, A., 2019. Holocene sea levels in southeast Asia, Maldives, India and Sri Lanka: the SEAMIS database. Quaternary Science Reviews, 219, pp.112-125. 
 
---------------------------JAN TEXT---------------------------
 
-Private Work Repository for Paleo Sea Level Database Interface
-
-Version 0.1.3 -> 1.0 [Release]
+Version 1.0.0 [Release]
 
 

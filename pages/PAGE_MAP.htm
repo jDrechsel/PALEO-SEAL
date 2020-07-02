@@ -2,24 +2,19 @@
     <md-card class="special" 
     data-toggle="tooltip" data-placement="right" 
     title="Choose category to show samples">
-        <!-- <md-card-title>
-            <md-card-title-text>
-                Select 
-            </md-card-title-text>
-        </md-card-title> -->
         <md-card-content>
             <div layout="row" layout-align="space-between center">
 
                 <span>Select category:</span>
-                <md-select ng-model="sortierung2"  ng-selected="sortierung2" placeholder="Select" class="selectContainer" md-container-class="selectContainer" style="margin: 0;">                <!-- <md-option value="'Type'" data-kategorie="'D5_01'">Type</md-option> -->
-                    <md-option value="Type" ng-click="groupBy( 'type', 'Type' ); console.log('$scope.sortierung2: ', $scope.sortierung2);">Type</md-option>
-                    <md-option value="Region" ng-click="groupBy( 'region', 'Region' ); ">Region</md-option>
-                    <md-option value="Subregion" ng-click="groupBy( 'subregion', 'Subregion' ); ">Subregion</md-option>
-                    <md-option value="Reference" ng-click="groupBy( 'reference', 'Reference' ); ">Reference</md-option>
-                    <md-option value="pubYear" ng-click="groupBy( 'publicationYear', 'Reference' ); ">Publication Year</md-option>
-                    <md-option value="Dating" ng-click="groupBy( 'dating' , 'Dating'); ">Dating</md-option>
-                    <md-option value="None" ng-click="groupBy(); sortierung2 = 'None'">All Samples</md-option>
-                </md-select>
+                <md-select ng-model="sortierung2"  placeholder="Select" class="selectContainer" md-container-class="selectContainer" style="margin: 0;">
+                    <md-option value="Type" ng-click="groupBy( 'type'); ">Type</md-option>
+                    <md-option value="Region" ng-click="groupBy( 'region');" ng-selected="true">Region</md-option>
+                    <md-option value="Subregion" ng-click="groupBy( 'subregion');">Subregion</md-option>
+                    <md-option value="Reference" ng-click="groupBy( 'reference');">Reference</md-option>
+                    <md-option value="pubYear" ng-click="groupBy( 'publicationYear');">Publication Year</md-option>
+                    <md-option value="Dating" ng-click="groupBy( 'dating');">Dating</md-option>
+                    <md-option value="None" ng-click="groupBy('none');">All Samples</md-option>
+                    </md-select>
             </div>
             <p ng-show="sortierung != ''">{{groups.length}} classes</p>
             <div>
@@ -34,7 +29,6 @@
     </md-card>
     <div style="overflow-y: scroll; height: 69vh;">
 
-    <!-- <div ng-repeat="group in groups  | filter: auswahl.suche.reference | orderBy: 'label'" > -->
     <div ng-repeat="group in groups  | filter: auswahl.suche.reference " >
         <md-card>
             <div class="groupContainer myPadding" id="card-{{group.label2}}" ng-class="{'groupSelected': group.label2 == detailName}">
@@ -46,13 +40,6 @@
                 </div>
                 <div class="mySampleBadge" >{{group.proben.length}}</div>
             </div>
-            <!-- <md-card-title>
-                
-                <h4>
-                    {{group.label2}}
-                </h4> 
-                
-            </md-card-title> -->
             <md-content >
                 <div class="col-md-6">
                 </div>
@@ -76,15 +63,11 @@
             
         
     </div>
-    <!-- <div ng-hide="mapMarkersRejected.length == 0">
-        {{mapMarkersRejected.length}} Rejected!
-    </div> -->
     <leaflet class="map" lf-center="ansicht" controls="controls" layers="layers" markers="markers" width="100%" height="90vh"></leaflet>
 </div>
 
 <!-- SIDENAV -->
 <div layout="row" style="z-index: 4;">
-	<!-- <div ng-show="linksOpen" flex> -->
 		<md-sidenav style="min-width: 60vw; position: fixed;z-index: 4000;" class="md-sidenav-left" md-component-id="links" md-disable-backdrop md-whiteframe="4">
 			<md-toolbar class="md-theme-indigo">
                 
@@ -117,11 +100,7 @@
 
                     <div layout="row" layout-wrap flex >
                         <p>Samples:<span class="badge">{{result.length}}</span> 
-                            <!-- [  Marine<span class="badge badge-marine" >{{result | filter:{indicatorType:'Marine limiting'}}}</span>  -->
-                            <!-- Indicator <span class="badge badge-indicator">{{werteSCATTER[1].values.length}}</span> -->
-                            <!-- Terrestrial: <span class="badge badge-terrestrial">{{werteSCATTER[0].values.length}}</span>] -->
                         </p>
-                    
                     </div>
                 </div>
                 <table  class="sampleTable " width="100%" height="100vh" id="tabelle" style="overflow-y: scroll;">
@@ -167,5 +146,4 @@
 
             </md-content>
         </md-sidenav>
-    <!-- </div> -->
 </div>

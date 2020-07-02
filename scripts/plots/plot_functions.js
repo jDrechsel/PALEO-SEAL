@@ -13,11 +13,7 @@ expandControllerPLOTfunc = function($scope, $parse){
 
        
 
-        // Calculate [Min Max] for svg extents! |--> draw axis
-            // ondrag handle -> move viewBox? or not?
-
-
-        console.log("select results in: ", $scope.werteSCATTER);
+      
 
     }; //end of select()
     

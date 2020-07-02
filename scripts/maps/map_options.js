@@ -5,18 +5,7 @@ expandControllerMAP = function($scope){
     II.      inital markers
     III.     Base layers (ESRI)
     */
-    //    L.Icon.Default.imagePath='common/ressource/images/' 
-
-    // var myIcon = L.icon({
-    //     iconUrl: 'common/img/jdMarkerCustom.png',
-    //     iconSize: [38, 95],
-    //     iconAnchor: [22, 94],
-    //     popupAnchor: [-3, -76],
-    //     shadowUrl: 'common/img/jdMarkerCustomShadow.png',
-    //     shadowSize: [68, 95],
-    //     shadowAnchor: [22, 94]
-    // });
-    // L.Marker.prototype.options.icon=myIcon;
+    
     // I.
     let standard_icon = L.icon({
         iconUrl: "common/ressource/images/marker-icon.png",
@@ -30,12 +19,8 @@ expandControllerMAP = function($scope){
     let local_icons = {
         
     };
-    // angular.extend($scope, {
-    //     icons: local_icons
-    // });
+    
     // II.
-    // let editableLayers = new L.featureGroup();
-    // map.addLayer(editableLayers);
     angular.extend($scope, {
         watchOptions:{
             paths:{
@@ -58,24 +43,14 @@ expandControllerMAP = function($scope){
                     circlemarker: false,
                     
                     
-                    // toolbar: {
-                        //     buttons: {
-                            //         rectangle: "Draw a rectangle2"
-                            //     }
-                            // }
+                   
                 },
-                // edit: {
-                //     featureGroup: editableLayers, //REQUIRED!!
-                //     remove: false
-                // }
+               
             },
-            // edit: {
-            //     featureGroup: editableLayers,
-            //     remove: true
-            // }
+            
         },
         // Icons
-        icons: {//local_icons, //-> [!] obsolete, but would be awesome if it could be declared here
+        icons: {//local_icons, //-> [!] obsolete, 
             jd_default_icon: {
                 iconUrl: "common/ressource/images/marker-icon.png",
                 shadowUrl: "common/ressource/images/marker-shadow.png",
@@ -122,54 +97,7 @@ expandControllerMAP = function($scope){
         },
         // Markers
         markers: {
-            // marum:{
-            //     lat: 53.110227,
-            //     lng: 8.850871,
-            //     layer: "institutes",
-            //     icon: local_icons.jd_icon_marum,
-            //     message: "Marum - Zentrum für Marine Umweltwissenschaften"
-            // },
-            // slcc:{
-            //     lat: 53.109061, 
-            //     lng: 8.850084,
-            //     layer: "institutes",
-            //     icon: local_icons.jd_icon_slcc,
-            //     message: "SLCC - Sea Level and Coastal Changes group @ Marum"
-            // },
-            // m1: {
-            //     lat: 4.649,
-            //     lng: -74.086,
-            //     icon: local_icons.jd_icon_custom,
-
-            // },
-            // m2: {
-            //     lat: 53.8,
-            //     lng: 8.3,
-            //     layer: "germany",
-            //     icon: local_icons.jd_icon_custom,
-
-            // },
-            // m3: {
-            //     lat: 53.83,
-            //     lng: 8.32,
-            //     layer: "germany",
-            //     icon: local_icons.jd_icon_custom,
-
-            // },
-            // m4: {
-            //     lat: 53.79,
-            //     lng: 8.29,
-            //     layer: "germany",
-            //     icon: local_icons.jd_icon_custom,
-
-            // },
-            // m5: {
-            //     lat: 53.8,
-            //     lng: 8.27,
-            //     layer: "germany",
-            //     icon: local_icons.jd_icon_custom,
-
-            // }
+            // will be populated automatically
         },
         // III. Layers
         layers: {

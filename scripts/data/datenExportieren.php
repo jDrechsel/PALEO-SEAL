@@ -13,7 +13,7 @@ $exportString=createInString($exportList);
 
 // retreive column headers from db
 $sql="SELECT * FROM holsea_dataworkbook_40 WHERE A_00 IN $exportString";
-$headersSQL="SHOW COLUMNS FROM data_entries_newdata";
+$headersSQL="SHOW COLUMNS FROM holsea_dataworkbook";
 $headersQuery=mysqli_query($con, $headersSQL);
 $headersResults = array();
 while ($row = $headersQuery->fetch_assoc()){

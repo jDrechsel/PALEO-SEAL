@@ -18,7 +18,7 @@
                     <md-option value="Reference" ng-click="groupBy( 'reference');">Reference</md-option>
                     <md-option value="pubYear" ng-click="groupBy( 'publicationYear');">Publication Year</md-option>
                     <md-option value="Dating" ng-click="groupBy( 'dating');">Dating</md-option>
-                    <md-option value="None" ng-click="groupBy();">All Samples</md-option>
+                    <md-option value="None" ng-click="groupBy('none');">All Samples</md-option>
                     </md-select>
             </div>
             <p ng-show="sortierung != ''">{{groups.length}} classes</p>

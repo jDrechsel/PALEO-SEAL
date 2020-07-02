@@ -27,24 +27,21 @@ expandControllerDATA = function($scope, $mdSidenav, $q){
 
         // First, reset the groups.
         $scope.groups = [];
-        // Now, sort the collection of entry on the
-        // grouping-property. This just makes it easier
-        // to split the collection.
+        // Now, sort the collection of entry on the grouping-property. This just makes it easier to split the collection.
         sortOn( $scope.werteALL, attribute );
-        // I determine which group we are currently in.
+        // determine which group we are currently in.
         var groupValue = "_INVALID_GROUP_VALUE_";
-        // As we loop over each entry, add it to the
-        // current group - we'll create a NEW group every
-        // time we come across a new attribute value.
+        // As we loop over each entry, add it to the current group - we'll create a NEW group every time we come across a new attribute value.
         for ( var i = 0 ; i < $scope.werteALL.length ; i++ ) {
             $scope.werteALL[i].plot=false;
             var entry = $scope.werteALL[ i ];
-            // Should we create a new group?
+            // Should a new group be created?
             if ( entry[ attribute ] !== groupValue ) {
                 $scope.labelname =nachSchlagen(entry[attribute],sortierung);
               
                 if (attribute=='None') {
                     var groupLabel="All Samples";
+                    $scope.labelname="All Samples";
                 } else {
                     var groupLabel=entry[ attribute ];
                 }

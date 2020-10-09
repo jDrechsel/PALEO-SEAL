@@ -1,0 +1,65 @@
+\begin{thebibliography}{5}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{D{\"u}sterhus et~al.(2016)D{\"u}sterhus, Rovere, Carlson, Horton,
+  Klemann, Tarasov, Barlow, Bradwell, Clark, Dutton et~al.}]{dusterhus2016}
+\bibinfo{author}{D{\"u}sterhus, A.}, \bibinfo{author}{Rovere, A.},
+  \bibinfo{author}{Carlson, A.E.}, \bibinfo{author}{Horton, B.P.},
+  \bibinfo{author}{Klemann, V.}, \bibinfo{author}{Tarasov, L.},
+  \bibinfo{author}{Barlow, N.L.}, \bibinfo{author}{Bradwell, T.},
+  \bibinfo{author}{Clark, J.}, \bibinfo{author}{Dutton, A.}, et~al.,
+  \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{Palaeo-sea-level and palaeo-ice-sheet databases:
+  problems, strategies, and perspectives}.
+\newblock \bibinfo{journal}{Climate of the Past} \bibinfo{volume}{12},
+  \bibinfo{pages}{911--921}.
+%Type = Article
+\bibitem[{Khan et~al.(2019)Khan, Horton, Engelhart, Rovere, Vacchi, Ashe,
+  T{\"o}rnqvist, Dutton, Hijma and Shennan}]{khan2019}
+\bibinfo{author}{Khan, N.S.}, \bibinfo{author}{Horton, B.P.},
+  \bibinfo{author}{Engelhart, S.}, \bibinfo{author}{Rovere, A.},
+  \bibinfo{author}{Vacchi, M.}, \bibinfo{author}{Ashe, E.L.},
+  \bibinfo{author}{T{\"o}rnqvist, T.E.}, \bibinfo{author}{Dutton, A.},
+  \bibinfo{author}{Hijma, M.P.}, \bibinfo{author}{Shennan, I.},
+  \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Inception of a global atlas of sea levels since the
+  last glacial maximum}.
+\newblock \bibinfo{journal}{Quaternary Science Reviews} \bibinfo{volume}{220},
+  \bibinfo{pages}{359--371}.
+%Type = Article
+\bibitem[{Shennan(1982)}]{shennan1982}
+\bibinfo{author}{Shennan, I.}, \bibinfo{year}{1982}.
+\newblock \bibinfo{title}{Interpretation of flandrian sea-level data from the
+  fenland, england}.
+\newblock \bibinfo{journal}{Proceedings of the Geologists' Association}
+  \bibinfo{volume}{93}, \bibinfo{pages}{53--63}.
+%Type = Article
+\bibitem[{Shennan et~al.(1983)Shennan, Tooley, Davis and Haggart}]{shennan1983}
+\bibinfo{author}{Shennan, I.}, \bibinfo{author}{Tooley, M.J.},
+  \bibinfo{author}{Davis, M.J.}, \bibinfo{author}{Haggart, B.A.},
+  \bibinfo{year}{1983}.
+\newblock \bibinfo{title}{Analysis and interpretation of holocene sea-level
+  data}.
+\newblock \bibinfo{journal}{Nature} \bibinfo{volume}{302},
+  \bibinfo{pages}{404--406}.
+%Type = Inbook
+\bibitem[{Van De~Plassche(1986)}]{VanDePlassche1986}
+\bibinfo{author}{Van De~Plassche, O.}, \bibinfo{year}{1986}.
+\newblock \bibinfo{title}{Introduction}. \bibinfo{publisher}{Springer
+  Netherlands}, \bibinfo{address}{Dordrecht}.
+\newblock pp. \bibinfo{pages}{1--26}.
+\newblock \URLprefix \url{https://doi.org/10.1007/978-94-009-4215-8_1},
+  \DOIprefix\doi{10.1007/978-94-009-4215-8_1}.
+
+\end{thebibliography}

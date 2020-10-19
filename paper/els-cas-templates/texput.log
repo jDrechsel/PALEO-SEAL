@@ -1,0 +1,19 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.14)  19 OCT 2020 17:55
+entering extended mode
+**cas-dc.tex
+
+! Emergency stop.
+<*> cas-dc.tex
+              
+*** (job aborted, file error in nonstop mode)
+
+ 
+Here is how much of TeX's memory you used:
+ 2 strings out of 480202
+ 16 string characters out of 2876047
+ 262772 words of memory out of 3000000
+ 16679 multiletter control sequences out of 15000+200000
+ 535088 words of font info for 29 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 0i,0n,0p,1b,6s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

@@ -1,0 +1,1 @@
+ $con=mysqli_connect("SERVER NAME","USERNAME","PASSWORD","DATABASE", "PORT");

@@ -59,15 +59,15 @@ Sea-level databases \sep Visualization \sep Web interface \sep
 \maketitle
 
 \section{Introduction}
-The standardization of Holocene sea-level proxies has been a recurrent theme in coastal Quaternary Science research. While it was theorized and approaches have been proposed at least since the early 80s \citep{shennan1982,shennan1983,VanDePlassche1986}, only recent works have established a comprehensive framework for the standardization of sea-level data \citep{khan2019}. The sea-level data standardization efforts were in part elicited by both several IGCP (International Geological Correlation Programme, later renamed as the International Geoscience Programme) projects and the INQUA-PAGES project PALSEA (Palaeo-Constraints on Sea-Level Rise). 
+The standardization of data on Holocene sea-level proxies has been a recurrent theme in coastal Quaternary Science research. While it was theorized and implemented at least since the early 80s \citep{shennan1982,shennan1983,VanDePlassche1986}, only recent works have established a comprehensive framework for the standardization of sea-level data and applied it globally \citep{khan2019}. The sea-level data standardization efforts were elicited by different IGCP (International Geological Correlation Programme, later renamed as the International Geoscience Programme) projects and the INQUA-PAGES project PALSEA (Palaeo-Constraints on Sea-Level Rise). 
 
-A paper stemming from the PALSEA community \citep{dusterhus2016} highlights that there are key elements to be considered when compiling a sea-level database are Accessibility, Transparency, Trust, Availability, Continuity, Completeness, and Communication of
-content. This set of properties is abbreviated into ATTAC\textsuperscript{3}. ``Communication of content'',  according to \citet{dusterhus2016}, means that interfaces for visualization, and standardized protocols for data extraction need to be implemented in order to allow users from different disciplines to easily visualize and export data of interest. 
+A paper stemming from the PALSEA community \citep{dusterhus2016} highlights that the key elements to be considered when compiling a sea-level database are: Accessibility, Transparency, Trust, Availability, Continuity, Completeness, and Communication of
+content. This set of properties was abbreviated into the ATTAC\textsuperscript{3} acronym. ``Communication of content'',  according to \citet{dusterhus2016}, means that interfaces for visualization, and standardized protocols for data extraction need to be implemented in order to allow users from different disciplines to easily visualize and export data of interest. 
 
 In this short note, we present one tool designed to meet such criteria, called PALEO-SEAL. The tool makes use of a mySQL version of the sea-level data template of \citet{khan2019}. Installed on any web server supporting PHP and with few simple steps to set it up, it can be used to create a webpage to explore, plot and download Holocene sea-level data. 
 
 \section{PALEO-SEAL description}
-The core of PALEO-SEAL are two main data visualization options. One is a map, where points are clustered and de-clustered at different zoom levels. Within the map, data can be filtered either by a drop-down menu or via a select tool directly within the map. The drop-down menu allows to select between: data type (type of sea-level indicator), Region, Subregion, Reference, Publication year, or Dating method. Data can also be filtered via a ``draw rectangle'' tool (Figure \ref{fig:1}). Once a subset of data is selected, it is possible to visualize it in a data explorer interface (Figure \ref{fig:2}). The data explorer interface is composed by an age/elevation graph (with adjustable X and Y axes) and a simplified table that previews the sea-level data plotted. 
+The core of PALEO-SEAL are two main data visualization options. One is a map, where points are clustered and de-clustered at different zoom levels. Within the map, data can be filtered either by a drop-down menu or directly on the map. The drop-down menu allows to select between: data type (type of sea-level indicator), Region, Subregion, Reference, Publication year, or Dating method. On the map, data can be filtered geographically with a ``draw rectangle'' tool (Figure \ref{fig:1}). Once a subset of data is selected, it is possible to visualize it in a data explorer interface (Figure \ref{fig:2}). The data explorer interface is composed by an age/elevation graph (with adjustable X and Y axes) and a simplified table that previews the sea-level data plotted. 
 
 The data explorer interface has the same data filtering options as the map, and the two interfaces are linked: what is selected on the map will appear in the data interface and vice-versa. From both map and data explorer, it is possible to create a list of dataponits to be exported. Once filtering is over, an ``Export'' button allows to download the selected data as a *.csv file, compliant with the \citet{khan2019} template.
 
@@ -86,40 +86,23 @@ The data explorer interface has the same data filtering options as the map, and 
 \end{figure*}
 
 \section{Installing PALEO-SEAL}
+Pre-requisites for PALEO-SEAL are a server with mySQL (where data is stored) and PhP 7 installed. Then, the following steps must be followed.
 
+\begin{enumerate}
+\item \textbf{Prepare and deploy the mySQL database}. The data that will be shown in PALEO-SEAL need to be hosted on a remote server, where you will have to create a mySQL database. The only privileges needed by the interface are "SELECT" and "SHOW VIEW". As the user name will be visible to anyone with access to the code, is is strongly suggested to create a user with only these minimal privileges dedicated to the PALEO-SEAL interface. Once the database is created, run the SQL command "create table", included in the mysql folder. This will create 79 fields, reproducing the HOLSEA data table in the mySQL database. Fields headers in the database are coded with alphanumeric codes, corresponding to the fields in the HOLSEA database. To obtain descriptions of each field, you can refer to the ``$data\_headers\_lookup$'' file in the ``$data/lookups$'' folder. Then, data can be imported into the mySQL database using common import functions from csv or excel.
 
+\item \textbf{Modify the connection string}. Navigate to ``scripts /data /connect.php" and open the file with a text editor. Edit line 3 to connect to your database as follows inserting the server name, username, password, database and port to connect to your database.
 
-\section{Bibliography styles}
+\item \textbf{Deploy your application}. Deploy the application by copying the entire PALEO-SEAL folder on a web server that supports PHP 7.0. The directory where PALEO-SEAL is copied needs to be publicly accessible.
 
+\item \textbf{Change style (optional)}. It is possible to change the appearance of PALEO-SEAL using HTML and CSS. For example, the logo can be changed by overwriting the ``logo.svg'' file in the folder ``/ common/ img''. Webpages composing the application are contained in the folder ``/pages''. Text and content can be edited from here. To change the page style, modify the ``/ common/ css/ appearance.css'' file and, if necessary, the ``index.php'' file.
+\end{enumerate}
 
-\section{Floats}
+\section{Technical details}
+Jan, here 2-3 paragraphs to explain a bit the background software used to build map and xy graph.
 
-\begin{figure}
-	\centering
-		\includegraphics[scale=.75]{figs/Fig1.pdf}
-	\caption{The evanescent light - $1S$ quadrupole coupling
-	($g_{1,l}$) scaled to the bulk exciton-photon coupling
-	($g_{1,2}$). The size parameter $kr_{0}$ is denoted as $x$ and
-	the \PMS is placed directly on the cuprous oxide sample ($\delta
-	r=0$, See also Table \protect\ref{tbl1}).}
-	\label{FIG:1}
-\end{figure}
-
-
-
-\section[Theorem and ...]{Theorem and theorem like environments}
-
-\section{Bibliography}
-
-%\item Parenthetical: \verb+\citep{WB96}+ produces (Wettig \& Brown, 1996).
-%\item Textual: \verb+\citet{ESG96}+ produces Elson et al. (1996).
-%\item An affix and part of a reference:\break
-%\verb+\citep[e.g.][Ch. 2]{Gea97}+ produces (e.g. Governato et
-%&al., 1997, Ch. 2).
-
-\appendix
-\section{My Appendix}
-Appendix sections are coded under \verb+\appendix+.
+\section{Potential use of PALEO-SEAL}
+In general, PALEO-SEAL is a simple tool that can be used to illustrate, filter and make available for export Holocene sea-level data related to a paper, or a research project.   
 
 \printcredits
 
@@ -129,11 +112,6 @@ Appendix sections are coded under \verb+\appendix+.
 
 % Loading bibliography database
 \bibliography{cas-refs}
-
-
-%\vskip3pt
-
-
 
 \end{document}
 

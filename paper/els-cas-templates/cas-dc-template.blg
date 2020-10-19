@@ -1,9 +1,52 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: cas-dc-template.aux
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: cas-dc-template.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
 The style file: cas-model2-names.bst
+Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: cas-refs.bib
-Warning--I didn't find a database entry for "Fortunato2010"
-Warning--I didn't find a database entry for "NewmanGirvan2004"
-Warning--I didn't find a database entry for "Vehlowetal2013"
+Reallocating 'singl_function' (item size: 4) to 100 items.
 Warning--can't use both author and editor fields in VanDePlassche1986
 Warning--empty chapter and pages in VanDePlassche1986
-(There were 5 warnings)
+You've used 5 entries,
+            2990 wiz_defined-function locations,
+            776 strings with 7559 characters,
+and the built_in function-call counts, 4214 in all, are:
+= -- 291
+> -- 226
+< -- 3
++ -- 86
+- -- 81
+* -- 504
+:= -- 620
+add.period$ -- 16
+call.type$ -- 5
+change.case$ -- 50
+chr.to.int$ -- 5
+cite$ -- 7
+duplicate$ -- 282
+empty$ -- 276
+format.name$ -- 92
+if$ -- 760
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 63
+newline$ -- 41
+num.names$ -- 20
+pop$ -- 99
+preamble$ -- 1
+purify$ -- 46
+quote$ -- 0
+skip$ -- 75
+stack$ -- 0
+substring$ -- 168
+swap$ -- 237
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 42
+warning$ -- 2
+while$ -- 26
+width$ -- 0
+write$ -- 87
+(There were 2 warnings)

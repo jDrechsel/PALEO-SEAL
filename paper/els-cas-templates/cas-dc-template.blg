@@ -1,11 +1,9 @@
-This is BibTeX, Version 0.99d
+This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: cas-dc-template.aux
-Reallocating 'name_of_file' (item size: 1) to 17 items.
 The style file: cas-model2-names.bst
-Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: cas-refs.bib
-Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--can't use both author and editor fields in VanDePlassche1986
 Warning--empty chapter and pages in VanDePlassche1986
 You've used 5 entries,

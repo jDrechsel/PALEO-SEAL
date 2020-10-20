@@ -16,3 +16,4 @@ scripts/data/exportfile2020-06-16_13_37_32.csv
 scripts/data/exportfile*
 .vscode/extensions.json
 .vscode/settings.json
+paper/els-cas-templates/debug.log

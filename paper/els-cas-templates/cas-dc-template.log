@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.10.20)  20 OCT 2020 15:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.10.20)  20 OCT 2020 15:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -760,13 +760,21 @@ Overfull \hbox (6.14473pt too wide) in paragraph at lines 96--97
 \T1/stix/m/n/10 copy-ing the en-tire PALEO-SEAL folder on a web server
  []
 
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 8.50006pt on input line 102.
+LaTeX Font Info:    Trying to load font information for TS1+zi4 on input line 103.
+(c:/texlive/2020/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
+File: ts1zi4.fd 2018/01/14 TS1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
+(Font)              scaled to size 8.50006pt on input line 103.
 
-Overfull \hbox (6.34554pt too wide) in paragraph at lines 102--107
+Overfull \hbox (6.34554pt too wide) in paragraph at lines 105--110
 \T1/stix/m/n/10 Three se-ries of mark-ers are gen-er-ated de-pend-ing on the marker
  []
 
 [2 <c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/figs/Figure1.png> <c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/figs/Figure2.png>]
-Overfull \hbox (6.12149pt too wide) in paragraph at lines 110--111
+Overfull \hbox (6.12149pt too wide) in paragraph at lines 113--114
 \T1/stix/m/n/10 used to il-lus-trate, fil-ter and make avail-able for ex-port Holocene
  []
 
@@ -777,18 +785,18 @@ Package rerunfilecheck Info: File `cas-dc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13245 strings out of 479917
- 188905 string characters out of 5886664
+ 13264 strings out of 479917
+ 189237 string characters out of 5886664
  500572 words of memory out of 5000000
- 29507 multiletter control sequences out of 15000+600000
- 620181 words of font info for 133 fonts, out of 8000000 for 9000
+ 29522 multiletter control sequences out of 15000+600000
+ 620778 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,8n,91p,1080b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb>
-Output written on c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-template.pdf (3 pages, 413259 bytes).
+{c:/texlive/2020/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb>
+Output written on c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-template.pdf (3 pages, 414832 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  22 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

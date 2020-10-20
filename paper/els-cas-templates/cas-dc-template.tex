@@ -99,6 +99,9 @@ Pre-requisites for PALEO-SEAL are a server with mySQL (where data is stored) and
 \end{enumerate}
 
 \section{Technical details}
+\begin{verbatim}
+	I'll try to make it more clear with a small flowchart or sth
+\end{verbatim}
 The initial PHP requests all entries from the MySQL DB and converts it into a basic array.  Additional properties with their initial values (export: false, plot: false, map: false) are added to each sample for data handling(User interaction)
 On group (default = region Code) the selected category (column, property) is scanned for unique values. An object of these values is generated where each entry is populated with the corresponding samples. This stacked array is used to generate the elements displayed on the sidenav. Including a counter showing the length of samples array within each group. \\
 In the sidenav when selecting “display” the samples within this group are processed to be handed over to Plot and Map. The plot script was developed as part of this project, whereas for the clustered map markers an ArcGis framework was used. Prerequisite for ArcGis: correct formatting and removal of invalid coordinate entries (Invalid are stored in an array, but not integrated into the frontend yet). Selection on the map is done by leaflets .contains method. \\ 

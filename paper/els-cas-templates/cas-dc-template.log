@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.10.20)  21 OCT 2020 09:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.10.20)  21 OCT 2020 11:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -772,34 +772,50 @@ LaTeX Font Info:    Trying to load font information for TS1+stix on input line 1
  (c:/texlive/2020/texmf-dist/tex/latex/stix/ts1stix.fd
 File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
 )
-Overfull \hbox (6.34554pt too wide) in paragraph at lines 112--117
-\T1/stix/m/n/10 Three se-ries of mark-ers are gen-er-ated de-pend-ing on the marker
+Underfull \hbox (badness 10000) in paragraph at lines 112--114
+
  []
 
 [2 <c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/figs/Figure1.png> <c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/figs/Figure2.png>]
-Overfull \hbox (6.12149pt too wide) in paragraph at lines 120--121
+<figs/FigureTechnical.png, id=63, 229.0959pt x 385.1991pt>
+File: figs/FigureTechnical.png Graphic file (type png)
+<use figs/FigureTechnical.png>
+Package pdftex.def Info: figs/FigureTechnical.png  used on input line 117.
+(pdftex.def)             Requested size: 229.09534pt x 385.19815pt.
+
+Overfull \hbox (5.80554pt too wide) in paragraph at lines 122--125
+[]\T1/stix/m/n/10 In the side-nav when se-lect-ing ^^Pdis-play^^Q the sam-ples within
+ []
+
+
+Overfull \hbox (6.34554pt too wide) in paragraph at lines 122--125
+\T1/stix/m/n/10 Three se-ries of mark-ers are gen-er-ated de-pend-ing on the marker
+ []
+
+
+Overfull \hbox (6.12149pt too wide) in paragraph at lines 128--129
 \T1/stix/m/n/10 used to il-lus-trate, fil-ter and make avail-able for ex-port Holocene
  []
 
-(c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-template.bbl) [3
+(c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-template.bbl [3 <c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/figs/FigureTechnical.png>]) [4
 
 ] (c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-template.aux)
 Package rerunfilecheck Info: File `cas-dc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13290 strings out of 479917
- 189691 string characters out of 5886664
+ 13298 strings out of 479917
+ 189863 string characters out of 5886664
  500572 words of memory out of 5000000
- 29544 multiletter control sequences out of 15000+600000
+ 29549 multiletter control sequences out of 15000+600000
  621109 words of font info for 136 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,8n,91p,1080b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 80i,8n,91p,1080b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/stix/stix-ts1.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb>
-Output written on c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-template.pdf (3 pages, 416708 bytes).
+Output written on c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-template.pdf (4 pages, 525794 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
- 22 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 118 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
+ 24 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -18,7 +18,7 @@
                 for (var i = 0; i < $scope.proben.length; i++){
 
                     /*replace wrong entries */
-                    // find records where C_02='modern' and replace with float 0;
+                    // find records where C_02='Modern' and replace with float 0;
                     if ($scope.proben[i].C_02 == "Modern") {
                         var age_temp = 0;
                     } else {

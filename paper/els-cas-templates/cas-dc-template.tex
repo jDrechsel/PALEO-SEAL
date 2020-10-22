@@ -99,29 +99,26 @@ Pre-requisites for PALEO-SEAL are a server with mySQL (where data is stored) and
 \end{enumerate}
 
 \section{Technical details}
-\begin{verbatim}
-	I'll try to make it more clear with a small flowchart or sth
-\end{verbatim}
-The initial PHP request returns a shortened form (23 properties) of every entry from the MySQL DB and converts it into a basic JSON array. Additional properties with their initial values (export: false, plot: false, map: false) are added to each sample for data handling (User interaction). Further conversions in ``scripts/data/getData.js'' include: 
+\textbf{The map} was built with following leaflet.js and ESRI directives for AngularJS:
+
 \begin{itemize}
-	\item find records where $C\_02$ : 'Modern' and replace with float 0;
-	\item Load RSL ($D7\_01$) for SL indicators and sample elevation ($D3\_11$) for marine \& terrestrial limiting (and the corresponing errors).
+	\item leaflet.js - \textit{basic web map}
+	\item esri-leaflet.js - \textit{base maps}
+	\item ui-leaflet.min.js - \textit{user interface elements}
+	\item angular-leaflet-directive.js - \textit{connect AngularJS\&Leaflet}
+	\item leaflet.draw.js - \textit{marker selection by area }
+	\item leaflet.markercluster.js - \textit{cluster markers based on scale }
 \end{itemize}
 
-
-Refer to the getData.js for more information.\\
-On group (default: region Code, $B\_01$) the selected category (column, property) is scanned for unique values. An object of these values is generated where each entry is populated with the corresponding samples. This stacked array is used to generate the elements displayed on the sidenav. Including a counter showing the length of samples array within each group. \\
-
-\begin{figure*}[h]
+\begin{figure}[]
 	% [width=0.4\textwidth]
 	\includegraphics{figs/FigureTechnical.png}
-	\caption{}
-	% \label{fig:2}
-\end{figure*}
+	\caption{Data handling, processing}
+	\label{fig:3}
+\end{figure}
+\textbf{The age/elevation graph} was built using a custom scripted Scalable Vector Graphic (SVG) HTML element, extended with AngularJS directives to dynamically manage displayed data. \
 
-In the sidenav when selecting “display” the samples within this group are processed to be handed over to Plot and Map. The plot script was developed as part of this project, whereas for the clustered map markers an ArcGis leaflet framework was used. Prerequisite for ArcGis: correct formatting and removal of invalid coordinate entries (Invalid are stored in an array, but not integrated into the frontend yet). Selection on the map is achieved by leaflet's .contains method. \\ 
-The plot component uses the errors provided for each sample to calculate the extent of the marker in each dimension. Three series of markers are generated depending on the marker type (indicator, marine \& terrestrial limiting). Angular repeat directive allows to iterate over the samples within the desired group and render the marker for each entry. \\
-Marking an entry for export, toggles the export property of the sample. The export Dialog filters the whole dataset for entries with property export: true and hands it to the export specific plot and map function for reviewing the selection. GetCSV gathers the UIDs and where export: true, requests the full records in the MySQL DB for each UID and saves it into a csvfile.
+\textbf{The two are interconnected} with the AngularJS framework, allowing to store data asynchronously and render the interface elements base on this dynamic data. Due to this framework used, the entire interface is a one-page website, rendering different outputs based on data and user choices. 
 
 
 \section{Potential use of PALEO-SEAL}

@@ -893,17 +893,12 @@ INPUT c:/texlive/2020/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-italic.tfm
 INPUT c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2020/texmf-dist/fonts/vf/public/stix/t1-stixgeneralsc.vf
 INPUT c:/texlive/2020/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
-INPUT c:/texlive/2020/texmf-dist/fonts/tfm/public/inconsolata/t1-zi4r-0.tfm
-INPUT c:/texlive/2020/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
-INPUT c:/texlive/2020/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
-INPUT c:/texlive/2020/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
-INPUT c:/texlive/2020/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
-INPUT c:/texlive/2020/texmf-dist/fonts/tfm/public/inconsolata/ts1-zi4r.tfm
 INPUT c:/texlive/2020/texmf-dist/tex/latex/stix/ts1stix.fd
 INPUT c:/texlive/2020/texmf-dist/tex/latex/stix/ts1stix.fd
 INPUT c:/texlive/2020/texmf-dist/tex/latex/stix/ts1stix.fd
 INPUT c:/texlive/2020/texmf-dist/tex/latex/stix/ts1stix.fd
 INPUT c:/texlive/2020/texmf-dist/fonts/tfm/public/stix/ts1-stixgeneral.tfm
+INPUT c:/texlive/2020/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-italic.tfm
 INPUT c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/figs/FigureTechnical.png
 INPUT c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/figs/FigureTechnical.png
 INPUT c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/figs/FigureTechnical.png
@@ -917,7 +912,6 @@ INPUT c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-t
 INPUT c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-template.out
 INPUT c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-template.out
 INPUT c:/texlive/2020/texmf-dist/fonts/enc/dvips/stix/stix-ts1.enc
-INPUT c:/texlive/2020/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc
 INPUT c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT c:/texlive/2020/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc
 INPUT c:/texlive/2020/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc

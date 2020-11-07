@@ -24,6 +24,16 @@
 %\usepackage[authoryear]{natbib}
 \usepackage[authoryear]{natbib}
 
+\usepackage{listings}
+\lstset{
+basicstyle=\small\ttfamily,
+columns=flexible,
+breaklines=true
+}
+
+\usepackage{url}
+
+
 \begin{document}
 \let\WriteBookmarks\relax
 \def\floatpagepagefraction{1}
@@ -49,7 +59,8 @@
 \credit{Writing of the paper, supervision on tool development}
 
 \begin{abstract}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet nunc risus, vitae porta justo semper lobortis. In tincidunt lacus nec felis dapibus, vitae vehicula elit suscipit. Nullam non lorem sed erat commodo euismod. Pellentesque non elit aliquam, dapibus ante a, commodo elit. Quisque in dignissim elit, rutrum dignissim lorem. Praesent interdum ac nibh et tempus. Donec rutrum rhoncus leo, eget egestas ex pharetra sit amet. Nulla accumsan commodo imperdiet.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et feugiat eros. Nam at placerat justo, laoreet mattis enim. Sed scelerisque felis orci, vitae elementum felis laoreet id. In rutrum elit ut felis vestibulum tristique vel id velit. Nam tristique sodales dignissim. Proin pretium libero nibh. Vestibulum sed enim tellus. Nunc risus lorem, condimentum quis nisl id, eleifend rhoncus nulla. Nam et rhoncus ipsum, at tristique lacus. Curabitur vel feugiat lacus.
+
 \end{abstract}
 
 \begin{keywords}
@@ -74,33 +85,37 @@ The data explorer interface has the same data filtering options as the map, and 
 \begin{figure*}
 	\centering
 	\includegraphics[width=0.8\textwidth]{figs/Figure1.png}
-	\caption{}
+	\caption{ALE TO DRAFT CAPTION}
 	\label{fig:1}
 \end{figure*}
 
 \begin{figure*}
 	\centering
 	\includegraphics[width=0.8\textwidth]{figs/Figure2.png}
-	\caption{}
+	\caption{ALE TO DRAFT CAPTION (Maybe merge with figure 1)}
 	\label{fig:2}
 \end{figure*}
 
 \section{Installing PALEO-SEAL}
-Pre-requisites for PALEO-SEAL are a server with mySQL (where data is stored) and PhP 7 installed. Then, the following steps must be followed.
+PALEO-SEAL is available via Zenodo (link). The repository can also be forked in GitHub (link). Pre-requisites for PALEO-SEAL are a server with mySQL (where data is stored) and PhP 7 installed. Then, the following steps must be followed.
 
-\begin{enumerate}
-\item \textbf{Prepare and deploy the mySQL database}. The data that will be shown in PALEO-SEAL need to be hosted on a remote server, where you will have to create a mySQL database. The only privileges needed by the interface are "SELECT" and "SHOW VIEW". As the user name will be visible to anyone with access to the code, is is strongly suggested to create a user with only these minimal privileges dedicated to the PALEO-SEAL interface. Once the database is created, run the SQL command "create table", included in the mysql folder. This will create 79 fields, reproducing the HOLSEA data table in the mySQL database. Fields headers in the database are coded with alphanumeric codes, corresponding to the fields in the HOLSEA database. To obtain descriptions of each field, you can refer to the ``$data\_headers\_lookup$'' file in the ``$data/lookups$'' folder. Then, data can be imported into the mySQL database using common import functions from csv or excel.
+\textbf{Prepare and deploy the mySQL database}. The data that will be shown in PALEO-SEAL need to be hosted on a remote server, where you will have to create a mySQL database. The only privileges needed by the interface are "SELECT" and "SHOW VIEW". As the user name and password to access the database will be visible to anyone with access to the code, is is strongly suggested to create a user with only these minimal privileges dedicated to the PALEO-SEAL interface. This will protect the data from unwanted changes by non-admin users. Once the database is created, run the SQL command "create table", included in the mysql folder. This will create 79 fields, reproducing the HOLSEA data table in the mySQL database. Fields headers in the database are coded with alphanumeric codes, corresponding to the fields in the HOLSEA database. To obtain descriptions of each field, you can refer to the \texttt{data\_headers\_lookup.json} file in the \texttt{\textbackslash data \textbackslash lookups} folder. Then, data can be imported into the mySQL database using common import functions from csv or excel.
 
-\item \textbf{Modify the connection string}. Navigate to ``scripts /data /connect.php" and open the file with a text editor. Edit line 3 to connect to your database as follows inserting the server name, username, password, database and port to connect to your database.
+\textbf{Modify the connection string}. Navigate to \texttt{scripts \textbackslash data \textbackslash connect.php} and open the file with a text editor. Edit line 3 to connect to your database as follows inserting the server name, username, password, database and port to connect to your database.
 
-\item \textbf{Deploy your application}. Deploy the application by copying the entire PALEO-SEAL folder on a web server that supports PHP 7.0. The directory where PALEO-SEAL is copied needs to be publicly accessible.
+\begin{lstlisting}
+$con=mysqli_connect("SERVER NAME","USERNAME","PASSWORD","DATABASE", "PORT");
+\end{lstlisting}
 
-\item \textbf{Change style (optional)}. It is possible to change the appearance of PALEO-SEAL using HTML and CSS. For example, the logo can be changed by overwriting the ``logo.svg'' file in the folder ``/ common/ img''. Webpages composing the application are contained in the folder ``/pages''. Text and content can be edited from here. To change the page style, modify the ``/ common/ css/ appearance.css'' file and, if necessary, the ``index.php'' file.
-\end{enumerate}
+
+\textbf{Deploy your application}. Deploy the application by copying the entire PALEO-SEAL folder on a web server that supports PHP 7.0. The directory where PALEO-SEAL is copied needs to be publicly accessible.
+
+\textbf{Change style (optional)}. It is possible to change the appearance of PALEO-SEAL using HTML and CSS. For example, the logo can be changed by overwriting the \texttt{logo.svg} file in the \texttt{\textbackslash common \textbackslash img} folder. Webpages composing the application are contained in the \texttt{\textbackslash pages} folder. Text and content can be edited from here. To change the page style, it is possible to modify the \texttt{\textbackslash common \textbackslash css \textbackslash appearance.css} file and, if necessary, the \texttt{index.php} file.
 
 \section{Technical details}
-\textbf{The map} was built with following leaflet.js and ESRI directives for AngularJS:
+PALEO-SEAL uses different libraries to interrogate the database and display data. 
 
+The map was built with following leaflet.js and ESRI directives for AngularJS:
 \begin{itemize}
 	\item leaflet.js - \textit{basic web map}
 	\item esri-leaflet.js - \textit{base maps}
@@ -110,21 +125,22 @@ Pre-requisites for PALEO-SEAL are a server with mySQL (where data is stored) and
 	\item leaflet.markercluster.js - \textit{cluster markers based on scale }
 \end{itemize}
 
+The age/elevation graph was built using a custom scripted Scalable Vector Graphic (SVG) HTML element, extended with AngularJS directives to dynamically manage displayed data. \
+
+The map and age/elevation graph are interconnected with the AngularJS framework, allowing to store data asynchronously and render the interface elements base on this dynamic data. Due to this framework used, the entire interface is a one-page website, rendering different outputs based on data and user choices. 
+
 \begin{figure}[]
 	% [width=0.4\textwidth]
 	\includegraphics{figs/FigureTechnical.png}
-	\caption{Data handling, processing}
+	\caption{Data handling, processing ---- JAN PLEASE DESCRIBE THIS FIGURE BETTER.}
 	\label{fig:3}
 \end{figure}
-\textbf{The age/elevation graph} was built using a custom scripted Scalable Vector Graphic (SVG) HTML element, extended with AngularJS directives to dynamically manage displayed data. \
-
-\textbf{The two are interconnected} with the AngularJS framework, allowing to store data asynchronously and render the interface elements base on this dynamic data. Due to this framework used, the entire interface is a one-page website, rendering different outputs based on data and user choices. 
 
 
 \section{Potential use of PALEO-SEAL}
-In general, PALEO-SEAL is a simple tool that can be used to illustrate, filter and make available for export Holocene sea-level data related to a paper, or a research project.   
+In general, PALEO-SEAL is a simple tool that can be used to illustrate, filter and make available for export Holocene sea-level data related to a paper, or a research project. For example, we deployed PALEO-SEAL to showcase the data reviewed in the context of a research project on South-East Asia sea-level proxies by \citet{mann2019holocene}. The deployed interface is available at \href{https://warmcoasts.eu/paleo-seal/}{this link}. SOME MORE DESCRIPTION HERE.
 
-\printcredits
+NICOLE, DO YOU WANT TO HOST AN INSTANCE WITH THE ENTIRE DATABASE TO THE HOLSEA WEBSITE?
 
 %% Loading bibliography style file
 %\bibliographystyle{model1-num-names}

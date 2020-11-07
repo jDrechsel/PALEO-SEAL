@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -37,6 +37,17 @@
   last glacial maximum}.
 \newblock \bibinfo{journal}{Quaternary Science Reviews} \bibinfo{volume}{220},
   \bibinfo{pages}{359--371}.
+%Type = Article
+\bibitem[{Mann et~al.(2019)Mann, Bender, Lorscheid, Stocchi, Vacchi, Switzer
+  and Rovere}]{mann2019holocene}
+\bibinfo{author}{Mann, T.}, \bibinfo{author}{Bender, M.},
+  \bibinfo{author}{Lorscheid, T.}, \bibinfo{author}{Stocchi, P.},
+  \bibinfo{author}{Vacchi, M.}, \bibinfo{author}{Switzer, A.D.},
+  \bibinfo{author}{Rovere, A.}, \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Holocene sea levels in southeast asia, maldives,
+  india and sri lanka: the seamis database}.
+\newblock \bibinfo{journal}{Quaternary Science Reviews} \bibinfo{volume}{219},
+  \bibinfo{pages}{112--125}.
 %Type = Article
 \bibitem[{Shennan(1982)}]{shennan1982}
 \bibinfo{author}{Shennan, I.}, \bibinfo{year}{1982}.

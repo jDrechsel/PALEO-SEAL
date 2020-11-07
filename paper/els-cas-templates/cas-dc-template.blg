@@ -1,50 +1,52 @@
-This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: cas-dc-template.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
 The style file: cas-model2-names.bst
+Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: cas-refs.bib
-Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocating 'singl_function' (item size: 4) to 100 items.
 Warning--can't use both author and editor fields in VanDePlassche1986
 Warning--empty chapter and pages in VanDePlassche1986
-You've used 5 entries,
+You've used 6 entries,
             2990 wiz_defined-function locations,
-            776 strings with 7559 characters,
-and the built_in function-call counts, 4214 in all, are:
-= -- 291
-> -- 226
+            781 strings with 7805 characters,
+and the built_in function-call counts, 5134 in all, are:
+= -- 353
+> -- 284
 < -- 3
-+ -- 86
-- -- 81
-* -- 504
-:= -- 620
-add.period$ -- 16
-call.type$ -- 5
-change.case$ -- 50
-chr.to.int$ -- 5
-cite$ -- 7
-duplicate$ -- 282
-empty$ -- 276
-format.name$ -- 92
-if$ -- 760
++ -- 108
+- -- 102
+* -- 621
+:= -- 755
+add.period$ -- 19
+call.type$ -- 6
+change.case$ -- 62
+chr.to.int$ -- 6
+cite$ -- 8
+duplicate$ -- 341
+empty$ -- 331
+format.name$ -- 116
+if$ -- 923
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 63
-newline$ -- 41
-num.names$ -- 20
-pop$ -- 99
+missing$ -- 77
+newline$ -- 46
+num.names$ -- 24
+pop$ -- 121
 preamble$ -- 1
-purify$ -- 46
+purify$ -- 57
 quote$ -- 0
-skip$ -- 75
+skip$ -- 88
 stack$ -- 0
-substring$ -- 168
-swap$ -- 237
+substring$ -- 204
+swap$ -- 290
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 42
+type$ -- 51
 warning$ -- 2
-while$ -- 26
+while$ -- 31
 width$ -- 0
-write$ -- 87
+write$ -- 101
 (There were 2 warnings)

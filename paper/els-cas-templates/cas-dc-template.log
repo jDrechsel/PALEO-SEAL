@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.14)  21 OCT 2020 13:59
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.10.20)  22 OCT 2020 15:30
->>>>>>> 48c15e626bf0a71b4cb1a8841eb26d9100eba559
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.14)  30 OCT 2020 13:55
 entering extended mode
 **C:/Users/arovere/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-t
 emplate.tex
@@ -978,126 +974,68 @@ Overfull \hbox (6.14473pt too wide) in paragraph at lines 96--97
 \T1/stix/m/n/10 copy-ing the en-tire PALEO-SEAL folder on a web server
  []
 
-<<<<<<< HEAD
-LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 102.
-LaTeX Font Info:    Trying to load font information for TS1+zi4 on input line 1
-03.
-
-("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/inconsolata\ts1z
-i4.fd"
-File: ts1zi4.fd 2018/01/14 TS1/zi4 (Inconsolata)
-)
-LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 103.
 LaTeX Font Info:    Trying to load font information for TS1+stix on input line 
-107.
-
+105.
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stix\ts1stix.fd"
-=======
-LaTeX Font Info:    Trying to load font information for TS1+stix on input line 105.
-(c:/texlive/2020/texmf-dist/tex/latex/stix/ts1stix.fd
->>>>>>> 48c15e626bf0a71b4cb1a8841eb26d9100eba559
 File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
 )
 Overfull \hbox (8.06555pt too wide) in paragraph at lines 108--109
-[]\T1/stix/m/n/10 angular-leaflet-directive.js - \T1/stix/m/it/10 con-nect An-gu-larJS&Leaflet 
+[]\T1/stix/m/n/10 angular-leaflet-directive.js - \T1/stix/m/it/10 con-nect An-g
+u-larJS&Leaflet 
  []
 
 
 Overfull \hbox (3.7655pt too wide) in paragraph at lines 110--111
-[]\T1/stix/m/n/10 leaflet.markercluster.js - \T1/stix/m/it/10 clus-ter mark-ers based on scale 
+[]\T1/stix/m/n/10 leaflet.markercluster.js - \T1/stix/m/it/10 clus-ter mark-ers
+ based on scale 
  []
 
-<<<<<<< HEAD
-[2 <./figs/Figure1.png> <./figs/Figure2.png>]
-<figs/FigureTechnical.png, id=62, 229.0959pt x 385.1991pt>
-=======
-<figs/FigureTechnical.png, id=50, 229.0959pt x 385.1991pt>
->>>>>>> 48c15e626bf0a71b4cb1a8841eb26d9100eba559
+<figs/FigureTechnical.png, id=49, 229.0959pt x 385.1991pt>
 File: figs/FigureTechnical.png Graphic file (type png)
 <use figs/FigureTechnical.png>
 Package pdftex.def Info: figs/FigureTechnical.png  used on input line 115.
 (pdftex.def)             Requested size: 229.09534pt x 385.19815pt.
 
-<<<<<<< HEAD
-Overfull \hbox (5.80554pt too wide) in paragraph at lines 122--125
-[]\T1/stix/m/n/10 In the side-nav when se-lect-ing dis-play the sam-ples with
-in
+Overfull \hbox (7.67548pt too wide) in paragraph at lines 119--120
+[]\T1/stix/b/n/10 The age/elevation graph \T1/stix/m/n/10 was built us-ing a cu
+s-tom scripted
  []
 
-
-Overfull \hbox (6.34554pt too wide) in paragraph at lines 122--125
-\T1/stix/m/n/10 Three se-ries of mark-ers are gen-er-ated de-pend-ing on the ma
-rker
- []
-
-
-Overfull \hbox (6.12149pt too wide) in paragraph at lines 128--129
+[2 <./figs/Figure1.png> <./figs/Figure2.png>]
+Overfull \hbox (6.12149pt too wide) in paragraph at lines 125--126
 \T1/stix/m/n/10 used to il-lus-trate, fil-ter and make avail-able for ex-port H
 olocene
  []
 
-(cas-dc-template.bbl [3 <./figs/FigureTechnical.png>]) [4
-
-] (cas-dc-template.aux)
-=======
-Overfull \hbox (7.67548pt too wide) in paragraph at lines 119--120
-[]\T1/stix/b/n/10 The age/elevation graph \T1/stix/m/n/10 was built us-ing a cus-tom scripted
- []
-
-[2 <c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/figs/Figure1.png> <c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/figs/Figure2.png>]
-Overfull \hbox (6.12149pt too wide) in paragraph at lines 125--126
-\T1/stix/m/n/10 used to il-lus-trate, fil-ter and make avail-able for ex-port Holocene
- []
-
-(c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-template.bbl) [3 <c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/figs/FigureTechnical.png>] (c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-template.aux)
->>>>>>> 48c15e626bf0a71b4cb1a8841eb26d9100eba559
+(cas-dc-template.bbl) [3 <./figs/FigureTechnical.png>] (cas-dc-template.aux)
 Package rerunfilecheck Info: File `cas-dc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 13301 strings out of 480202
- 195419 string characters out of 2876047
- 500497 words of memory out of 3000000
- 29545 multiletter control sequences out of 15000+200000
- 621109 words of font info for 136 fonts, out of 3000000 for 9000
+ 13283 strings out of 480202
+ 195055 string characters out of 2876047
+ 500544 words of memory out of 3000000
+ 29532 multiletter control sequences out of 15000+200000
+ 623277 words of font info for 135 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,8n,87p,1083b,465s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 72i,8n,87p,1083b,458s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/arovere/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/stix/stix
--ts1.enc}{C:/Users/arovere/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/in
-consolata/i4-ts1.enc} <C:\Users\arovere\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
-r/jknappen/ec/dpi600\ecsx0900.pk> <C:\Users\arovere\AppData\Local\MiKTeX\2.9\fo
-nts/pk/ljfour/jknappen/ec/dpi600\ecss0900.pk>{C:/Users/arovere/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{C:/Users/arovere/App
-Data/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/stix/stix-t1.enc}<C:/Users/arove
-re/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/inconsolata/Inconsolata
--zi4r.pfb><C:/Users/arovere/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/stix/STIXGeneral-Bold.pfb><C:/Users/arovere/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/stix/STIXGeneral-Italic.pfb><C:/Users/arovere/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/stix/STIXGeneral-Regular.pfb><C:/Users/
-arovere/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/stix/stix-mathit.p
-fb><C:/Users/arovere/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/stix/
-stix-mathrm.pfb>
-Output written on cas-dc-template.pdf (4 pages, 523682 bytes).
+-ts1.enc} <C:\Users\arovere\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/e
+c/dpi600\ecsx0900.pk> <C:\Users\arovere\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
+r/jknappen/ec/dpi600\ecss0900.pk>{C:/Users/arovere/AppData/Local/Programs/MiKTe
+X 2.9/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{C:/Users/arovere/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/enc/dvips/stix/stix-t1.enc}<C:/Users/arovere/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C
+:/Users/arovere/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/stix/STIXG
+eneral-Bold.pfb><C:/Users/arovere/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/stix/STIXGeneral-Italic.pfb><C:/Users/arovere/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/stix/STIXGeneral-Regular.pfb><C:/Users/arovere/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/stix/stix-mathit.pfb><C:/Users
+/arovere/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/stix/stix-mathrm.
+pfb>
+Output written on cas-dc-template.pdf (3 pages, 522528 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
-=======
- 13280 strings out of 479917
- 189547 string characters out of 5886664
- 500619 words of memory out of 5000000
- 29536 multiletter control sequences out of 15000+600000
- 623277 words of font info for 135 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 80i,8n,91p,1080b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2020/texmf-dist/fonts/enc/dvips/stix/stix-ts1.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb>
-Output written on c:/Users/User/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-template.pdf (3 pages, 524856 bytes).
-PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
+ 147 PDF objects out of 1000 (max. 8388607)
  23 named destinations out of 1000 (max. 500000)
->>>>>>> 48c15e626bf0a71b4cb1a8841eb26d9100eba559
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

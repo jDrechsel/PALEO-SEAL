@@ -1,6 +1,9 @@
 # What is PALEO-SEAL?
 PALEO-SEAL is an easily deployable and scalable web interface that allows the visualization and download of Holocene sea-level index points. The data displayed in the interface are hosted in a MySQL database. The database structure follows the template of the HOLSEA project (Long-form version, that can be retrieved from <a href="https://www.holsea.org/archive-your-data">www.holsea.org</a>), and is described by Khan et al., 2019<sup>[1](#Khan2019)</sup>.
 
+# Quick video tour
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/A3ZGQh7foZI/0.jpg)](http://www.youtube.com/watch?v=A3ZGQh7foZI "Video Title")
+
 # How can I use PALEO-SEAL?
 With PALEO-SEAL, you can create your own website to visualize and download Holocene sea-level data within minutes. The tool offers a basic template, and to furhter style your page you will need some basic knowledge of HTML and CSS. To setup your database, you will need some basic knowledge of mySQL and a remote server supporting mySQL databases.
 
@@ -30,7 +33,7 @@ We developed PALEO-SEAL to support a project based in South East Asia. As such, 
 If you use this tool we kindly ask you to include this statement in your website: *" This website was developed using PALEO-SEAL, a results of the SEASCHANGE project (DFG RO 5245/1-1 ). The interface builds on the data structure compiled by the HOLSEA project, funded by INQUA, the International Union for Quaternary Research. PALEO-SEAL was coded by Jan Drechsel (MSc, IT consultant), under scientific supervision of Dr. Alessio Rovere (PhD, MARUM, University of Bremen).*
 
 # License
-TO DO.
+Apache 2.0 license.
 
 ## References
 <a name="Khan2019"><sup>1</sup></a> Khan, N.S., Horton, B.P., Engelhart, S., Rovere, A., Vacchi, M., Ashe, E.L., Törnqvist, T.E., Dutton, A., Hijma, M.P. and Shennan, I., 2019. Inception of a global atlas of sea levels since the Last Glacial Maximum. Quaternary Science Reviews, 220, pp.359-371.

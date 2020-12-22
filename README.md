@@ -35,7 +35,19 @@ We developed PALEO-SEAL to support a project based in South East Asia. As such, 
 If you use this tool we kindly ask you to include this statement in your website: *" This website was developed using PALEO-SEAL, a results of the SEASCHANGE project (DFG RO 5245/1-1 ). The interface builds on the data structure compiled by the HOLSEA project, funded by INQUA, the International Union for Quaternary Research. PALEO-SEAL was coded by Jan Drechsel (MSc, IT consultant), under scientific supervision of Dr. Alessio Rovere (PhD, MARUM, University of Bremen).*
 
 # License
-Apache 2.0 license.
+Copyright 2020 Jan Drechsel
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 ## References
 <a name="Khan2019"><sup>1</sup></a> Khan, N.S., Horton, B.P., Engelhart, S., Rovere, A., Vacchi, M., Ashe, E.L., Törnqvist, T.E., Dutton, A., Hijma, M.P. and Shennan, I., 2019. Inception of a global atlas of sea levels since the Last Glacial Maximum. Quaternary Science Reviews, 220, pp.359-371.

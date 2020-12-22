@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.14)  22 DEC 2020 11:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.14)  22 DEC 2020 14:19
 entering extended mode
 **C:/Users/arovere/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-t
 emplate.tex
@@ -733,45 +733,45 @@ File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
 LaTeX Font Info:    Trying to load font information for T1+stix on input line 3
-7.
+8.
 
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stix\t1stix.fd"
 File: t1stix.fd 2015/04/17 v1.1.2-latex STIX T1 font definitions
 ) (cas-dc-template.aux)
 \openout1 = `cas-dc-template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 38.
 LaTeX Font Info:    Trying to load font information for LS1+stix on input line 
-37.
+38.
 
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stix\ls1stix.fd"
 File: ls1stix.fd 2015/04/17 v1.1.2-latex STIX LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 38.
 LaTeX Font Info:    Trying to load font information for LS2+stix on input line 
-37.
+38.
  ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stix\ls2stix.fd
 "
 File: ls2stix.fd 2015/04/17 v1.1.2-latex STIX LS2 font definitions
 )
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    ... okay on input line 38.
 
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp
 -pdf.mkii"
@@ -794,7 +794,7 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Package hyperref Info: Link coloring ON on input line 37.
+Package hyperref Info: Link coloring ON on input line 38.
 
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref
 .sty"
@@ -810,9 +810,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count331
 )
-LaTeX Info: Redefining \ref on input line 37.
-LaTeX Info: Redefining \pageref on input line 37.
-LaTeX Info: Redefining \nameref on input line 37.
+LaTeX Info: Redefining \ref on input line 38.
+LaTeX Info: Redefining \pageref on input line 38.
+LaTeX Info: Redefining \nameref on input line 38.
  (cas-dc-template.out) (cas-dc-template.out)
 \@outlinefile=\write3
 \openout3 = `cas-dc-template.out'.
@@ -862,28 +862,28 @@ tim
 \openout4 = `cas-dc-template.abs'.
 
 LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
-ne 70.
+ne 68.
 
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stix\ls1stixscr.
 fd"
 File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixex on input lin
-e 70.
+e 68.
 
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stix\ls2stixex.f
 d"
 File: ls2stixex.fd 2015/04/17 v1.1.2-latex STIX extentions LS2 font definitions
 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
 
 
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
 "
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
 
 
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
@@ -891,14 +891,14 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixfrak on input l
-ine 70.
+ine 68.
 
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stix\ls1stixfrak
 .fd"
 File: ls1stixfrak.fd 2015/04/17 v1.1.2-latex STIX fraktur LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixbb on input lin
-e 70.
+e 68.
 
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stix\ls1stixbb.f
 d"
@@ -906,7 +906,7 @@ File: ls1stixbb.fd 2015/04/17 v1.1.2-latex STIX blackboard LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixcal on input li
-ne 70.
+ne 68.
 
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stix\ls2stixcal.
 fd"
@@ -914,7 +914,7 @@ File: ls2stixcal.fd 2015/04/17 v1.1.2-latex STIX calligraphic LS2 font definiti
 ons
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixsf on input lin
-e 70.
+e 68.
 
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stix\ls1stixsf.f
 d"
@@ -922,27 +922,27 @@ File: ls1stixsf.fd 2015/04/17 v1.1.2-latex STIX sans-serif LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixtt on input lin
-e 70.
+e 68.
 
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stix\ls2stixtt.f
 d"
 File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
 
 )
-Overfull \hbox (123.62721pt too wide) detected at line 70
+Overfull \hbox (123.62721pt too wide) detected at line 68
 []
  []
 
 (cas-dc-template.abs)
 
-Package hyperref Warning: Ignoring empty anchor on input line 70.
+Package hyperref Warning: Ignoring empty anchor on input line 68.
 
 <thumbnails/cas-email.jpeg, id=3, 225.84375pt x 225.84375pt>
 File: thumbnails/cas-email.jpeg Graphic file (type jpg)
 <use thumbnails/cas-email.jpeg>
-Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 70.
+Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 68.
 (pdftex.def)             Requested size: 7.99838pt x 8.0pt.
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 70
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 68
 .
 
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/inconsolata\t1zi
@@ -950,92 +950,98 @@ LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 70
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 6.80005pt on input line 70.
+(Font)              scaled to size 6.80005pt on input line 68.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 70.
+Package hyperref Warning: Ignoring empty anchor on input line 68.
 
 
-Overfull \hbox (4.65385pt too wide) in paragraph at lines 75--77
+Overfull \hbox (4.65385pt too wide) in paragraph at lines 73--74
 []\T1/stix/m/n/10 A pa-per stem-ming from the PALSEA com-mu-nity ([][]Düster-
  []
 
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 8
-6.
+3.
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmss.fd"
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<figs/Figure1.png, id=22, 1003.49907pt x 493.0922pt>
-File: figs/Figure1.png Graphic file (type png)
-<use figs/Figure1.png>
-Package pdftex.def Info: figs/Figure1.png  used on input line 87.
-(pdftex.def)             Requested size: 395.60861pt x 194.38931pt.
-<figs/Figure2.png, id=24, 1003.49907pt x 493.0922pt>
-File: figs/Figure2.png Graphic file (type png)
-<use figs/Figure2.png>
-Package pdftex.def Info: figs/Figure2.png  used on input line 94.
-(pdftex.def)             Requested size: 395.60861pt x 194.38931pt.
+<figs/Figure1.jpg, id=21, 596.2275pt x 586.3506pt>
+File: figs/Figure1.jpg Graphic file (type jpg)
+<use figs/Figure1.jpg>
+Package pdftex.def Info: figs/Figure1.jpg  used on input line 84.
+(pdftex.def)             Requested size: 395.60861pt x 389.05934pt.
 
-Overfull \hbox (5.91385pt too wide) in paragraph at lines 100--101
-\T1/stix/m/n/10 PALEO-SEAL are a server with mySQL (where data is stored)
+Overfull \hbox (3.66884pt too wide) in paragraph at lines 90--91
+\T1/stix/m/n/10 i-tory can also be forked in [][]GitHub[][]. Pre-requisites for
+ PALEO-
  []
 
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 102.
+(Font)              scaled to size 8.50006pt on input line 92.
 
-Overfull \hbox (12.45226pt too wide) in paragraph at lines 102--103
-\T1/stix/m/n/10 tions of each field, you can re-fer to the \T1/zi4/m/n/10 data_
-headers_lookup.json
+Overfull \hbox (11.91pt too wide) in paragraph at lines 92--93
+\T1/zi4/m/n/10 data_headers_lookup.json \T1/stix/m/n/10 file in the \T1/zi4/m/n
+/10 \data\lookups \T1/stix/m/n/10 folder. Then,
  []
 
 [1{C:/Users/arovere/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
  <./thumbnails/cas-email.jpeg>]
-Overfull \hbox (3.26968pt too wide) in paragraph at lines 104--105
-[]\T1/stix/b/n/10 Modify the con-nec-tion string\T1/stix/m/n/10 . Nav-i-gate to
- \T1/zi4/m/n/10 scripts \data
- []
-
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 7.65005pt on input line 106.
+(Font)              scaled to size 7.65005pt on input line 96.
 LaTeX Font Info:    Trying to load font information for TS1+stix on input line 
-120.
+110.
+
 ("C:\Users\arovere\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stix\ts1stix.fd"
 File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
 )
-Overfull \hbox (8.06555pt too wide) in paragraph at lines 123--124
+Overfull \hbox (8.06555pt too wide) in paragraph at lines 113--114
 []\T1/stix/m/n/10 angular-leaflet-directive.js - \T1/stix/m/it/10 con-nect An-g
 u-larJS&Leaflet 
  []
 
 
-Overfull \hbox (3.7655pt too wide) in paragraph at lines 125--126
+Overfull \hbox (3.7655pt too wide) in paragraph at lines 115--116
 []\T1/stix/m/n/10 leaflet.markercluster.js - \T1/stix/m/it/10 clus-ter mark-ers
  based on scale 
  []
 
-[2 <./figs/Figure1.png> <./figs/Figure2.png>]
-Overfull \hbox (1.63548pt too wide) in paragraph at lines 128--129
-[]\T1/stix/m/n/10 The age/el-e-va-tion graph was built us-ing a cus-tom scripte
-d
- []
-
-
-Overfull \hbox (0.17554pt too wide) in paragraph at lines 130--131
-[]\T1/stix/m/n/10 The map and age/el-e-va-tion graph are in-ter-con-nected with
-
- []
-
-<figs/FigureTechnical.png, id=58, 229.0959pt x 385.1991pt>
+[2 <./figs/Figure1.jpg>]
+<figs/FigureTechnical.png, id=53, 229.0959pt x 385.1991pt>
 File: figs/FigureTechnical.png Graphic file (type png)
 <use figs/FigureTechnical.png>
-Package pdftex.def Info: figs/FigureTechnical.png  used on input line 134.
+Package pdftex.def Info: figs/FigureTechnical.png  used on input line 122.
 (pdftex.def)             Requested size: 229.09534pt x 385.19815pt.
 
-Overfull \hbox (6.12149pt too wide) in paragraph at lines 141--142
-\T1/stix/m/n/10 used to il-lus-trate, fil-ter and make avail-able for ex-port H
-olocene
+Overfull \hbox (0.8067pt too wide) in paragraph at lines 128--129
+[]\T1/stix/m/n/10 In gen-eral, PALEO-SEAL can be used to vi-su-al-ize, query
+ []
+
+
+Overfull \hbox (11.69482pt too wide) in paragraph at lines 128--129
+\T1/stix/m/n/10 project or a sci-en-tific pa-per. For ex-am-ple, we de-ployed P
+ALEO-
+ []
+
+
+Overfull \hbox (16.28552pt too wide) in paragraph at lines 131--132
+[]\T1/stix/m/n/10 Jan Drech-sel de-vel-oped PALEO-SEAL, Nicole Khan worked
+ []
+
+
+Overfull \hbox (3.3199pt too wide) in paragraph at lines 137--139
+\T1/stix/m/n/10 (SEASCHANGE, DFG RO 5245/1-1), funded within the pro-
+ []
+
+
+Overfull \hbox (2.26071pt too wide) in paragraph at lines 137--139
+\T1/stix/m/n/10 HOLSEA project, funded by the In-ter-na-tional Union for Qua-
+ []
+
+
+Overfull \hbox (1.18466pt too wide) in paragraph at lines 137--139
+\T1/stix/m/n/10 funded by IN-QUA and Past Global Changes (PAGES), which
  []
 
 (cas-dc-template.bbl) [3 <./figs/FigureTechnical.png>] (cas-dc-template.aux)
@@ -1043,13 +1049,13 @@ Package rerunfilecheck Info: File `cas-dc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14851 strings out of 480202
- 215603 string characters out of 2876047
- 521664 words of memory out of 3000000
- 31094 multiletter control sequences out of 15000+200000
+ 14847 strings out of 480202
+ 215509 string characters out of 2876047
+ 521179 words of memory out of 3000000
+ 31088 multiletter control sequences out of 15000+200000
  623893 words of font info for 137 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,8n,87p,1223b,1059s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 72i,8n,87p,1236b,1059s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/arovere/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/stix/stix
 -ts1.enc} <C:\Users\arovere\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/e
 c/dpi600\ecsx0900.pk> <C:\Users\arovere\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
@@ -1062,9 +1068,9 @@ eneral-Bold.pfb><C:/Users/arovere/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/stix/STIXGeneral-Italic.pfb><C:/Users/arovere/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/public/stix/STIXGeneral-Regular.pfb><C:/Users/arovere/AppD
 ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/stix/stix-mathrm.pfb>
-Output written on cas-dc-template.pdf (3 pages, 527334 bytes).
+Output written on cas-dc-template.pdf (3 pages, 3319450 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 152 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

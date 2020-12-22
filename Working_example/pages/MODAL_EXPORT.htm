@@ -1,0 +1,49 @@
+<md-dialog style="max-height: 90vh; min-width: 60vw; min-height: 80vh; z-index: 5;">
+    <md-toolbar>
+        
+        <h3 style="padding-left: 16px;">Export </h3>
+
+            
+    </md-toolbar>
+    <md-dialog-content style="min-height: 70vh;">
+        <md-tabs md-dynamic-height>
+            
+            <md-tab label="List">
+                <div style="min-height: 60vh;">
+                    <table  class="sampleTable " width="95%" id="tabelle" >
+                        <thead>
+                            <tr class="">
+                                <th>SampleID</th>
+                                <th>Reference</th>
+                                <th>Age [a]</th>
+                                <th>Paleo RSL/Elevation [m]</th>
+                            </tr>
+                        </thead>
+                            <tr ng-repeat="werte in werteALL | filter: {'export': true} ">
+                                <td> {{werte.label}} </td>
+                                <td> {{werte.reference}} </td>
+                                <td style="text-align: right;"> {{werte.age}} </td>
+                                <td style="text-align: right;"> {{werte.elevation | number: 2}} </td>
+                            </tr>
+                    </table>
+
+                </div>
+                </md-tab>
+                <md-tab label="Plot">
+                    <jd-directive-svg template="dialog" display="export"></jd-directive-svg>   
+                    
+                
+                </md-tab>
+                
+            </md-tabs>
+            
+        </md-dialog-content>
+        <md-dialog-actions>
+            <md-button class="md-raised " ng-click="dialogExportClose('abbruch')" style="float: right;" >
+                close
+            </md-button>
+            <md-button class="md-raised" ng-click="dialogExportClose('etwas')">
+                Download CSV
+            </md-button>
+        </md-dialog-actions>
+    </md-dialog>

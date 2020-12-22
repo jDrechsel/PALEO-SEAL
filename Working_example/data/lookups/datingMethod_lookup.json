@@ -1,0 +1,38 @@
+[
+   {
+      "Key": 1,
+      "fullName": "Radiocarbon"
+   },
+   {
+      "Key": 2,
+      "fullName": "U-series"
+   },
+   {
+      "Key": 3,
+      "fullName": "Optically stimulated luminescence"
+   },
+   {
+      "Key": 4,
+      "fullName": "Amino acid racemization"
+   },
+   {
+      "Key": 5,
+      "fullName": "10Be"
+   },
+   {
+      "Key": 6,
+      "fullName": "Tephra"
+   },
+   {
+      "Key": 7,
+      "fullName": "Varved sediments"
+   },
+   {
+      "Key": 8,
+      "fullName": "Archeological dating"
+   },
+   {
+      "Key": 9,
+      "fullName": "Other"
+   }
+]

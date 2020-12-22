@@ -1,2 +1,2 @@
-We present a simply deployable interface that allows querying and downloading Holocene sea-level datapoints, formatted following the HOLSEA data template, hosted on a mySQL database. The interface uses AngularJS, is scalable to large datasets and can be deployed in few easy steps, that require only basic knowledge of SQL and HTML.
+We present a simple and easily deployable web interface that allows visualizing, querying and downloading Holocene sea-level datapoints formatted following the HOLSEA data template. The data is hosted on a mySQL database, and the interface uses AngularJS, is scalable to large datasets and can be deployed in few easy steps, that require only basic knowledge of SQL and HTML. The tool is released in the open domain.
 

@@ -1,0 +1,501 @@
+/* NEW STYLES 
+certainly in use! 
+*/
+.infoPage{
+    min-height: 60px;
+}
+.introDivider .pageLogo{
+    /* display: table-column; */
+    position: absolute;
+    right: 0;
+    /* align-self: center; */
+    height: 120px;
+    padding-top: 3px; 
+    padding-left: 3px;
+}
+
+/* Bigger elements (Divs Navs Sidebar etc) */
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid #5252523b;;
+}
+
+.special{
+    background-color: rgb(207, 207, 207);
+    border-style: groove;
+    border-color: rgb(56, 56, 56);
+    margin: 2px;
+}
+
+.md-toolbar{
+    min-height: 30px;
+    min-height: 30px;
+}
+.md-dialog-content{
+    /* min-height: 100vh; */
+}
+.md-tab-content{
+    height: 100vh;
+}
+/* Buttons, Badges and other small elements */
+.md-card{
+    padding: 3px;
+}
+.md-card-title{
+    padding: 3px;
+}
+.groupContainer{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    /* padding: 5px 5px 5px 5px; */
+    /* border-radius: 10px; */
+    height: auto;
+    min-height: 45px;
+    /* margin: 5px 1% 5px 1%; */
+    position: relative;
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: inherit;
+    white-space: normal;
+    font-size: 13px;
+    font-weight: 500;
+    /* letter-spacing: 1px; */
+    line-height: normal;
+    outline: 0 none;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+}
+ .groupContainer:hover{
+    overflow: visible;
+    white-space: normal;
+    height: auto;
+}
+.groupPristine{
+    background-color: rgb(255, 255, 255);
+}
+.groupSelected{
+    background-color: rgb(39, 41, 148);
+    color: white;
+    font-weight: bolder;
+}
+.groupCard{
+    background-color: rgb(255, 255, 255);
+}
+.groupCard.active{
+    background-color: rgb(39, 41, 148);
+    font-weight: bolder;
+}
+.mySampleBadge{
+    /* background-color: rgb(110, 110, 110); */
+    /* padding: 5px 5px 5px 5px; */
+    position: absolute;    
+    right: 10px;
+    border-radius: 20px;
+
+    margin: 5px 4px;
+    outline: 1 black;
+    display: inline-block;
+    text-justify: auto;
+    min-width: 40px;
+    min-height: 25px;
+    padding: 5px 5px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    /* line-height: 1; */
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    /* vertical-align: top; */
+    background-color: #777;
+    box-shadow: 1px 1px 2px rgba(58, 58, 58, 0.404);
+
+}
+
+.myPadding{
+    padding: 5px;
+}
+.alignRight{
+    align-self: flex-end;
+}
+.md-button.md-small{
+    width: 10px;
+    height: 20px;
+    line-height: 20px;
+    min-height: 20px;
+    vertical-align: top;
+    font-size: 12px;
+    padding: 2 2;
+    margin: 02;
+}
+
+.badge-custom{    
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: top;
+    background-color: #777;
+    border-radius: 10px;
+    /* border:1px solid black; */
+    box-shadow: 1px 1px 2px rgba(58, 58, 58, 0.404);
+}
+.badge-indicator {
+    background-color: rgb(255, 127, 14);
+}
+.badge-marine {
+    background-color: rgb(31, 119, 180);
+}
+.badge-terrestrial {
+    background-color: rgb(44, 160, 44);
+}
+
+/*Addititonal stuff */
+text {
+    font: 12px sans-serif;
+}
+svg {
+    /* display: block; */
+}
+.plotContainer{
+    /* margin-top: -2%; */
+    max-height:40%;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    /* padding-bottom: 50%; */
+    /* overflow: hidden; */
+}
+.plotControls{
+    background-color: rgb(167, 167, 167);
+    padding: 0px 20px;
+    border-style: outset;
+
+}
+html, body, #test1 {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+input {
+    width: 120px;
+    margin-right: 10px;
+}
+
+.angular-leaflet-map svg{
+    width: initial;
+    height: initial;
+    z-index: 1;
+  } 
+
+.map{
+    z-index: 1;
+}
+.selectionTooltip{
+    background: rgba(64, 67, 235, 0);
+}
+.leaflet-tooltip {
+    position: inherit;
+    padding: 6px;
+    background-color: rgba(255, 255, 255, 0.322);
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #222;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+.leaflet-tooltip-left.selectionTooltip::before {
+    border-left-color: cyan;
+    display: none;
+}
+.leaflet-tooltip-right.selectionTooltip::before {
+    border-right-color: cyan;
+    display: none;
+  }
+.leaflet-popup-tip-container {
+    display: none;
+} 
+.myHeading{
+    font-size: 13pt;
+    margin: 10px;
+    /* padding-left: 10px; */
+    /* font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; */
+}
+
+.subheading{
+    background-color: rgb(129, 129, 129);
+    margin: 0pt;
+}
+
+.sampleTable{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+    table-layout: auto;
+    }
+
+.sampleTable tbody{
+    /* display:block; */
+    width: unset;
+    overflow: auto;
+    height: 100%;
+}
+
+.sampleTable td, .sampleTable th {
+    border: 1px solid rgb(146, 146, 146);
+    padding: 1px;
+    }   
+
+.sampleTable tr:nth-child(even){
+        background-color: #f2f2f2;
+    }
+
+.sampleTable tr:hover {
+        background-color: #ddd;
+        font-weight: bold;
+    }
+
+.sampleTable th {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: left;
+    background-color: rgb(24, 16, 97);
+    color: white;
+    position: sticky;
+    top: 0;
+    /* z-index: 100; */
+  }
+
+  .myFocus{
+      color: black;
+      /* background-color: rgb(126, 126, 126); */
+      font-weight: bold;
+      border: 2px solid rgb(75, 75, 75);     
+  }
+  /* SVG PLOT STYLE */
+  .myContainer{
+      display: table;
+      table-layout: fixed;
+      height: 80vh;
+      max-height: 90vh;
+      align-content: flex-end;
+  }
+
+    .myContainerContent{
+        display: table-row;
+        /* height: auto; */
+        width: 100%;
+        
+    }
+    .myContainerContentResponsive{
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+
+    }
+
+    .introDivider h2, h3{
+        /* box-shadow: rgb(0, 0, 0); */
+        position: relative;
+        /* vertical-align: bottom; */
+
+    }
+    .textCenter{
+        /* text-align: center; */
+        padding-left: 15vw;
+        padding-top: inherit;
+        /* vertical-align: bottom; */
+        
+        /* position: relative; */
+
+
+    }
+  
+    .introText{
+        padding: 0px 3vw;
+
+    }
+    .contentText{
+        padding: 0px 20vw;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+    .introDivider{
+        background-color: lightgray;
+        min-height: 10vh;
+        display: table-row;
+        vertical-align: bottom;
+        align-content: center;
+    }
+  /* INTERFACE ELEMENTS */
+  /*CheckBox */ 
+
+  .exportCheckbox{
+    width: 15px ;
+    height:  15px ;
+    margin: 5px;
+    outline: solid 1px;
+    outline-color: rgb(112, 112, 112);
+    background-color: rgb(209, 209, 209);
+  }
+  .exportCheckboxChecked{
+    outline-color: rgb(36, 36, 36);
+    background-color: rgb(24, 16, 97);
+  }
+  .exportCheckboxCheckedAll{
+    outline-color: rgb(202, 202, 202);
+    background-color: rgb(72, 58, 197);
+  }
+  .selectContainer md-select-menu{
+    margin: 0px; 
+    /* height: fit-content;
+    overflow-y: auto; */
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);    
+  }
+  /* .selectContainer {
+    margin: 0px; 
+    padding: 2px;
+    height: fit-content;
+    overflow-y: auto;
+ 
+  }
+  .selectContainer .md-select-menu-container{
+    margin: 0px; 
+    padding: 2px;
+    min-height: fit-content;
+    overflow-y: auto;
+  } */
+  md-select-menu, md-select-menu md-content {
+    max-height: 385px;
+    }
+  /* md-select-menu, md-select-menu  */
+  md-option {
+    /* max-height: 385px; */
+    height: 36px;
+    }
+  md-checkbox.md-checked.myCheckbox .md-icon {
+    background-color: rgb(24, 16, 97);
+   }
+  md-checkbox.md-checked.myCheckboxHead .md-icon {
+    background-color: rgb(72, 58, 197);
+  }
+   md-slider.md-checked.mySlider .md-icon {
+    background-color: rgb(24, 16, 97);
+   }
+   md-slider {
+       width: 30vw;
+       /* background-color: blue; */
+       border-color: crimson;
+       /* padding: 0px; */
+       /* height: 5%; */
+   }
+   md-slider  .md-checked .md-focus-ring .md-track{
+       background-color: rgb(8, 29, 146);
+       border-color: rgb(8, 29, 146);
+       color: rgb(8, 29, 146);
+
+   }
+
+   /* Map */
+   .myToast{
+       margin-top: 8px;
+       padding: 10px 30px;
+       background-color: rgb(167, 167, 167);
+       position: fixed;
+       z-index: 2;
+       right: 6%;
+       left: 60%;
+       border-style: outset;
+       
+       font-weight: bold;
+       fill: dimgray;
+       box-shadow: 1px 1px 2px rgba(58, 58, 58, 0.404);
+
+   }
+   .myMapToast{
+       margin-top: 8px;
+       padding: 6px 10px;
+       background-color: rgb(128, 14, 14);
+       position: fixed;
+       z-index: 2;
+       max-width: 4%;
+       max-height: 5%;
+       right: 6%;
+       /* left: 85%; */
+       overflow: hidden;
+       border-style: outset;
+       border-radius: 5px;
+       border-color: firebrick;
+       font-weight: bold;
+       line-height: 1.6;
+       color: rgb(224, 224, 224);
+       box-shadow: 1px 1px 2px rgba(58, 58, 58, 0.404);
+
+   }
+   .myMapToast em{
+       /* visibility: hidden; */
+   }
+   .myMapToast em:hover{
+       visibility: initial;
+   }
+   .myMapToast:hover{
+    /* overflow:auto; */
+    max-width: 30%;
+
+
+   }
+   .myToastBadge{
+    position: absolute;    
+    right: 10px;
+    min-height: 25px;
+    min-width: 40px;
+
+    /* padding: 5px 4px; */
+
+   }
+   .myWarning{
+    
+    border-radius: 20px;
+
+    outline: 1 black;
+    display: inline-block;
+    text-justify: auto;
+    min-width: 40px;
+    min-height: 25px;
+    padding: 5px 5px;
+    font-size: 13px;
+    font-weight: bolder;
+    letter-spacing: 0px;
+
+    /* line-height: 1; */
+    color: rgb(196, 196, 196);
+    text-align: center;
+    white-space: nowrap;
+    /* vertical-align: top; */
+    background-color: rgb(150, 18, 18);
+    box-shadow: 1px 1px 2px rgba(58, 58, 58, 0.404);
+}
+
+.navbar-brand {
+    padding: 5px 5px;
+}

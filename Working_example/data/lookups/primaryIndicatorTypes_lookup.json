@@ -1,0 +1,42 @@
+[
+   {
+      "Key": 1,
+      "fullName": "Coral reefs"
+   },
+   {
+      "Key": 2,
+      "fullName": "Other bioconstructed reefs"
+   },
+   {
+      "Key": 3,
+      "fullName": "Fixed biological indicators"
+   },
+   {
+      "Key": 4,
+      "fullName": "Archeological"
+   },
+   {
+      "Key": 5,
+      "fullName": "Sedimentary"
+   },
+   {
+      "Key": 6,
+      "fullName": "Beach rock"
+   },
+   {
+      "Key": 7,
+      "fullName": "Isolation basin"
+   },
+   {
+      "Key": 8,
+      "fullName": "Marine terrace"
+   },
+   {
+      "Key": 9,
+      "fullName": "Raised/storm beach"
+   },
+   {
+      "Key": 10,
+      "fullName": "Other"
+   }
+]

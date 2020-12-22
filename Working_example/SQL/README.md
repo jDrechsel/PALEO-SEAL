@@ -1,0 +1,1 @@
+This SQL script will need to be run on a mySQL server to which the application has access.

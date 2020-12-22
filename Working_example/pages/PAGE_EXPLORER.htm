@@ -1,0 +1,195 @@
+<div class="col-md-9 myContainer" style="background-color: rgb(228, 228, 228); height: 90vh;"
+>
+    <div class="myContainerContent" style="height: 55vh;">
+        <h4>{{sortierung2}} : {{detailName}}</h4>
+        <span style="position: absolute; right: 20px; top: 5px;">
+            <md-checkbox class="myCheckbox" ng-checked="showPlotControl == true; " ng-click="showPlotControl = !showPlotControl " >
+                show Controls
+            </md-checkbox>           
+        </span>
+          
+            <div class="plotControls" layout="row"  ng-show="showPlotControl">
+                <md-slider-container>
+                    ZoomX
+                    <md-slider class="md-primary" aria-label="Zoom X" ng-model="svgScaleX" min="0.04" max="0.2" step="0.001">
+                    </md-slider>
+                    
+                </md-slider-container>
+                <md-slider-container>
+                    ZoomY
+                    <md-slider class="md-primary" aria-label="Zoom Y" ng-model="svgScaleY" min="1" max="4" step="0.01">
+                    </md-slider>
+                </md-slider-container>
+            </div>
+            <div class="plotControls" layout="row" layout-wrap flex ng-show="showPlotControl"> 
+                <md-slider-container>
+                    ScrollX
+                    <md-slider class="md-primary" aria-label="Scroll X" ng-model="svgShiftX" ng-attr-min="-1000" ng-attr-max="0" md-invert="true">
+                        PanX
+                    </md-slider>
+                </md-slider-container>
+                <md-slider-container>
+                    ScrollY
+                    <md-slider class="md-primary" aria-label="Scroll Y" ng-model="svgShiftY" min="-100" max="100" step="1">
+                    </md-slider>
+                </md-slider-container>
+            </div>
+
+        <div class="plotContainer">
+
+            <jd-directive-svg template="default" daten="werteALL" ></jd-directive-svg>   
+        </div>
+    </div>
+
+    <div class="myContainerContentResponsive" >
+        <div >
+            <table  class="sampleTable " width="100%" id="tabelle" >
+                <thead >
+                    <tr class="" >
+                        <th>
+                         
+                            <div class="exportCheckbox" ng-model="allSelected" ng-checked="allSelected == true; " ng-click="selectAll()"
+                            ng-class="{exportCheckboxCheckedAll: allSelected == true }"></div>
+                            
+                        </th>
+                        <th ng-click="sortType = 'label'; sortReverse = !sortReverse">
+                            SampleID
+                           
+                        </th>
+                        <th ng-click="sortType = 'reference'; sortReverse = !sortReverse">
+                            Reference
+                           
+                        </th>
+                        <th ng-click="sortType = 'age'; sortReverse = !sortReverse">
+                            Age [a]
+                           
+                        </th>
+                        <th ng-click="sortType = 'elevation'; sortReverse = !sortReverse">
+                            Paleo RSL/Elevation [m]
+                           
+                        </th>
+                        <th ng-click="sortType = 'type'; sortReverse = !sortReverse">
+                            Indicator Type
+                        </th>
+                        <th ng-click="sortType = 'feature'; sortReverse = !sortReverse">
+                            Primary Indicator
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody >
+
+                    <tr ng-attr-id="{{selected.xUID}}" 
+                    ng-repeat="selected in werteALL |filter: {plot: 'true'} |orderBy:sortType:sortReverse" 
+                    ng-class="">
+                        <td>
+                            <div class="exportCheckbox" ng-click="selected.export = !selected.export " 
+                            ng-class="{exportCheckboxChecked: selected.export == true }"></div>
+                           
+                        </td>
+                        <td > {{selected.label}} </td>
+                        <td> {{selected.reference}} </td>
+                        <td style="text-align: right; padding-right:4px"> {{selected.age}} </td>
+                        <td style="text-align: right;padding-right: 10px;"> {{selected.elevation | number: 1}} </td>
+                        <td> {{selected.type_string}}</td>
+                        <td> {{selected.feature}} </td>
+                
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="col-md-3" style="background-color: darkgrey; height: 90vh; overflow-y: scroll; padding: 0px;">
+    <md-card class="special">
+       
+        <md-card-content style="padding: 6px;">
+            <div layout="row" layout-align="space-between center" style="padding: 6px;">
+                <span>Select category:</span>
+                <md-select ng-model="sortierung2"  placeholder="Select" class="selectContainer" md-container-class="selectContainer" style="margin: 0;">
+                <md-option value="Type" ng-click="groupBy( 'type'); ">Type</md-option>
+                <md-option value="Region" ng-click="groupBy( 'region');" ng-selected="true">Region</md-option>
+                <md-option value="Subregion" ng-click="groupBy( 'subregion');">Subregion</md-option>
+                <md-option value="Reference" ng-click="groupBy( 'reference');">Reference</md-option>
+                <md-option value="pubYear" ng-click="groupBy( 'publicationYear');">Publication Year</md-option>
+                <md-option value="Dating" ng-click="groupBy( 'dating');">Dating</md-option>
+                <md-option value="None" ng-click="groupBy('none');">All Samples</md-option>
+                </md-select>
+            </div>
+            <p ng-show="sortierung2 != ''">{{groups.length}} classes</p>
+            <div>
+                <form name="eineForm">
+                    <md-input-container style="padding: 0px; margin: 0px;">
+                        <label>Filter by Publication</label>
+                        <input ng-model="auswahl.suche.reference">
+                    </md-input-container>
+                </form>
+            </div>
+        </md-card-content>
+    </md-card>
+
+    <div style="overflow-y: scroll; height: 69vh;" >
+        <div ng-repeat="group in groups| filter: auswahl.suche.reference" >
+            <md-card  >
+                <div class="groupContainer myPadding" id="card-{{group.label2}}" ng-class="{'groupSelected': group.label2 == detailName}">
+
+                    
+                    <div class="myHeading" >
+                        
+                        {{group.label2}}
+                    </div>
+                    <div class="mySampleBadge" >{{group.proben.length}}</div>
+                </div>
+                <md-content >
+                    
+                    <div class="col-md-2" ng-init="selectedPanel = {selectedNode: null}">
+                        <md-button class="md-raised md-small" ng-click="showMap(group); selectedPanel.selectedNode=group">
+                            Show
+                        </md-button>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-2">
+                        <md-button class="md-raised md-small" ng-click="selectWithinGroup(group)">
+                            Add to List
+                        </md-button>
+                        
+                    </div>
+                </md-content>
+                
+            </md-card>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

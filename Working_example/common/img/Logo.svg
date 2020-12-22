@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 187 107" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:2.61313;">
+    <g transform="matrix(1,0,0,1,-72.9491,-47.8086)">
+        <path d="M132.041,106.183C115.941,105.583 97.941,99.183 79.941,92.783L79.941,150.983L255.741,150.983L255.741,105.383C255.741,105.583 255.741,105.783 247.541,101.783C239.341,97.782 222.941,89.583 209.741,87.983C196.541,86.383 186.541,91.382 174.441,96.482C162.341,101.582 148.141,106.782 132.041,106.182L132.041,106.183Z" style="fill:rgb(0,141,210);"/>
+        <g transform="matrix(1,0,0,1,134.796,145.283)">
+            <text x="0px" y="0px" style="font-family:'Rubik-Regular', 'Rubik';font-size:44px;fill:rgb(254,254,254);">SEAL</text>
+        </g>
+        <g transform="matrix(1,0,0,1,79.596,84.6828)">
+            <text x="0px" y="0px" style="font-family:'Rubik-Regular', 'Rubik';font-size:44px;fill:rgb(0,141,210);">PALEO</text>
+        </g>
+        <g>
+            <clipPath id="_clip1">
+                <rect x="79.94" y="50.783" width="175.8" height="100.2"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g>
+                    <path d="M76.915,91.665C95.59,98.222 114.265,104.778 130.869,105.564C147.474,106.35 162.007,101.367 174.274,96.375C186.54,91.383 196.541,86.383 209.011,88.009C221.481,89.636 236.422,97.889 244.622,101.986C252.822,106.083 254.281,106.023 255.74,105.964" style="fill:none;stroke:rgb(6,73,116);stroke-width:2.83px;"/>
+                </g>
+            </g>
+        </g>
+        <path d="M79.94,50.783L255.74,50.783L255.74,150.983L79.94,150.983L79.94,50.783Z" style="fill:none;stroke:rgb(43,42,41);stroke-width:2.13px;"/>
+    </g>
+</svg>

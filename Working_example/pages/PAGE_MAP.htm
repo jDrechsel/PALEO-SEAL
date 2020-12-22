@@ -1,0 +1,149 @@
+<div class="col-md-3 col-lg-3" style="background-color: darkgrey; height: 90vh; padding: 0px;" ng-init="initMap();" >
+    <md-card class="special" 
+    data-toggle="tooltip" data-placement="right" 
+    title="Choose category to show samples">
+        <md-card-content>
+            <div layout="row" layout-align="space-between center">
+
+                <span>Select category:</span>
+                <md-select ng-model="sortierung2"  placeholder="Select" class="selectContainer" md-container-class="selectContainer" style="margin: 0;">
+                    <md-option value="Type" ng-click="groupBy( 'type'); ">Type</md-option>
+                    <md-option value="Region" ng-click="groupBy( 'region');" ng-selected="true">Region</md-option>
+                    <md-option value="Subregion" ng-click="groupBy( 'subregion');">Subregion</md-option>
+                    <md-option value="Reference" ng-click="groupBy( 'reference');">Reference</md-option>
+                    <md-option value="pubYear" ng-click="groupBy( 'publicationYear');">Publication Year</md-option>
+                    <md-option value="Dating" ng-click="groupBy( 'dating');">Dating</md-option>
+                    <md-option value="None" ng-click="groupBy('none');">All Samples</md-option>
+                    </md-select>
+            </div>
+            <p ng-show="sortierung != ''">{{groups.length}} classes</p>
+            <div>
+                <form name="eineForm">
+                    <md-input-container style="padding: 0px; margin: 0px;">
+                        <label>Filter by Publication</label>
+                        <input ng-model="auswahl.suche.reference">
+                    </md-input-container>
+                </form>
+            </div>
+        </md-card-content>
+    </md-card>
+    <div style="overflow-y: scroll; height: 69vh;">
+
+    <div ng-repeat="group in groups  | filter: auswahl.suche.reference " >
+        <md-card>
+            <div class="groupContainer myPadding" id="card-{{group.label2}}" ng-class="{'groupSelected': group.label2 == detailName}">
+
+                    
+                <div class="myHeading" >
+                    
+                    {{group.label2}}
+                </div>
+                <div class="mySampleBadge" >{{group.proben.length}}</div>
+            </div>
+            <md-content >
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-2">
+                    <md-button class="md-raised md-small" ng-click="showMap(group)">
+                        Show
+                    </md-button>
+                </div>
+                </md-content>
+                
+            </md-card>
+        </div>
+    </div>
+
+</div>
+<div class="col-md-9">
+    <div class="myMapToast" ng-show="mapMarkersRejected.length >= 1"> 
+        {{mapMarkersRejected.length}}!<em>
+            Samples have invalid Lat/Lng
+        </em> 
+            
+        
+    </div>
+    <leaflet class="map" lf-center="ansicht" controls="controls" layers="layers" markers="markers" width="100%" height="90vh"></leaflet>
+</div>
+
+<!-- SIDENAV -->
+<div layout="row" style="z-index: 4;">
+		<md-sidenav style="min-width: 60vw; position: fixed;z-index: 4000;" class="md-sidenav-left" md-component-id="links" md-disable-backdrop md-whiteframe="4">
+			<md-toolbar class="md-theme-indigo">
+                
+                <span>
+
+                    <h2 class="md-toolbar-tools">Export list:       
+                            <div class="col-md-2">
+                            </div>
+
+                                <md-button ng-click="addSelectedToExport()" class="md-accent col-md-2" data-toggle="tooltip" data-placement="right" 
+                                title="add samples to export list">
+                                    Add 
+                                </md-button>
+                                <md-button ng-click="removeSelectedFromExport()" class="md-accent md-accent col-md-2" 
+                                data-toggle="tooltip" data-placement="right" 
+                                title="remove samples from export list">
+                                    Remove 
+                                </md-button>
+                            <md-button ng-click="closeSideNav('links')" class="md-accent col  align-self-end" 
+                            data-toggle="tooltip" data-placement="right" 
+                            title="Close without adding or removing samples">
+                                Close
+                            </md-button>
+                    </h2>
+                </span>
+				
+			</md-toolbar>
+			<md-content >
+                <div class="subheading">
+
+                    <div layout="row" layout-wrap flex >
+                        <p>Samples:<span class="badge">{{result.length}}</span> 
+                        </p>
+                    </div>
+                </div>
+                <table  class="sampleTable " width="100%" height="100vh" id="tabelle" style="overflow-y: scroll;">
+                    <thead>
+                        <tr class="">
+                            <th>xUID</th>
+                            <th ng-click="sortType = 'A_01'; sortReverse = !sortReverse">
+                                SampleID
+                                <span ng-if="sortReverse == true && sortType == 'A_01'" class="fa fa-caret-down"> 
+                                  <md-icon md-svg-src="img/expand_more.svg"></md-icon>
+                                </span>
+                                <span ng-if="sortReverse == false  && sortType == 'A_01'" class="fa fa-caret-down"> 
+                                  <md-icon md-svg-src="img/expand_less.svg"></md-icon>
+                                </span>
+                            </th>
+                            <th ng-click="sortType = 'C0_02'; sortReverse = !sortReverse">
+                                Reference
+                                <span ng-if="sortReverse == true && sortType == 'C0_02'" class="fa fa-caret-down"> 
+                                    <md-icon md-svg-src="img/expand_more.svg"></md-icon>
+                                </span>
+                                <span ng-if="sortReverse == false && sortType == 'C0_02'" class="fa fa-caret-down"> 
+                                  <md-icon md-svg-src="img/expand_less.svg"></md-icon>
+                                </span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr 
+                    ng-repeat="sample in result" 
+                    ng-class="">
+                        <td>
+                            {{sample.options.xUID}}
+                        </td>
+                        <td>
+                            {{sample.options.title}}
+                        </td>
+                        <td>
+                            {{sample.options.reference}}
+                        </td>
+                    </tr>
+
+                </table>
+              
+
+            </md-content>
+        </md-sidenav>
+</div>

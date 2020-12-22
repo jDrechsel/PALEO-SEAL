@@ -1,0 +1,375 @@
+[
+   {
+      "ID_head": "A_00",
+      "Name_head": "xUID",
+      "Unit_head": "(PRIMARY KEY)"
+   },
+   {
+      "ID_head": "A_01",
+      "Name_head": "Unique sample ID"
+   },
+   {
+      "ID_head": "A_02",
+      "Name_head": "Reference"
+   },
+   {
+      "ID_head": "B_01",
+      "Name_head": "Region code"
+   },
+   {
+      "ID_head": "B_02",
+      "Name_head": "Sub-region"
+   },
+   {
+      "ID_head": "B_03",
+      "Name_head": "Latitude"
+   },
+   {
+      "ID_head": "B_04",
+      "Name_head": "Longitude"
+   },
+   {
+      "ID_head": "C_01",
+      "Name_head": "Dating method"
+   },
+   {
+      "ID_head": "C_02",
+      "Name_head": "Corrected age",
+      "Unit_head": "(14C a BP)"
+   },
+   {
+      "ID_head": "C_03",
+      "Name_head": "Corrected age uncertainty",
+      "Unit_head": "(14C a)"
+   },
+   {
+      "ID_head": "C_04",
+      "Name_head": "Age",
+      "Unit_head": "(cal a BP)"
+   },
+   {
+      "ID_head": "C_05",
+      "Name_head": "Age 2σ Uncertainty +",
+      "Unit_head": "(cal a)"
+   },
+   {
+      "ID_head": "C_06",
+      "Name_head": "Age 2σ Uncertainty -",
+      "Unit_head": "(cal a)"
+   },
+   {
+      "ID_head": "D1_01",
+      "Name_head": "Dated facies"
+   },
+   {
+      "ID_head": "D1_02",
+      "Name_head": "Overburden facies",
+      "Unit_head": "(nearest layer)"
+   },
+   {
+      "ID_head": "D1_03",
+      "Name_head": "Underlying facies",
+      "Unit_head": "(nearest layer)"
+   },
+   {
+      "ID_head": "D1_04",
+      "Name_head": "Tendency"
+   },
+   {
+      "ID_head": "D1_05",
+      "Name_head": "Sample depth/Overburden thickness",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D1_06",
+      "Name_head": "Depth to consolidated substrate",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D1_07",
+      "Name_head": "Intercalated"
+   },
+   {
+      "ID_head": "D2_01",
+      "Name_head": "Sampling method"
+   },
+   {
+      "ID_head": "D2_02",
+      "Name_head": "Sample thickness",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D2_03",
+      "Name_head": "Sample thickness type"
+   },
+   {
+      "ID_head": "D2_04",
+      "Name_head": "Corrected sample thickness",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D2_05",
+      "Name_head": "Sample thickness uncertainty",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D2_06",
+      "Name_head": "Sampling uncertainty",
+      "Unit_head": "(m) "
+   },
+   {
+      "ID_head": "D2_07",
+      "Name_head": "Core shortening/stretching uncertainty",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D2_08",
+      "Name_head": "Non-vertical drilling uncertainty",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D3_01",
+      "Name_head": "Tidal uncertainty",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D3_02",
+      "Name_head": "Water depth uncertainty",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D3_03",
+      "Name_head": "Leveling uncertainty",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D3_04",
+      "Name_head": "(d)GPS or RTK uncertainty",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D3_05",
+      "Name_head": "Benchmark uncertainty",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D3_06",
+      "Name_head": "Vegetation zone uncertainty",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D3_07",
+      "Name_head": "Map uncertainty",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D3_08",
+      "Name_head": "DEM uncertainty",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D3_09",
+      "Name_head": "Orthometric sample elevation",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D3_10",
+      "Name_head": "Orthometric datum or MSL epoch "
+   },
+   {
+      "ID_head": "D3_11",
+      "Name_head": "Sample elevation",
+      "Unit_head": "(m MSL)"
+   },
+   {
+      "ID_head": "D3_12",
+      "Name_head": "Sample elevation type"
+   },
+   {
+      "ID_head": "D3_13",
+      "Name_head": "Sample elevation uncertainty +",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D3_14",
+      "Name_head": "Sample elevation uncertainty -",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D4_01",
+      "Name_head": "LAT",
+      "Unit_head": "(m MSL)"
+   },
+   {
+      "ID_head": "D4_02",
+      "Name_head": "MLWS",
+      "Unit_head": "(m MSL)"
+   },
+   {
+      "ID_head": "D4_03",
+      "Name_head": "MLWN",
+      "Unit_head": "(m MSL)"
+   },
+   {
+      "ID_head": "D4_04",
+      "Name_head": "MLLW",
+      "Unit_head": "(m MSL)"
+   },
+   {
+      "ID_head": "D4_05",
+      "Name_head": "MLW",
+      "Unit_head": "(m MSL)"
+   },
+   {
+      "ID_head": "D4_06",
+      "Name_head": "MTL",
+      "Unit_head": "(m MSL)"
+   },
+   {
+      "ID_head": "D4_07",
+      "Name_head": "MHW",
+      "Unit_head": "(m MSL)"
+   },
+   {
+      "ID_head": "D4_08",
+      "Name_head": "MHHW",
+      "Unit_head": "(m MSL)"
+   },
+   {
+      "ID_head": "D4_09",
+      "Name_head": "MHWN",
+      "Unit_head": "(m MSL)"
+   },
+   {
+      "ID_head": "D4_10",
+      "Name_head": "MHWS",
+      "Unit_head": "(m MSL)"
+   },
+   {
+      "ID_head": "D4_11",
+      "Name_head": "HAT",
+      "Unit_head": "(m MSL)"
+   },
+   {
+      "ID_head": "D5_01",
+      "Name_head": "Type"
+   },
+   {
+      "ID_head": "D5_02",
+      "Name_head": "Primary indicator type"
+   },
+   {
+      "ID_head": "D5_03",
+      "Name_head": "Secondary indicator type"
+   },
+   {
+      "ID_head": "D5_04",
+      "Name_head": "Supporting evidence"
+   },
+   {
+      "ID_head": "D5_05",
+      "Name_head": "Sample indicative meaning "
+   },
+   {
+      "ID_head": "D5_06",
+      "Name_head": "Reference water level",
+      "Unit_head": "(m MSL)"
+   },
+   {
+      "ID_head": "D5_07",
+      "Name_head": "Indicative range uncertainty",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D5_08",
+      "Name_head": "RWL modeling uncertainty",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D5_09",
+      "Name_head": "IR modeling uncertainty",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D5_10",
+      "Name_head": "Paleotide-corrected RWL",
+      "Unit_head": "(m MSL) (if any)"
+   },
+   {
+      "ID_head": "D5_11",
+      "Name_head": "Paleotide-corrected indicative range",
+      "Unit_head": "(m) (if any)"
+   },
+   {
+      "ID_head": "D5_12",
+      "Name_head": "Paleo indicative range change uncertainty",
+      "Unit_head": "(m) (if any)"
+   },
+   {
+      "ID_head": "D6_01",
+      "Name_head": "Compaction correction",
+      "Unit_head": "(if any)"
+   },
+   {
+      "ID_head": "D6_02",
+      "Name_head": "Compaction correction uncertainty",
+      "Unit_head": "(if any)"
+   },
+   {
+      "ID_head": "D6_03",
+      "Name_head": "Tectonic correction",
+      "Unit_head": "(m/ka) (if any)"
+   },
+   {
+      "ID_head": "D6_04",
+      "Name_head": "Tectonic correction uncertainty",
+      "Unit_head": "(m/ka) (if any)"
+   },
+   {
+      "ID_head": "D7_01",
+      "Name_head": "RSL",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D7_02",
+      "Name_head": "RSL 2σ Uncertainty +",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D7_03",
+      "Name_head": "RSL 2σ Uncertainty -",
+      "Unit_head": "(m)"
+   },
+   {
+      "ID_head": "D7_04",
+      "Name_head": "Corrected RSL",
+      "Unit_head": "(m) (if any)"
+   },
+   {
+      "ID_head": "D7_05",
+      "Name_head": "Corrected RSL uncertainty +",
+      "Unit_head": "(m) (if any)"
+   },
+   {
+      "ID_head": "D7_06",
+      "Name_head": "Corrected RSL uncertainty -",
+      "Unit_head": "(m) (if any)"
+   },
+   {
+      "ID_head": "D7_07",
+      "Name_head": "Correction type",
+      "Unit_head": "(if any)"
+   },
+   {
+      "ID_head": "E_01",
+      "Name_head": "Reject"
+   },
+   {
+      "ID_head": "E_02",
+      "Name_head": "Why rejected?"
+   },
+   {
+      "ID_head": "E_03",
+      "Name_head": "Notes"
+   }
+]

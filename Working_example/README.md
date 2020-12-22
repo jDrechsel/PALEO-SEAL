@@ -1,0 +1,1 @@
+This folder contains the working example of PALEO-SEAL, based on the SEAMIS database.

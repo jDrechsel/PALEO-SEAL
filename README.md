@@ -2,7 +2,9 @@
 PALEO-SEAL is an easily deployable and scalable web interface that allows the visualization and download of Holocene sea-level index points. The data displayed in the interface are hosted in a MySQL database. The database structure follows the template of the HOLSEA project (Long-form version, that can be retrieved from <a href="https://www.holsea.org/archive-your-data">www.holsea.org</a>), and is described by Khan et al., 2019<sup>[1](#Khan2019)</sup>.
 
 # Quick video tour
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/A3ZGQh7foZI/0.jpg)](http://www.youtube.com/watch?v=A3ZGQh7foZI "Video Title")
+We prepared a quick video tour of PALEO-SEAL, to give a quick demonstration of its functionalities.
+
+[![PALEO-SEAL Video](http://img.youtube.com/vi/A3ZGQh7foZI/0.jpg)](http://www.youtube.com/watch?v=A3ZGQh7foZI "PALEO-SEAL")
 
 # How can I use PALEO-SEAL?
 With PALEO-SEAL, you can create your own website to visualize and download Holocene sea-level data within minutes. The tool offers a basic template, and to furhter style your page you will need some basic knowledge of HTML and CSS. To setup your database, you will need some basic knowledge of mySQL and a remote server supporting mySQL databases.

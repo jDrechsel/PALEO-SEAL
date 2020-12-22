@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.14)  7 NOV 2020 11:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.14)  22 DEC 2020 11:03
 entering extended mode
 **C:/Users/arovere/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-t
 emplate.tex
@@ -1009,13 +1009,13 @@ Overfull \hbox (8.06555pt too wide) in paragraph at lines 123--124
 u-larJS&Leaflet 
  []
 
-[2 <./figs/Figure1.png> <./figs/Figure2.png>]
+
 Overfull \hbox (3.7655pt too wide) in paragraph at lines 125--126
 []\T1/stix/m/n/10 leaflet.markercluster.js - \T1/stix/m/it/10 clus-ter mark-ers
  based on scale 
  []
 
-
+[2 <./figs/Figure1.png> <./figs/Figure2.png>]
 Overfull \hbox (1.63548pt too wide) in paragraph at lines 128--129
 []\T1/stix/m/n/10 The age/el-e-va-tion graph was built us-ing a cus-tom scripte
 d
@@ -1025,12 +1025,6 @@ d
 Overfull \hbox (0.17554pt too wide) in paragraph at lines 130--131
 []\T1/stix/m/n/10 The map and age/el-e-va-tion graph are in-ter-con-nected with
 
- []
-
-
-Overfull \hbox (14.80064pt too wide) in paragraph at lines 130--131
-\T1/stix/m/n/10 the An-gu-larJS frame-work, al-low-ing to store data asyn-chron
-ously
  []
 
 <figs/FigureTechnical.png, id=58, 229.0959pt x 385.1991pt>
@@ -1044,11 +1038,6 @@ Overfull \hbox (6.12149pt too wide) in paragraph at lines 141--142
 olocene
  []
 
-
-Overfull \hbox (3.78976pt too wide) in paragraph at lines 143--144
-\T1/stix/m/n/10 WITH THE EN-TIRE DATABASE TO THE HOLSEA WEB-
- []
-
 (cas-dc-template.bbl) [3 <./figs/FigureTechnical.png>] (cas-dc-template.aux)
 Package rerunfilecheck Info: File `cas-dc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -1056,7 +1045,7 @@ Package rerunfilecheck Info: File `cas-dc-template.out' has not changed.
 Here is how much of TeX's memory you used:
  14851 strings out of 480202
  215603 string characters out of 2876047
- 521530 words of memory out of 3000000
+ 521664 words of memory out of 3000000
  31094 multiletter control sequences out of 15000+200000
  623893 words of font info for 137 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1073,7 +1062,7 @@ eneral-Bold.pfb><C:/Users/arovere/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/stix/STIXGeneral-Italic.pfb><C:/Users/arovere/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/public/stix/STIXGeneral-Regular.pfb><C:/Users/arovere/AppD
 ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/stix/stix-mathrm.pfb>
-Output written on cas-dc-template.pdf (3 pages, 527675 bytes).
+Output written on cas-dc-template.pdf (3 pages, 527334 bytes).
 PDF statistics:
  165 PDF objects out of 1000 (max. 8388607)
  21 named destinations out of 1000 (max. 500000)

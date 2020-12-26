@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -11,6 +11,12 @@
 \providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Drechsel and Rovere(2020)}]{paleoseal2020}
+\bibinfo{author}{Drechsel, J.}, \bibinfo{author}{Rovere, A.},
+  \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Paleo-seal: visualization and sharing of holocene
+  sea-level data} \DOIprefix\doi{10.5281/zenodo.4394223}.
 %Type = Article
 \bibitem[{D{\"u}sterhus et~al.(2016)D{\"u}sterhus, Rovere, Carlson, Horton,
   Klemann, Tarasov, Barlow, Bradwell, Clark, Dutton et~al.}]{dusterhus2016}

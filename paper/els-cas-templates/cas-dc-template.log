@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.14)  22 DEC 2020 14:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.14)  26 DEC 2020 15:20
 entering extended mode
 **C:/Users/arovere/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-t
 emplate.tex
@@ -971,9 +971,8 @@ File: figs/Figure1.jpg Graphic file (type jpg)
 Package pdftex.def Info: figs/Figure1.jpg  used on input line 84.
 (pdftex.def)             Requested size: 395.60861pt x 389.05934pt.
 
-Overfull \hbox (3.66884pt too wide) in paragraph at lines 90--91
-\T1/stix/m/n/10 i-tory can also be forked in [][]GitHub[][]. Pre-requisites for
- PALEO-
+Overfull \hbox (1.32469pt too wide) in paragraph at lines 90--91
+[]\T1/stix/m/n/10 PALEO-SEAL is avail-able via Zen-odo ([][]Drech-sel and Ro-
  []
 
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
@@ -1008,7 +1007,7 @@ Overfull \hbox (3.7655pt too wide) in paragraph at lines 115--116
  []
 
 [2 <./figs/Figure1.jpg>]
-<figs/FigureTechnical.png, id=53, 229.0959pt x 385.1991pt>
+<figs/FigureTechnical.png, id=57, 229.0959pt x 385.1991pt>
 File: figs/FigureTechnical.png Graphic file (type png)
 <use figs/FigureTechnical.png>
 Package pdftex.def Info: figs/FigureTechnical.png  used on input line 122.
@@ -1027,6 +1026,24 @@ ALEO-
 
 Overfull \hbox (16.28552pt too wide) in paragraph at lines 131--132
 []\T1/stix/m/n/10 Jan Drech-sel de-vel-oped PALEO-SEAL, Nicole Khan worked
+ []
+
+
+Overfull \hbox (5.47182pt too wide) in paragraph at lines 134--135
+\T1/zi4/m/n/10 github . com / jDrechsel / PALEO-[]SEAL . git$[][] \T1/stix/m/n/
+10 or from Zen-odo: [][]$\T1/zi4/m/n/10 https :
+ []
+
+
+Overfull \hbox (6.01904pt too wide) in paragraph at lines 134--135
+\T1/zi4/m/n/10 / / doi . org / 10 . 5281 / zenodo . 4394223$[][]\T1/stix/m/n/10
+ . PALEO-SEAL is re-leased
+ []
+
+
+Overfull \hbox (7.03612pt too wide) in paragraph at lines 134--135
+\T1/stix/m/n/10 un-der the terms of the Apache Li-cense 2.0 ([][]$\T1/zi4/m/n/1
+0 http : / / www . apache .
  []
 
 
@@ -1049,10 +1066,10 @@ Package rerunfilecheck Info: File `cas-dc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14847 strings out of 480202
- 215509 string characters out of 2876047
- 521179 words of memory out of 3000000
- 31088 multiletter control sequences out of 15000+200000
+ 14851 strings out of 480202
+ 215590 string characters out of 2876047
+ 521356 words of memory out of 3000000
+ 31091 multiletter control sequences out of 15000+200000
  623893 words of font info for 137 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,8n,87p,1236b,1059s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1068,9 +1085,9 @@ eneral-Bold.pfb><C:/Users/arovere/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/stix/STIXGeneral-Italic.pfb><C:/Users/arovere/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/public/stix/STIXGeneral-Regular.pfb><C:/Users/arovere/AppD
 ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/stix/stix-mathrm.pfb>
-Output written on cas-dc-template.pdf (3 pages, 3319450 bytes).
+Output written on cas-dc-template.pdf (3 pages, 3321355 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 23 named destinations out of 1000 (max. 500000)
+ 159 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

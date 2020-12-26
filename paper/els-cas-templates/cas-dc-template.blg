@@ -6,47 +6,48 @@ The style file: cas-model2-names.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: cas-refs.bib
 Reallocating 'singl_function' (item size: 4) to 100 items.
+Warning--empty journal in paleoseal2020
 Warning--can't use both author and editor fields in VanDePlassche1986
 Warning--empty chapter and pages in VanDePlassche1986
-You've used 6 entries,
+You've used 7 entries,
             2990 wiz_defined-function locations,
-            781 strings with 7805 characters,
-and the built_in function-call counts, 5134 in all, are:
-= -- 353
-> -- 284
-< -- 3
-+ -- 108
-- -- 102
-* -- 621
-:= -- 755
-add.period$ -- 19
-call.type$ -- 6
-change.case$ -- 62
-chr.to.int$ -- 6
-cite$ -- 8
-duplicate$ -- 341
-empty$ -- 331
-format.name$ -- 116
-if$ -- 923
+            788 strings with 7950 characters,
+and the built_in function-call counts, 5655 in all, are:
+= -- 395
+> -- 302
+< -- 4
++ -- 115
+- -- 108
+* -- 673
+:= -- 833
+add.period$ -- 21
+call.type$ -- 7
+change.case$ -- 69
+chr.to.int$ -- 7
+cite$ -- 10
+duplicate$ -- 384
+empty$ -- 369
+format.name$ -- 127
+if$ -- 1020
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 77
-newline$ -- 46
-num.names$ -- 24
-pop$ -- 121
+missing$ -- 84
+newline$ -- 50
+num.names$ -- 28
+pop$ -- 142
 preamble$ -- 1
-purify$ -- 57
+purify$ -- 63
 quote$ -- 0
-skip$ -- 88
+skip$ -- 103
 stack$ -- 0
-substring$ -- 204
-swap$ -- 290
+substring$ -- 215
+swap$ -- 312
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 51
-warning$ -- 2
-while$ -- 31
+type$ -- 60
+warning$ -- 3
+while$ -- 34
 width$ -- 0
-write$ -- 101
-(There were 2 warnings)
+write$ -- 113
+(There were 3 warnings)

@@ -1,10 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.14)  26 DEC 2020 15:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.14)  26 DEC 2020 15:43
 entering extended mode
-**C:/Users/arovere/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-t
-emplate.tex
-
-(C:/Users/arovere/Documents/GitHub/PALEO-SEAL/paper/els-cas-templates/cas-dc-te
-mplate.tex
+**./cas-dc-template.tex
+(cas-dc-template.tex
 LaTeX2e <2020-10-01> patch level 1
 L3 programming layer <2020-10-05> xparse <2020-03-03> (cas-dc.cls
 Document Class: cas-dc 2020/03/14, 2.1: Formatting class for CAS double column 
@@ -1066,13 +1063,13 @@ Package rerunfilecheck Info: File `cas-dc-template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14851 strings out of 480202
- 215590 string characters out of 2876047
+ 14849 strings out of 480202
+ 215383 string characters out of 2876047
  521356 words of memory out of 3000000
  31091 multiletter control sequences out of 15000+200000
  623893 words of font info for 137 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,8n,87p,1236b,1059s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 72i,8n,87p,1169b,1059s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/arovere/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/stix/stix
 -ts1.enc} <C:\Users\arovere\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/e
 c/dpi600\ecsx0900.pk> <C:\Users\arovere\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
